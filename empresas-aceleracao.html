@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aceleração Geracional — 2A Educação</title>
+  <meta name="description" content="Programa de desenvolvimento que prepara lideranças e melhora a comunicação intergeracional nas empresas." />
+  <link rel="icon" type="image/png" href="assets/logos/logo-2a-dark.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/logos/logo-2a-light.png" alt="2A Educação" height="36" /></a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html"    class="nav-link">Home</a></li>
+      <li><a href="sobre.html"    class="nav-link">Sobre Nós</a></li>
+      <li><a href="jovens.html"   class="nav-link">Para Jovens</a></li>
+      <li><a href="empresas.html" class="nav-link active">Para Empresas</a></li>
+      <li><a href="blog.html"     class="nav-link">Blog</a></li>
+      <li><a href="contato.html"  class="nav-link">Contato</a></li>
+    </ul>
+    <div class="nav-ctas">
+      <button class="btn btn-outline btn-sm" onclick="openYouthModal()">Sou Jovem</button>
+      <button class="btn btn-primary btn-sm" onclick="openCompanyModal()">Sou Empresa</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="sobre.html" class="nav-link">Sobre Nós</a>
+  <a href="jovens.html" class="nav-link">Para Jovens</a>
+  <a href="empresas.html" class="nav-link active">Para Empresas</a>
+  <a href="blog.html" class="nav-link">Blog</a>
+  <a href="contato.html" class="nav-link">Contato</a>
+  <div class="mobile-nav-ctas">
+    <button class="btn btn-outline btn-full" onclick="openYouthModal()">Sou Jovem</button>
+    <button class="btn btn-primary btn-full" onclick="openCompanyModal()">Sou Empresa</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero" aria-label="Aceleração Geracional">
+  <div class="container">
+    <div class="hero-center" style="max-width: 780px;">
+      <p class="tag fade-in">Para Empresas</p>
+      <h1 class="fade-in fd-1">Programa de Aceleração Geracional</h1>
+      <p class="fade-in fd-2">Desenvolva jovens talentos, prepare lideranças e construa uma empresa onde todas as gerações prosperam juntas.</p>
+      <div class="hero-ctas fade-in fd-3">
+        <button class="btn btn-primary btn-lg" onclick="openCompanyModal()">Falar com especialista</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- O QUE DESENVOLVEMOS -->
+<section class="section section-white" aria-labelledby="dev-heading">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-label" style="justify-content:center;"><h2 id="dev-heading">O que o programa desenvolve</h2></div>
+      <p>Quatro frentes de trabalho desenhadas para transformar a cultura da sua empresa.</p>
+    </div>
+    <div class="grid-4">
+      <div class="card reveal" style="text-align:center;">
+        <div class="card-icon" style="margin: 0 auto 1.25rem;" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        </div>
+        <h3>Jovens talentos</h3>
+        <p style="font-size:0.875rem;">Desenvolve habilidades técnicas e comportamentais dos novos colaboradores para que atinjam alta performance mais rapidamente.</p>
+      </div>
+      <div class="card reveal rv-1" style="text-align:center;">
+        <div class="card-icon" style="margin: 0 auto 1.25rem;" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h3>Lideranças</h3>
+        <p style="font-size:0.875rem;">Capacita gestores e líderes para compreender, motivar e extrair o melhor das novas gerações no ambiente de trabalho.</p>
+      </div>
+      <div class="card reveal rv-2" style="text-align:center;">
+        <div class="card-icon" style="margin: 0 auto 1.25rem;" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>Comunicação intergeracional</h3>
+        <p style="font-size:0.875rem;">Cria pontes de diálogo entre gerações diferentes, reduzindo conflitos e aumentando a colaboração interna.</p>
+      </div>
+      <div class="card reveal rv-3" style="text-align:center;">
+        <div class="card-icon" style="margin: 0 auto 1.25rem;" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
+        <h3>Processos de contratação</h3>
+        <p style="font-size:0.875rem;">Aprimora os critérios e processos de atração e seleção de jovens para que a empresa contrate com mais assertividade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTADOS -->
+<section class="metrics-strip">
+  <div class="container">
+    <div class="metrics-grid">
+      <div class="metric-item reveal"><div class="metric-value" data-target="40" data-suffix="%">40%</div><div class="metric-label">Redução de turnover jovem</div></div>
+      <div class="metric-item reveal rv-1"><div class="metric-value" data-target="60" data-suffix="%">60%</div><div class="metric-label">Melhora no engajamento</div></div>
+      <div class="metric-item reveal rv-2"><div class="metric-value" data-target="3" data-suffix="x">3x</div><div class="metric-label">Mais rápido para alta performance</div></div>
+      <div class="metric-item reveal rv-3"><div class="metric-value" data-target="92" data-suffix="%">92%</div><div class="metric-label">Satisfação dos participantes</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="section section-white" aria-labelledby="how-acel-heading">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-label" style="justify-content:center;"><h2 id="how-acel-heading">Como o programa funciona</h2></div>
+    </div>
+    <div class="steps-grid">
+      <div class="step-item reveal">
+        <div class="step-num" aria-hidden="true">1</div>
+        <h3>Diagnóstico</h3>
+        <p>Mapeamos o perfil geracional da sua empresa, os principais pontos de atrito e as oportunidades de desenvolvimento.</p>
+      </div>
+      <div class="step-item reveal rv-1">
+        <div class="step-num" aria-hidden="true">2</div>
+        <h3>Programa customizado</h3>
+        <p>Desenvolvemos um programa sob medida com workshops, mentorias e trilhas de desenvolvimento para cada público.</p>
+      </div>
+      <div class="step-item reveal rv-2">
+        <div class="step-num" aria-hidden="true">3</div>
+        <h3>Acompanhamento</h3>
+        <p>Monitoramos os resultados ao longo do programa com métricas claras de engajamento, retenção e performance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTO -->
+<section class="section section-gray" aria-labelledby="testi-acel-heading">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-label" style="justify-content:center;"><h2 id="testi-acel-heading">Empresas que já passaram pelo programa</h2></div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars" aria-label="5 estrelas">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testi-quote">"O programa transformou a forma como nossa liderança se comunica com os times jovens. Reduzimos o turnover em 40% e aumentamos o engajamento de toda a empresa."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" aria-hidden="true">FO</div>
+          <div><div class="testi-name">Fernanda Oliveira</div><div class="testi-role">Diretora de RH · Grupo Nexus</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal rv-1">
+        <div class="testi-stars" aria-label="5 estrelas">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testi-quote">"Nossos gestores finalmente entendem o que motiva a geração Z. O impacto foi imediato — a produtividade dos times jovens aumentou visivelmente em poucos meses."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" aria-hidden="true">GA</div>
+          <div><div class="testi-name">Gustavo Andrade</div><div class="testi-role">VP de Pessoas · Fintech Alpha</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal rv-2">
+        <div class="testi-stars" aria-label="5 estrelas">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testi-quote">"Investimos no programa sem saber muito bem o que esperar. O retorno superou qualquer expectativa — hoje a 2A é nossa parceira estratégica de desenvolvimento."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" aria-hidden="true">LB</div>
+          <div><div class="testi-name">Larissa Braga</div><div class="testi-role">CEO · Agência Plural</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-dark">
+  <div class="container">
+    <h2 class="reveal">Transforme a cultura da sua empresa.</h2>
+    <p class="reveal rv-1">Fale com um especialista da 2A e descubra como o Programa de Aceleração Geracional pode ser customizado para o seu contexto.</p>
+    <div class="cta-btns reveal rv-2">
+      <button class="btn btn-primary btn-lg" onclick="openCompanyModal()">Falar com especialista</button>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="assets/logos/logo-2a-dark.png" alt="2A Educação" height="40" /><p>Conectando jovens ao futuro que eles merecem.</p><div class="footer-socials"><a href="#" class="social-link" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><a href="#" class="social-link" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href="#" class="social-link" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a><a href="#" class="social-link" aria-label="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg></a></div></div>
+      <div class="footer-col"><h4>Para Jovens</h4><ul><li><a href="jovens.html">Visão Geral</a></li><li><a href="jovens-academy.html">2A Academy</a></li><li><a href="jovens-growy.html">GROWY</a></li></ul></div>
+      <div class="footer-col"><h4>Para Empresas</h4><ul><li><a href="empresas.html">Visão Geral</a></li><li><a href="empresas-growy.html">GROWY Empresas</a></li><li><a href="empresas-aceleracao.html">Aceleração Geracional</a></li><li><a href="empresas-2ahire.html">2A Hire</a></li></ul></div>
+      <div class="footer-col"><h4>Institucional</h4><ul><li><a href="sobre.html">Sobre a 2A</a></li><li><a href="blog.html">Blog</a></li><li><a href="contato.html">Contato</a></li><li><a href="#">Política de Privacidade</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p class="footer-copy">© 2024 2A Educação. Todos os direitos reservados.</p></div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modalYouth" role="dialog" aria-modal="true" aria-labelledby="modalYouthTitle"><div class="modal-box"><button class="modal-close" aria-label="Fechar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><h3 class="modal-title" id="modalYouthTitle">Quero saber mais</h3><p class="modal-sub">Preencha o formulário e entraremos em contato em breve.</p><form id="formYouth" novalidate><input type="hidden" name="_subject" value="Lead Jovem | 2A Educação" /><div class="form-group"><label class="form-label" for="youthName">Nome completo</label><input class="form-input" type="text" id="youthName" name="nome" placeholder="Seu nome" required /></div><div class="form-group"><label class="form-label" for="youthEmail">E-mail</label><input class="form-input" type="email" id="youthEmail" name="email" placeholder="seu@email.com" required /></div><div class="form-group"><label class="form-label" for="youthPhone">Telefone</label><input class="form-input" type="tel" id="youthPhone" name="telefone" placeholder="(11) 9 0000-0000" /></div><div class="form-group"><label class="form-label" for="youthProduct">Qual produto te interessa?</label><select class="form-input" id="youthProduct" name="produto"><option value="">Selecione</option><option value="2A Academy">2A Academy</option><option value="GROWY">GROWY</option></select></div><button class="btn btn-primary btn-full" type="submit">Quero saber mais</button></form><div class="form-success" id="formYouthSuccess"><p>Recebemos seu interesse!<br />Em breve entraremos em contato.</p></div></div></div>
+<div class="modal-overlay" id="modalCompany" role="dialog" aria-modal="true" aria-labelledby="modalCompanyTitle"><div class="modal-box"><button class="modal-close" aria-label="Fechar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><h3 class="modal-title" id="modalCompanyTitle">Falar com especialista</h3><p class="modal-sub">Preencha o formulário e nossa equipe entrará em contato.</p><form id="formCompany" novalidate><input type="hidden" name="_subject" value="Lead Empresa — Aceleração Geracional | 2A Educação" /><div class="form-group"><label class="form-label" for="compName">Nome</label><input class="form-input" type="text" id="compName" name="nome" placeholder="Seu nome" required /></div><div class="form-group"><label class="form-label" for="compEmail">E-mail corporativo</label><input class="form-input" type="email" id="compEmail" name="email" placeholder="voce@empresa.com.br" required /></div><div class="form-group"><label class="form-label" for="compPhone">Telefone</label><input class="form-input" type="tel" id="compPhone" name="telefone" placeholder="(11) 9 0000-0000" /></div><div class="form-group"><label class="form-label" for="compCompany">Nome da empresa</label><input class="form-input" type="text" id="compCompany" name="empresa" placeholder="Empresa S.A." required /></div><div class="form-group"><label class="form-label" for="compRole">Cargo</label><input class="form-input" type="text" id="compRole" name="cargo" placeholder="Head de RH" /></div><div class="form-group"><label class="form-label" for="compProduct">Qual solução te interessa?</label><select class="form-input" id="compProduct" name="solucao"><option value="">Selecione</option><option value="GROWY Empresas">GROWY Empresas</option><option value="Aceleração Geracional" selected>Aceleração Geracional</option><option value="2A Hire">2A Hire</option></select></div><button class="btn btn-primary btn-full" type="submit">Falar com nosso time</button></form><div class="form-success" id="formCompanySuccess"><p>Recebemos seu contato!<br />Nossa equipe comercial entrará em contato em breve.</p></div></div></div>
+
+<script src="main.js"></script>
+</body>
+</html>

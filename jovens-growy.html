@@ -1,0 +1,2022 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GROWY Edição 3 — 09 de Maio · Itajaí SC | 2A Educação</title>
+  <meta name="description" content="Mais de 8 processos seletivos ao vivo em um único dia. Conecte-se com empresas que estão contratando agora. 09 de Maio · Praia Brava, Itajaí SC." />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Sora:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap');
+
+    /* ══════════════════════════════════════
+       TOKENS & RESET
+    ══════════════════════════════════════ */
+    :root {
+      --bg:          #080808;
+      --bg-alt:      #0A0A0A;
+      --gold:        #C9A84C;
+      --gold-bright: #F0C040;
+      --gold-glow:   rgba(201,168,76,0.12);
+      --white:       #FFFFFF;
+      --gray:        #999999;
+      --card-bg:     #0F0F0F;
+      --card-border: rgba(201,168,76,0.2);
+      --green-wa:    #25D366;
+      --ease:        cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      line-height: 1.8;
+      overflow-x: hidden;
+      padding-top: 48px;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    ul, ol { list-style: none; }
+    button { cursor: pointer; font-family: inherit; }
+
+    /* ══════════════════════════════════════
+       KEYFRAMES
+    ══════════════════════════════════════ */
+    @keyframes bar-shimmer {
+      0%   { background-position: 100% 0; }
+      100% { background-position: -100% 0; }
+    }
+    @keyframes gold-pulse {
+      0%, 100% {
+        box-shadow: 0 4px 20px rgba(201,168,76,0.3),
+                    0 0 0 0 rgba(201,168,76,0.4);
+      }
+      50% {
+        box-shadow: 0 4px 40px rgba(201,168,76,0.5),
+                    0 0 0 12px rgba(201,168,76,0);
+      }
+    }
+    @keyframes whatsapp-pulse {
+      0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
+      50%      { box-shadow: 0 4px 40px rgba(37,211,102,0.7), 0 0 0 8px rgba(37,211,102,0.1); }
+    }
+    @keyframes marquee-scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-20px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(20px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+
+    /* ══════════════════════════════════════
+       REDUCED MOTION
+    ══════════════════════════════════════ */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+      .reveal { opacity: 1 !important; transform: none !important; }
+      .hero-left, .hero-right { animation: none; opacity: 1; transform: none; }
+    }
+
+    /* ══════════════════════════════════════
+       SCROLL REVEAL
+    ══════════════════════════════════════ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ══════════════════════════════════════
+       LAYOUT
+    ══════════════════════════════════════ */
+    .container    { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+    .container-sm { width: 100%; max-width: 900px;  margin: 0 auto; padding: 0 2rem; }
+    .section      { padding: 100px 0; }
+    .section-alt  { padding: 100px 0; background: var(--bg-alt); }
+
+    /* ══════════════════════════════════════
+       TYPOGRAPHY
+    ══════════════════════════════════════ */
+    .label {
+      display: block;
+      font-family: 'Sora', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      line-height: 1.2;
+      color: var(--white);
+      margin-bottom: 2.5rem;
+    }
+    .h2 .gold        { color: var(--gold); display: block; }
+    .h2 .underline   { border-bottom: 2px solid var(--gold); display: inline-block; padding-bottom: 4px; }
+    .gold-glow       { color: var(--gold); text-shadow: 0 0 30px rgba(201,168,76,0.4); }
+
+    /* ══════════════════════════════════════
+       BUTTONS
+    ══════════════════════════════════════ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 18px 40px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease, filter 0.2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); filter: brightness(1.05); }
+    .btn-gold {
+      background: linear-gradient(135deg, #C9A84C, #F0C040);
+      color: #080808;
+      animation: gold-pulse 2.5s ease-in-out infinite;
+    }
+    .btn-wa {
+      background: var(--green-wa);
+      color: var(--white);
+    }
+    .btn-full { width: 100%; max-width: 440px; }
+    .btn-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--gold);
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: gap 0.2s;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+    .btn-link:hover { gap: 0.55rem; }
+
+    /* ══════════════════════════════════════
+       CARDS
+    ══════════════════════════════════════ */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 36px 28px;
+      transition: transform 0.3s var(--ease), box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(201,168,76,0.12);
+      border-color: rgba(201,168,76,0.5);
+    }
+
+    /* ══════════════════════════════════════
+       VIDEO VERTICAL
+    ══════════════════════════════════════ */
+    .video-vertical {
+      position: relative;
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 9 / 16;
+      background: #111;
+      border: 2px solid rgba(201,168,76,0.4);
+      box-shadow: 0 0 60px rgba(201,168,76,0.15);
+      transition: box-shadow 0.3s ease;
+    }
+    .video-vertical:hover { box-shadow: 0 0 80px rgba(201,168,76,0.3); }
+    .video-vertical video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ══════════════════════════════════════
+       01 — TOP BAR
+    ══════════════════════════════════════ */
+    .top-bar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 9999;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      gap: 1rem;
+      background: linear-gradient(90deg, #B8922A, #C9A84C, #F0C040, #C9A84C, #B8922A);
+      background-size: 300% 100%;
+      animation: bar-shimmer 4s linear infinite;
+    }
+    .top-bar-text {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #080808;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .top-bar-cta {
+      background: #080808;
+      color: #F0C040;
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 8px 20px;
+      border-radius: 6px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background 0.2s;
+    }
+    .top-bar-cta:hover { background: #1A1A1A; }
+
+    /* ══════════════════════════════════════
+       02 — HERO
+    ══════════════════════════════════════ */
+    .hero {
+      background: var(--bg);
+      background-image: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(201,168,76,0.08) 0%, transparent 60%);
+      min-height: 100vh;
+      position: relative;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 55fr 45fr;
+      gap: 4rem;
+      min-height: calc(100vh - 48px);
+      align-items: stretch;
+    }
+    .hero-left {
+      align-self: center;
+      padding: 80px 0 80px 0;
+      animation: slideInLeft 0.8s var(--ease) 0.2s both;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 50px;
+      padding: 6px 18px;
+      font-family: 'Sora', sans-serif;
+      font-weight: 500;
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(201,168,76,0.07);
+      margin-bottom: 1.5rem;
+    }
+    .hero-headline {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      line-height: 1.2;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+    .hero-headline .gold-line {
+      display: block;
+      color: var(--gold);
+    }
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--gray);
+      line-height: 1.7;
+      max-width: 480px;
+      margin-bottom: 1.75rem;
+    }
+    .hero-bullets {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 1.75rem;
+    }
+    .hero-bullet {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--white);
+      line-height: 1.5;
+    }
+    .hero-bullet svg { flex-shrink: 0; margin-top: 2px; }
+    .hero-urgency {
+      background: rgba(201,168,76,0.06);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 20px;
+      margin-bottom: 1.75rem;
+    }
+    .hero-urgency-date {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--white);
+      margin-bottom: 2px;
+    }
+    .hero-urgency-note { font-size: 0.88rem; color: var(--gray); }
+
+    /* Hero right / photo */
+    .hero-right {
+      animation: slideInRight 0.8s var(--ease) 0.3s both;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .hero-photo-wrap {
+      position: relative;
+      height: 100%;
+      min-height: 500px;
+    }
+    .hero-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      min-height: 500px;
+      object-fit: cover;
+      border-radius: 16px;
+      outline: 2px solid rgba(201,168,76,0.3);
+      outline-offset: 6px;
+    }
+    .hero-stat-card {
+      position: absolute;
+      bottom: 28px;
+      left: -28px;
+      background: rgba(8,8,8,0.92);
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: 12px;
+      padding: 14px 20px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .hero-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 2rem;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .hero-stat-label { font-size: 0.78rem; color: var(--gray); }
+
+    /* ══════════════════════════════════════
+       03 — COMPANIES MARQUEE
+    ══════════════════════════════════════ */
+    .marquee-section {
+      background: var(--bg-alt);
+      border-top: 1px solid #1A1A1A;
+      border-bottom: 1px solid #1A1A1A;
+      padding: 28px 0;
+    }
+    .marquee-section-label {
+      text-align: center;
+      font-family: 'Sora', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #555;
+      margin-bottom: 24px;
+    }
+    .marquee-wrap {
+      overflow: hidden;
+      position: relative;
+    }
+    .marquee-wrap::before,
+    .marquee-wrap::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 120px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .marquee-wrap::before {
+      left: 0;
+      background: linear-gradient(to right, var(--bg-alt), transparent);
+    }
+    .marquee-wrap::after {
+      right: 0;
+      background: linear-gradient(to left, var(--bg-alt), transparent);
+    }
+    .marquee-track {
+      display: flex;
+      align-items: center;
+      gap: 64px;
+      width: max-content;
+      padding: 0 32px;
+      animation: marquee-scroll 28s linear infinite;
+    }
+    .marquee-track:hover { animation-play-state: paused; }
+    .marquee-logo {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+      flex-shrink: 0;
+      filter: grayscale(0.3) brightness(1.3);
+      mix-blend-mode: screen;
+      transition: filter 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+    }
+    .marquee-logo:hover {
+      filter: grayscale(0) brightness(1.5);
+      transform: scale(1.08);
+    }
+
+    /* ══════════════════════════════════════
+       04 — STATS
+    ══════════════════════════════════════ */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .stat-col {
+      padding: 1.5rem 2rem;
+      text-align: center;
+      border-right: 1px solid #1A1A1A;
+    }
+    .stat-col:last-child { border-right: none; }
+    .stat-num {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .stat-label {
+      font-size: 0.9rem;
+      color: #666;
+      max-width: 160px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* ══════════════════════════════════════
+       05 — FOR WHOM
+    ══════════════════════════════════════ */
+    .fw-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+    .fw-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(201,168,76,0.15);
+      border-top: 3px solid var(--gold);
+      border-radius: 16px;
+      padding: 36px 28px;
+      transition: transform 0.3s var(--ease), box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .fw-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(201,168,76,0.12);
+      border-color: rgba(201,168,76,0.5);
+      border-top-color: var(--gold);
+    }
+    .fw-deco {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      color: var(--gold);
+      opacity: 0.08;
+      line-height: 1;
+      display: block;
+      margin-bottom: -1rem;
+    }
+    .fw-title {
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+    .fw-body { font-size: 0.95rem; color: var(--gray); line-height: 1.7; }
+    .fw-note {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .fw-cta { display: flex; justify-content: center; }
+
+    /* ══════════════════════════════════════
+       06 — HOW IT WORKS
+    ══════════════════════════════════════ */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 5rem;
+      align-items: center;
+    }
+    .timeline {
+      position: relative;
+      padding-left: 48px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 16px;
+      top: 24px;
+      bottom: 24px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--gold), rgba(201,168,76,0.08));
+    }
+    .tl-item {
+      position: relative;
+      margin-bottom: 48px;
+    }
+    .tl-item:last-child { margin-bottom: 0; }
+    .tl-dot {
+      position: absolute;
+      left: -40px;
+      top: 2px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Sora', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .tl-title {
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .tl-body { font-size: 0.93rem; color: var(--gray); line-height: 1.7; margin-bottom: 0.65rem; }
+
+    .steps-photo img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid rgba(201,168,76,0.2);
+      outline: 2px solid rgba(201,168,76,0.15);
+      outline-offset: 6px;
+    }
+
+    /* ══════════════════════════════════════
+       07 — AGENDA
+    ══════════════════════════════════════ */
+    .agenda-layout {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 5rem;
+      align-items: start;
+    }
+    .agenda-items { }
+    .agenda-item {
+      border-bottom: 1px solid #1A1A1A;
+    }
+    .agenda-item:first-child { border-top: 1px solid #1A1A1A; }
+    .agenda-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 24px 0;
+      cursor: pointer;
+    }
+    .agenda-num {
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      color: var(--gold);
+      letter-spacing: 0.08em;
+      flex-shrink: 0;
+    }
+    .agenda-title {
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--white);
+      flex: 1;
+    }
+    .agenda-chevron {
+      color: var(--gold);
+      flex-shrink: 0;
+      transition: transform 0.35s ease;
+    }
+    .agenda-item.open .agenda-chevron { transform: rotate(180deg); }
+    .agenda-body {
+      overflow: hidden;
+    }
+    .agenda-body-inner {
+      padding-bottom: 20px;
+      font-size: 0.93rem;
+      color: var(--gray);
+      line-height: 1.7;
+      max-width: 540px;
+    }
+    /* Desktop: show all bodies; mobile: collapsible */
+    @media (min-width: 769px) {
+      .agenda-chevron { display: none; }
+      .agenda-body { max-height: none !important; }
+    }
+    @media (max-width: 768px) {
+      .agenda-body { max-height: 0; transition: max-height 0.4s ease; }
+      .agenda-item.open .agenda-body { max-height: 300px; }
+    }
+
+    .agenda-photo img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid rgba(201,168,76,0.2);
+      position: sticky;
+      top: 80px;
+    }
+
+    /* ══════════════════════════════════════
+       08 — VIDEO SECTION
+    ══════════════════════════════════════ */
+    .video-section { text-align: center; }
+    .video-section-label {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+    .video-section .h2 { margin-bottom: 2rem; }
+    .video-caption {
+      font-size: 0.8rem;
+      color: #555;
+      margin-top: 1rem;
+    }
+
+    /* ══════════════════════════════════════
+       09 — PHOTO GALLERY
+    ══════════════════════════════════════ */
+    .gallery-row-1 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .gallery-row-2 {
+      display: grid;
+      grid-template-columns: 60fr 40fr;
+      gap: 12px;
+    }
+    .gallery-item {
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .gallery-row-1 .gallery-item { aspect-ratio: 4/3; }
+    .gallery-row-2 .gallery-item { aspect-ratio: 16/9; }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.04); }
+    .gallery-item {
+      transition: box-shadow 0.4s ease;
+    }
+    .gallery-item:hover {
+      box-shadow: 0 8px 40px rgba(201,168,76,0.2);
+    }
+
+    /* ══════════════════════════════════════
+       10 — SUCCESS CASES
+    ══════════════════════════════════════ */
+    .cases-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .case-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: transform 0.3s var(--ease), box-shadow 0.3s ease;
+    }
+    .case-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(201,168,76,0.12);
+    }
+    .case-header { display: flex; align-items: center; gap: 16px; }
+    .case-photo {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--gold);
+      flex-shrink: 0;
+    }
+    .case-name {
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .case-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: #080808;
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+    .case-quote {
+      font-style: italic;
+      font-size: 0.95rem;
+      color: #AAA;
+      line-height: 1.7;
+    }
+    .case-result {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--gold);
+    }
+
+    /* LinkedIn card */
+    .li-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      overflow: hidden;
+      max-width: 680px;
+      margin: 0 auto;
+      transition: box-shadow 0.3s ease;
+    }
+    .li-card:hover { box-shadow: 0 0 40px rgba(201,168,76,0.1); }
+    .li-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 20px 28px;
+      border-bottom: 1px solid #1A1A1A;
+    }
+    .li-header img { height: 32px; width: auto; object-fit: contain; }
+    .li-name {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--white);
+    }
+    .li-role { font-size: 0.78rem; color: #666; }
+    .li-img-wrap {
+      max-height: 500px;
+      overflow: hidden;
+      background: #1A1A1A;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .li-img-wrap img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: contain;
+    }
+    .li-caption {
+      padding: 10px 28px;
+      font-size: 0.75rem;
+      color: #444;
+      text-align: center;
+    }
+
+    /* ══════════════════════════════════════
+       11 — TESTIMONIALS
+    ══════════════════════════════════════ */
+    .test-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      align-items: start;
+    }
+    .test-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: transform 0.3s var(--ease), box-shadow 0.3s ease;
+    }
+    .test-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(201,168,76,0.1);
+    }
+    .test-header { display: flex; align-items: center; gap: 0.85rem; }
+    .test-photo {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--gold);
+      flex-shrink: 0;
+    }
+    .test-name {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .stars { display: flex; gap: 3px; }
+    .test-quote { font-size: 0.9rem; color: #AAA; line-height: 1.7; font-style: italic; }
+
+    .test-video-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.85rem;
+    }
+    .test-video-label {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+    }
+    .test-video-card .video-vertical { max-width: 240px; }
+
+    /* ══════════════════════════════════════
+       12 — PARTNER / EQI
+    ══════════════════════════════════════ */
+    .eqi-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 20px;
+      padding: 56px 48px;
+      max-width: 640px;
+      margin: 2.5rem auto 0;
+      text-align: center;
+    }
+    .eqi-logo {
+      height: 56px;
+      width: auto;
+      object-fit: contain;
+      filter: brightness(1.3);
+      margin: 0 auto 2rem;
+      display: block;
+    }
+    .eqi-num {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 4rem;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .eqi-num-label {
+      font-size: 1rem;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+    .eqi-divider { border: none; border-top: 1px solid #1A1A1A; margin: 1.75rem 0; }
+    .eqi-body { font-size: 0.95rem; color: var(--gray); line-height: 1.8; max-width: 480px; margin: 0 auto 1rem; }
+    .eqi-fine { font-size: 0.75rem; color: #444; max-width: 460px; margin: 0 auto; }
+
+    /* ══════════════════════════════════════
+       13 — OFFER
+    ══════════════════════════════════════ */
+    .offer-price-wrap {
+      margin-bottom: 2.5rem;
+    }
+    .offer-price {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(4rem, 10vw, 6rem);
+      line-height: 1;
+      color: var(--gold);
+      text-shadow: 0 0 40px rgba(201,168,76,0.3);
+    }
+    .offer-price-sub {
+      font-style: italic;
+      color: var(--gray);
+      font-size: 1rem;
+      margin-top: 0.25rem;
+    }
+    .offer-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .checklist { display: flex; flex-direction: column; gap: 0.85rem; }
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 1rem;
+      color: var(--white);
+      line-height: 1.5;
+      font-weight: 500;
+    }
+    .check-item svg { flex-shrink: 0; margin-top: 3px; }
+    .guarantee-box {
+      background: rgba(201,168,76,0.05);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 16px;
+      padding: 36px 28px;
+      text-align: center;
+    }
+    .guarantee-icon { margin-bottom: 1rem; }
+    .guarantee-title {
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--white);
+      margin-bottom: 0.65rem;
+    }
+    .guarantee-body { font-size: 0.93rem; color: var(--gray); line-height: 1.7; margin-bottom: 1.5rem; }
+    .guarantee-box .btn { width: 100%; }
+
+    /* ══════════════════════════════════════
+       14 — COUNTDOWN
+    ══════════════════════════════════════ */
+    .countdown-section {
+      border-top: 1px solid rgba(201,168,76,0.2);
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+      padding: 80px 0;
+      text-align: center;
+    }
+    .countdown-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--gold);
+      text-shadow: 0 0 30px rgba(201,168,76,0.3);
+      margin-bottom: 1rem;
+    }
+    .countdown-body {
+      font-size: 1rem;
+      color: var(--gray);
+      max-width: 480px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+    .countdown {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .cd-box {
+      background: var(--card-bg);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 12px;
+      padding: 20px 28px;
+      min-width: 88px;
+      text-align: center;
+    }
+    .cd-num {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--gold);
+      line-height: 1;
+      text-shadow: 0 0 20px rgba(201,168,76,0.4);
+    }
+    .cd-label {
+      display: block;
+      font-family: 'Sora', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #555;
+      margin-top: 6px;
+    }
+
+    /* ══════════════════════════════════════
+       15 — FAQ
+    ══════════════════════════════════════ */
+    .faq-list {
+      max-width: 720px;
+      margin: 2.5rem auto 0;
+    }
+    .faq-item { border-bottom: 1px solid #1A1A1A; }
+    .faq-item:first-child { border-top: 1px solid #1A1A1A; }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 24px 0;
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--white);
+      text-align: left;
+      transition: color 0.2s;
+    }
+    .faq-question:hover { color: var(--gold); }
+    .faq-chevron-icon {
+      flex-shrink: 0;
+      color: var(--gold);
+      transition: transform 0.35s ease;
+    }
+    .faq-item.open .faq-chevron-icon { transform: rotate(180deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+    .faq-answer-inner {
+      padding-bottom: 20px;
+      font-size: 0.95rem;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+    .faq-item.open .faq-answer { max-height: 300px; }
+
+    /* ══════════════════════════════════════
+       16 — FINAL CTA
+    ══════════════════════════════════════ */
+    .final-cta {
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px; height: 600px;
+      background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .final-cta-inner { position: relative; z-index: 1; max-width: 680px; }
+    .final-headline {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+    .final-headline .gold { color: var(--gold); display: block; }
+    .final-info { font-size: 0.9rem; color: #666; margin: 1.25rem 0 2rem; }
+    .final-btns { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+
+    /* ══════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════ */
+    .lp-footer {
+      background: #050505;
+      border-top: 1px solid #111;
+      padding: 2.5rem 0;
+      text-align: center;
+    }
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--gold);
+      opacity: 0.5;
+      margin-bottom: 0.5rem;
+    }
+    .lp-footer p { font-size: 0.78rem; color: #333; }
+
+    /* ══════════════════════════════════════
+       FLOATING WA BUTTON
+    ══════════════════════════════════════ */
+    .wa-float {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      z-index: 9998;
+      width: 60px; height: 60px;
+      border-radius: 50%;
+      background: var(--green-wa);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      animation: whatsapp-pulse 3s ease-in-out infinite;
+      transition: transform 0.2s ease;
+    }
+    .wa-float:hover { transform: scale(1.1); }
+    .wa-tooltip {
+      position: absolute;
+      right: 72px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #111;
+      color: var(--white);
+      font-size: 0.8rem;
+      padding: 6px 12px;
+      border-radius: 6px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+      border: 1px solid #222;
+    }
+    .wa-float:hover .wa-tooltip { opacity: 1; }
+
+    /* ══════════════════════════════════════
+       MOBILE BOTTOM BAR
+    ══════════════════════════════════════ */
+    .mobile-bar {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 9997;
+      height: 68px;
+      background: linear-gradient(135deg, #C9A84C, #F0C040);
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      gap: 0.75rem;
+    }
+    .mob-text {
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      color: #080808;
+      line-height: 1.3;
+    }
+    .mob-btn {
+      background: #080808;
+      color: #F0C040;
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 10px 20px;
+      border-radius: 6px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* ══════════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .hero-grid   { grid-template-columns: 1fr; min-height: auto; }
+      .hero-right  { display: none; }
+      .steps-grid  { grid-template-columns: 1fr; }
+      .steps-photo { display: none; }
+      .agenda-layout { grid-template-columns: 1fr; }
+      .agenda-photo { display: none; }
+      .offer-layout { grid-template-columns: 1fr; gap: 2rem; }
+      .guarantee-box .btn { max-width: 100%; }
+    }
+    @media (max-width: 768px) {
+      .section, .section-alt { padding: 60px 0; }
+      body { padding-bottom: 68px; }
+      .hero-left { padding: 60px 0; }
+      .top-bar-text { font-size: 0.68rem; }
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .stat-col:nth-child(2) { border-right: none; }
+      .stat-col:nth-child(3) { border-top: 1px solid #1A1A1A; }
+      .stat-col:nth-child(4) { border-top: 1px solid #1A1A1A; border-right: none; }
+      .fw-grid { grid-template-columns: 1fr; }
+      .cases-grid { grid-template-columns: 1fr; }
+      .test-grid { grid-template-columns: 1fr; }
+      .gallery-row-1 { grid-template-columns: repeat(2, 1fr); }
+      .gallery-row-2 { grid-template-columns: 1fr; }
+      .gallery-row-2 .gallery-item { aspect-ratio: 4/3; }
+      .countdown { gap: 12px; }
+      .cd-box { min-width: 70px; padding: 14px 16px; }
+      .hero-stat-card { display: none; }
+      .mobile-bar { display: flex; }
+      .wa-float { bottom: 84px; }
+      .video-vertical { max-width: 260px; }
+      .test-video-card .video-vertical { max-width: 200px; }
+    }
+    @media (max-width: 480px) {
+      .gallery-row-1 { grid-template-columns: 1fr; }
+      .top-bar-text { font-size: 0.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════
+     01 — STICKY TOP BAR
+══════════════════════════════ -->
+<div class="top-bar" role="banner">
+  <span class="top-bar-text">⚡ EDIÇÃO 3 · 09 DE MAIO · ITAJAÍ SC · VAGAS LIMITADAS</span>
+  <a href="https://pickpass.com.br/eventos/growy-edicao-3-mmtnxvgr" class="top-bar-cta" target="_blank" rel="noopener">GARANTIR VAGA →</a>
+</div>
+
+<!-- ══════════════════════════════
+     02 — HERO
+══════════════════════════════ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+
+      <!-- LEFT: TEXT -->
+      <div class="hero-left">
+        <span class="hero-badge">GROWY · Edição 3 · Evento de Carreira</span>
+
+        <h1 class="hero-headline">
+          Mais de 8 processos seletivos<br>
+          em um único dia.<br>
+          <span class="gold-line">Saia com emprego na mão.</span>
+        </h1>
+
+        <p class="hero-sub">Conecte-se diretamente com empresas que estão contratando e participe de processos seletivos ao vivo no mesmo dia.</p>
+
+        <ul class="hero-bullets">
+          <li class="hero-bullet">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Mais de 8 empresas recrutando ao vivo no evento
+          </li>
+          <li class="hero-bullet">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Mais de 200 vagas de emprego e estágio disponíveis
+          </li>
+          <li class="hero-bullet">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Entrevistas e processos seletivos acontecendo no local
+          </li>
+          <li class="hero-bullet">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Networking direto com recrutadores e quem decide
+          </li>
+        </ul>
+
+        <div class="hero-urgency">
+          <div class="hero-urgency-date">09 de Maio · Itajaí, SC</div>
+          <div class="hero-urgency-note">Vagas limitadas — quem chega preparado sai na frente.</div>
+        </div>
+
+        <a href="https://pickpass.com.br/eventos/growy-edicao-3-mmtnxvgr" class="btn btn-gold btn-full" target="_blank" rel="noopener">GARANTIR MINHA VAGA AGORA →</a>
+      </div>
+
+      <!-- RIGHT: PHOTO -->
+      <div class="hero-right">
+        <div class="hero-photo-wrap">
+          <img src="GROWY/fotos/evento-05.JPG" alt="Jovens participando da GROWY em Itajaí" />
+          <div class="hero-stat-card" aria-hidden="true">
+            <div class="hero-stat-num">1 em 8</div>
+            <div class="hero-stat-label">participantes são contratados</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     03 — COMPANIES MARQUEE
+══════════════════════════════ -->
+<div class="marquee-section" aria-label="Empresas parceiras">
+  <p class="marquee-section-label">Empresas que confiam na 2A e podem te contratar no evento</p>
+  <div class="marquee-wrap">
+    <div class="marquee-track" aria-hidden="true">
+      <img src="GROWYlogos/eqi.png"       alt="EQI Investimentos" class="marquee-logo" />
+      <img src="GROWYlogos/outside.png"   alt="Outside"           class="marquee-logo" />
+      <img src="GROWYlogos/pib.png"       alt="PIB Education"     class="marquee-logo" />
+      <img src="GROWYlogos/sicredi.png"   alt="Sicredi"           class="marquee-logo" />
+      <img src="GROWYlogos/kefraya.png"   alt="Kefraya"           class="marquee-logo" />
+      <img src="GROWYlogos/harmonique.png" alt="Harmonique"       class="marquee-logo" />
+      <img src="GROWYlogos/uma.png"       alt="UMA"               class="marquee-logo" />
+      <img src="GROWYlogos/uniavan.png"   alt="Uniavan"           class="marquee-logo" />
+      <!-- Duplicate for seamless loop -->
+      <img src="GROWYlogos/eqi.png"       alt="" class="marquee-logo" />
+      <img src="GROWYlogos/outside.png"   alt="" class="marquee-logo" />
+      <img src="GROWYlogos/pib.png"       alt="" class="marquee-logo" />
+      <img src="GROWYlogos/sicredi.png"   alt="" class="marquee-logo" />
+      <img src="GROWYlogos/kefraya.png"   alt="" class="marquee-logo" />
+      <img src="GROWYlogos/harmonique.png" alt="" class="marquee-logo" />
+      <img src="GROWYlogos/uma.png"       alt="" class="marquee-logo" />
+      <img src="GROWYlogos/uniavan.png"   alt="" class="marquee-logo" />
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     04 — SOCIAL PROOF NUMBERS
+══════════════════════════════ -->
+<div class="section" style="padding:80px 0;">
+  <div class="stats-grid reveal" data-delay="0">
+    <div class="stat-col">
+      <span class="stat-num"><span class="counter" data-target="3000" data-prefix="+" data-dot>+3.000</span></span>
+      <span class="stat-label">jovens formados pela 2A Educação</span>
+    </div>
+    <div class="stat-col">
+      <span class="stat-num">1 em 8</span>
+      <span class="stat-label">participantes são contratados após o evento</span>
+    </div>
+    <div class="stat-col">
+      <span class="stat-num"><span class="counter" data-target="100" data-prefix="+">+100</span></span>
+      <span class="stat-label">jovens transformados pela GROWY</span>
+    </div>
+    <div class="stat-col">
+      <span class="stat-num"><span class="counter" data-target="400" data-prefix="+">+400</span></span>
+      <span class="stat-label">contratações pela EQI em um único ano</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     05 — FOR WHOM
+══════════════════════════════ -->
+<section class="section-alt" aria-labelledby="forwhom-title">
+  <div class="container">
+    <span class="label reveal" data-delay="0">Para quem é</span>
+    <h2 class="h2 reveal" data-delay="100" id="forwhom-title">
+      A GROWY é para<br>
+      <span class="gold underline">você que...</span>
+    </h2>
+    <div class="fw-grid">
+      <div class="fw-card reveal" data-delay="0">
+        <span class="fw-deco" aria-hidden="true">01</span>
+        <div class="fw-title">Quer o primeiro emprego</div>
+        <p class="fw-body">Você tem potencial, mas o mercado ainda não te enxergou. Na GROWY, você vai estar na frente de quem pode te contratar agora.</p>
+      </div>
+      <div class="fw-card reveal" data-delay="100">
+        <span class="fw-deco" aria-hidden="true">02</span>
+        <div class="fw-title">Quer uma oportunidade melhor</div>
+        <p class="fw-body">Está empregado, mas sabe que pode ir mais longe. Conecte-se com empresas que valorizam quem tem fome de crescer.</p>
+      </div>
+      <div class="fw-card reveal" data-delay="200">
+        <span class="fw-deco" aria-hidden="true">03</span>
+        <div class="fw-title">Quer se preparar de verdade</div>
+        <p class="fw-body">Aqui você não manda currículo para o vazio. Você treina, recebe feedback e entra em processos seletivos ao vivo.</p>
+      </div>
+    </div>
+    <span class="fw-note reveal" data-delay="0">"Se você se identificou, seu lugar é na GROWY."</span>
+    <div class="fw-cta reveal" data-delay="100">
+      <a href="https://pickpass.com.br/eventos/growy-edicao-3-mmtnxvgr" class="btn btn-gold" target="_blank" rel="noopener">QUERO PARTICIPAR →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     06 — HOW IT WORKS
+══════════════════════════════ -->
+<section class="section" aria-labelledby="steps-title">
+  <div class="container">
+    <span class="label reveal" data-delay="0">Como participar</span>
+    <h2 class="h2 reveal" data-delay="100" id="steps-title">
+      3 passos para<br>
+      <span class="gold underline">mudar sua trajetória</span>
+    </h2>
+    <div class="steps-grid">
+      <div class="timeline reveal" data-delay="0">
+        <div class="tl-item">
+          <div class="tl-dot" aria-hidden="true">01</div>
+          <div class="tl-title">Garanta sua vaga</div>
+          <p class="tl-body">Inscrição por R$ 45 — um valor simbólico para confirmar que você vai aparecer. Direto, sem complicação.</p>
+          <a href="https://pickpass.com.br/eventos/growy-edicao-3-mmtnxvgr" class="btn-link" target="_blank" rel="noopener">Garantir minha vaga →</a>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot" aria-hidden="true">02</div>
+          <div class="tl-title">Preparação guiada</div>
+          <p class="tl-body">Nossa equipe entra em contato. Você faz avaliações de perfil e testes de raciocínio. Chegue preparado. Quem chega preparado sai na frente.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot" aria-hidden="true">03</div>
+          <div class="tl-title">Dia do evento · 09 de Maio</div>
+          <p class="tl-body">Processos seletivos ao vivo, painéis com líderes e conexões que abrem portas. Você sai do evento com oportunidades na mão.</p>
+        </div>
+      </div>
+      <div class="steps-photo reveal" data-delay="200">
+        <img src="GROWY/fotos/evento-02.jpg" alt="Jovens em networking na GROWY" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     07 — AGENDA
+══════════════════════════════ -->
+<section class="section-alt" aria-labelledby="agenda-title">
+  <div class="container">
+    <span class="label reveal" data-delay="0">Programação</span>
+    <h2 class="h2 reveal" data-delay="100" id="agenda-title">
+      O que acontece<br>
+      <span class="gold underline">no dia?</span>
+    </h2>
+    <div class="agenda-layout">
+      <div class="agenda-items reveal" data-delay="0">
+
+        <div class="agenda-item">
+          <div class="agenda-header">
+            <span class="agenda-num">01</span>
+            <h3 class="agenda-title">Abertura</h3>
+            <svg class="agenda-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="agenda-body">
+            <div class="agenda-body-inner">Uma conversa direta com Arthur Félix e Akilles Cecilio, fundadores da 2A Educação, e um C-Level de mercado sobre carreira e o que as empresas buscam de verdade nos jovens.</div>
+          </div>
+        </div>
+
+        <div class="agenda-item">
+          <div class="agenda-header">
+            <span class="agenda-num">02</span>
+            <h3 class="agenda-title">Palestras e Workshops</h3>
+            <svg class="agenda-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="agenda-body">
+            <div class="agenda-body-inner">Conteúdo prático com especialistas: IA no mercado de trabalho, comunicação e oratória, pensamento estratégico e workshop de pitch. Painéis com lideranças de diferentes setores.</div>
+          </div>
+        </div>
+
+        <div class="agenda-item">
+          <div class="agenda-header">
+            <span class="agenda-num">03</span>
+            <h3 class="agenda-title">Stands de Relacionamento</h3>
+            <svg class="agenda-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="agenda-body">
+            <div class="agenda-body-inner">Conecte-se com recrutadores das empresas participantes. Sem filtros. Sem portais. Face a face com quem pode te contratar.</div>
+          </div>
+        </div>
+
+        <div class="agenda-item">
+          <div class="agenda-header">
+            <span class="agenda-num">04</span>
+            <h3 class="agenda-title">Salas de Entrevista</h3>
+            <svg class="agenda-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="agenda-body">
+            <div class="agenda-body-inner">Apresente seu perfil diretamente a gestores em entrevistas individuais ao vivo. Este é o momento que muda trajetórias.</div>
+          </div>
+        </div>
+
+        <div class="agenda-item">
+          <div class="agenda-header">
+            <span class="agenda-num">05</span>
+            <h3 class="agenda-title">Encerramento e Happy Hour</h3>
+            <svg class="agenda-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="agenda-body">
+            <div class="agenda-body-inner">Networking livre, trocas entre participantes e premiações para os mais engajados do dia.</div>
+          </div>
+        </div>
+
+      </div>
+      <div class="agenda-photo reveal" data-delay="200">
+        <img src="GROWY/fotos/evento-03.JPG" alt="Painel de lideranças na GROWY" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     08 — VIDEO SECTION
+══════════════════════════════ -->
+<section class="section video-section" aria-labelledby="video-title">
+  <div class="container-sm">
+    <div class="reveal" data-delay="0">
+      <p class="video-section-label">Veja como foi a última edição</p>
+      <h2 class="h2" id="video-title">A GROWY em imagens</h2>
+    </div>
+    <div class="reveal" data-delay="150">
+      <div class="video-vertical">
+        <video controls playsinline preload="metadata" aria-label="Vídeo da edição anterior da GROWY">
+          <source src="GROWY/videos/growy-edicao-2.mp4" type="video/mp4">
+        </video>
+      </div>
+      <p class="video-caption">Edição 2 · 2A Educação · Itajaí, SC</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     09 — PHOTO GALLERY
+══════════════════════════════ -->
+<section class="section-alt" aria-labelledby="gallery-title">
+  <div class="container">
+    <span class="label reveal" data-delay="0">Galeria</span>
+    <h2 class="h2 reveal" data-delay="100" id="gallery-title">
+      Veja a GROWY<br>
+      <span class="gold underline">na prática</span>
+    </h2>
+    <div class="reveal" data-delay="200">
+      <div class="gallery-row-1">
+        <div class="gallery-item">
+          <img src="GROWY/fotos/evento-01.JPG" alt="Jovens participando da GROWY" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="GROWY/fotos/evento-02.jpg" alt="Networking na GROWY" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="GROWY/fotos/evento-03.JPG" alt="Painel na GROWY" loading="lazy" />
+        </div>
+      </div>
+      <div class="gallery-row-2">
+        <div class="gallery-item">
+          <img src="GROWY/fotos/evento-04.JPG" alt="Dinâmica em grupo na GROWY" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="GROWY/fotos/evento-05.JPG" alt="Momentos da GROWY" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     10 — SUCCESS CASES
+══════════════════════════════ -->
+<section class="section" aria-labelledby="cases-title">
+  <div class="container">
+    <span class="label reveal" data-delay="0">Cases</span>
+    <h2 class="h2 reveal" data-delay="100" id="cases-title">
+      Quem participou<br>
+      <span class="gold underline">já colheu resultados</span>
+    </h2>
+    <div class="cases-grid">
+      <div class="case-card reveal" data-delay="0">
+        <div class="case-header">
+          <img src="GROWY/fotos/case-bernardo.jpg" alt="Foto de Bernardo Ormeneze" class="case-photo" />
+          <div>
+            <div class="case-name">Bernardo Ormeneze</div>
+            <span class="case-badge">SDR TOP 1 BRASIL · EQI</span>
+          </div>
+        </div>
+        <p class="case-quote">"Participei da GROWY e em menos de 30 dias estava contratado. Em um mês me tornei o SDR número 1 do Brasil na EQI Investimentos."</p>
+        <div class="case-result">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Contratado em menos de 30 dias
+        </div>
+      </div>
+      <div class="case-card reveal" data-delay="150">
+        <!-- Replace with case-matheus.jpg final version when available -->
+        <div class="case-header">
+          <img src="GROWY/fotos/case-matheus.jpg" alt="Foto de Matheus Marques" class="case-photo" style="filter:contrast(1.15) brightness(1.1) saturate(1.1);" />
+          <div>
+            <div class="case-name">Matheus Marques</div>
+            <span class="case-badge">TOP 6 BRASIL · EQI</span>
+          </div>
+        </div>
+        <p class="case-quote">"Após a GROWY, me tornei o assessor com maior captação do escritório EQI Praia Brava e cheguei ao 6º lugar no ranking nacional de assessores."</p>
+        <div class="case-result">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Top 6 Brasil · Maior captação do escritório
+        </div>
+      </div>
+    </div>
+
+    <!-- LinkedIn Proof -->
+    <div class="li-card reveal" data-delay="0">
+      <div class="li-header">
+        <img src="GROWYlogos/eqi.png" alt="EQI Investimentos" />
+        <div>
+          <div class="li-name">Matheus Alves Marques</div>
+          <div class="li-role">Especialista em Investimentos · EQI</div>
+        </div>
+      </div>
+      <div class="li-img-wrap">
+        <img src="GROWY/fotos/depoimentomatheus.jpg" alt="Post de Matheus Marques no LinkedIn sobre a GROWY" />
+      </div>
+      <div class="li-caption">Post original publicado no LinkedIn</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     11 — TESTIMONIALS
+══════════════════════════════ -->
+<section class="section-alt" aria-labelledby="test-title">
+  <div class="container">
+    <span class="label reveal" data-delay="0">Depoimentos</span>
+    <h2 class="h2 reveal" data-delay="100" id="test-title">
+      O que dizem<br>
+      <span class="gold underline">os participantes</span>
+    </h2>
+    <div class="test-grid">
+
+      <!-- Gabriela -->
+      <div class="test-card reveal" data-delay="0">
+        <div class="test-header">
+          <img src="GROWY/fotos/depoimento-gabriela.jpg" alt="Foto de Gabriela Nunes" class="test-photo" />
+          <div>
+            <div class="test-name">Gabriela Nunes</div>
+            <div class="stars" aria-label="5 de 5 estrelas">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="#C9A84C" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="#C9A84C" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="#C9A84C" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="#C9A84C" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="#C9A84C" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
+            </div>
+          </div>
+        </div>
+        <p class="test-quote">"O dia de imersão foi incrível, com profissionais altamente qualificados e insights que vou aplicar no trabalho e nos meus projetos futuros."</p>
+      </div>
+
+      <!-- Arthur Fischer -->
+      <div class="test-card reveal" data-delay="120">
+        <div class="test-header">
+          <img src="GROWY/fotos/depoimento-arthur.jpg" alt="Foto de Arthur Fischer" class="test-photo" />
+          <div>
+            <div class="test-name">Arthur Fischer</div>
+            <div class="stars" aria-label="5 de 5 estrelas">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="#C9A84C" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="#C9A84C" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="#C9A84C" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="#C9A84C" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="#C9A84C" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
+            </div>
+          </div>
+        </div>
+        <p class="test-quote">"Mentores excelentes e aprendizados que vou levar desse dia em diante. Uma experiência que valeu muito a pena."</p>
+      </div>
+
+      <!-- Video testimonial -->
+      <div class="test-video-card reveal" data-delay="240">
+        <span class="test-video-label">Depoimento em vídeo</span>
+        <div class="video-vertical">
+          <video controls playsinline preload="metadata" aria-label="Depoimento em vídeo de participante da GROWY">
+            <source src="GROWY/videos/depoimento-01.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     12 — PARTNER / EQI
+══════════════════════════════ -->
+<section class="section" aria-labelledby="partner-title">
+  <div class="container" style="text-align:center;">
+    <span class="label reveal" data-delay="0">Empresa parceira</span>
+    <h2 class="h2 reveal" data-delay="100" id="partner-title">
+      Quem confia<br>
+      <span class="gold underline">na GROWY</span>
+    </h2>
+    <div class="eqi-card reveal" data-delay="200">
+      <img src="GROWYlogos/eqi.png" alt="EQI Investimentos" class="eqi-logo" />
+      <div class="eqi-num">+400</div>
+      <div class="eqi-num-label">contratações em um único ano</div>
+      <hr class="eqi-divider" />
+      <p class="eqi-body">A EQI Investimentos participa da GROWY desde a primeira edição. Em um único ano, contratou mais de 400 profissionais que buscavam exatamente o que a GROWY oferece: uma conexão direta com o mercado.</p>
+      <p class="eqi-fine">*O volume de contratações reflete o total da empresa. A GROWY é um dos canais de conexão com talentos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     13 — THE OFFER
+══════════════════════════════ -->
+<section class="section-alt" aria-labelledby="offer-title">
+  <div class="container">
+    <span class="label reveal" data-delay="0">O que você recebe</span>
+    <div class="offer-price-wrap reveal" data-delay="100">
+      <h2 class="h2" id="offer-title" style="margin-bottom:0.25rem;">Por apenas</h2>
+      <div class="offer-price gold-glow">R$ 45</div>
+      <div class="offer-price-sub">e uma decisão.</div>
+    </div>
+    <div class="offer-layout">
+      <div class="checklist reveal" data-delay="0">
+        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Acesso completo ao evento presencial</div>
+        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Avaliação de perfil pela equipe 2A antes do evento</div>
+        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Painéis com lideranças do mercado</div>
+        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Rounds de networking com recrutadores</div>
+        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Participação em processos seletivos ao vivo</div>
+        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Workshop de pitch com feedback de gestores</div>
+        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Certificado de participação GROWY</div>
+        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Acesso à comunidade pós-evento</div>
+      </div>
+      <div class="reveal" data-delay="200">
+        <div class="guarantee-box">
+          <div class="guarantee-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="guarantee-title">Garantia de Experiência</div>
+          <p class="guarantee-body">Se você participar e sentir que não valeu os R$ 45, devolvemos. Sem burocracia, sem questionamentos.</p>
+          <a href="https://pickpass.com.br/eventos/growy-edicao-3-mmtnxvgr" class="btn btn-gold" target="_blank" rel="noopener" style="display:flex;width:100%;justify-content:center;">GARANTIR MINHA VAGA POR R$ 45 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     14 — SCARCITY + COUNTDOWN
+══════════════════════════════ -->
+<section class="countdown-section" aria-labelledby="countdown-title">
+  <div class="container-sm">
+    <div class="reveal" data-delay="0">
+      <h2 class="countdown-title" id="countdown-title">Vagas limitadas.</h2>
+      <p class="countdown-body">O espaço comporta um número restrito de jovens para garantir qualidade nas conexões com as empresas.</p>
+      <div class="countdown" aria-label="Contagem regressiva para o evento">
+        <div class="cd-box">
+          <span class="cd-num" id="cd-days">00</span>
+          <span class="cd-label">Dias</span>
+        </div>
+        <div class="cd-box">
+          <span class="cd-num" id="cd-hours">00</span>
+          <span class="cd-label">Horas</span>
+        </div>
+        <div class="cd-box">
+          <span class="cd-num" id="cd-mins">00</span>
+          <span class="cd-label">Min</span>
+        </div>
+        <div class="cd-box">
+          <span class="cd-num" id="cd-secs">00</span>
+          <span class="cd-label">Seg</span>
+        </div>
+      </div>
+      <a href="https://pickpass.com.br/eventos/growy-edicao-3-mmtnxvgr" class="btn btn-gold" target="_blank" rel="noopener">QUERO GARANTIR MINHA VAGA AGORA →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     15 — FAQ
+══════════════════════════════ -->
+<section class="section" aria-labelledby="faq-title">
+  <div class="container">
+    <span class="label reveal" data-delay="0">Dúvidas</span>
+    <h2 class="h2 reveal" data-delay="100" id="faq-title">
+      Dúvidas<br>
+      <span class="gold underline">frequentes</span>
+    </h2>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Quanto custa a inscrição?
+          <svg class="faq-chevron-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">R$ 45 — um valor simbólico para confirmar sua presença. Não é ingresso de show, é comprometimento com a sua carreira.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          O evento é presencial?
+          <svg class="faq-chevron-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Sim, presencial. PIB Education, Av. Osvaldo Reis, 3334, Sala 01, Edifício Artefacto Towers, Praia Brava, Itajaí-SC.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Preciso ter experiência profissional?
+          <svg class="faq-chevron-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Não. A GROWY é para jovens em qualquer fase — primeiro emprego, recolocação ou quem quer crescer.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Como funciona a preparação antes do evento?
+          <svg class="faq-chevron-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Após a inscrição, nossa equipe entra em contato para guiar testes, avaliações e orientações personalizadas para o seu perfil.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          E se eu não for contratado no dia?
+          <svg class="faq-chevron-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">O evento abre portas. Você sai com contatos, feedback e visibilidade que a maioria dos processos seletivos normais não oferecem.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Posso pedir reembolso?
+          <svg class="faq-chevron-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Participou e não achou que valeu os R$ 45? Devolvemos. Simples assim.</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     16 — FINAL CTA
+══════════════════════════════ -->
+<section class="final-cta" aria-labelledby="finalcta-title">
+  <div class="final-cta-inner reveal" data-delay="0">
+    <h2 class="final-headline" id="finalcta-title">
+      Sua carreira começa
+      <span class="gold">com uma decisão.</span>
+    </h2>
+    <p class="final-info">09 de Maio · PIB Education · Praia Brava, Itajaí SC</p>
+    <div class="final-btns">
+      <a href="https://pickpass.com.br/eventos/growy-edicao-3-mmtnxvgr" class="btn btn-gold btn-full" target="_blank" rel="noopener">GARANTIR MINHA VAGA AGORA →</a>
+      <a href="https://wa.me/message/X4UMSV5HFTPIM1" class="btn btn-wa" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Falar com a equipe no WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="lp-footer">
+  <div class="container">
+    <div class="footer-brand">GROWY · 2A EDUCAÇÃO</div>
+    <p>© 2026 2A Educação · Todos os direitos reservados · Itajaí, SC</p>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/message/X4UMSV5HFTPIM1" class="wa-float" aria-label="Fale com a equipe no WhatsApp" target="_blank" rel="noopener">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="wa-tooltip">Falar com a equipe</span>
+</a>
+
+<!-- MOBILE BOTTOM BAR -->
+<div class="mobile-bar" role="complementary" aria-label="Inscrição rápida">
+  <span class="mob-text">09/05 · ITAJAÍ/SC</span>
+  <a href="https://pickpass.com.br/eventos/growy-edicao-3-mmtnxvgr" class="mob-btn" target="_blank" rel="noopener">INSCREVER AGORA</a>
+</div>
+
+<!-- ══════════════════════════════
+     JAVASCRIPT
+══════════════════════════════ -->
+<script>
+(function () {
+  'use strict';
+
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ── SCROLL REVEAL ── */
+  var reveals = document.querySelectorAll('.reveal');
+
+  function makeVisible(el) {
+    var delay = parseInt(el.dataset.delay || '0', 10);
+    if (reduceMotion || delay === 0) {
+      el.classList.add('visible');
+    } else {
+      setTimeout(function () { el.classList.add('visible'); }, delay);
+    }
+  }
+
+  if (reduceMotion) {
+    reveals.forEach(function (el) { el.classList.add('visible'); });
+  } else {
+    var revealObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          makeVisible(entry.target);
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(function (el) { revealObs.observe(el); });
+  }
+
+  /* ── COUNTER ANIMATION ── */
+  function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+
+  function animateCounter(el) {
+    var target   = parseInt(el.dataset.target, 10);
+    var prefix   = el.dataset.prefix || '';
+    var useDot   = el.hasAttribute('data-dot');
+    var dur      = 2000;
+    var startTs  = null;
+
+    function fmt(n) {
+      n = Math.round(n);
+      return prefix + (useDot ? n.toLocaleString('pt-BR') : n);
+    }
+
+    function step(ts) {
+      if (!startTs) startTs = ts;
+      var prog = Math.min((ts - startTs) / dur, 1);
+      el.textContent = fmt(easeOut(prog) * target);
+      if (prog < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  var counters = document.querySelectorAll('.counter');
+  var cObs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        animateCounter(e.target);
+        cObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(function (el) { cObs.observe(el); });
+
+  /* ── COUNTDOWN TIMER ── */
+  var eventDate = new Date('2026-05-09T08:00:00');
+  var $d = document.getElementById('cd-days');
+  var $h = document.getElementById('cd-hours');
+  var $m = document.getElementById('cd-mins');
+  var $s = document.getElementById('cd-secs');
+
+  function pad(n) { return String(n).padStart(2, '0'); }
+
+  function tick() {
+    var diff = eventDate - Date.now();
+    if (diff <= 0) {
+      [$d, $h, $m, $s].forEach(function (el) { el.textContent = '00'; });
+      return;
+    }
+    $d.textContent = pad(Math.floor(diff / 86400000));
+    $h.textContent = pad(Math.floor(diff % 86400000 / 3600000));
+    $m.textContent = pad(Math.floor(diff % 3600000  / 60000));
+    $s.textContent = pad(Math.floor(diff % 60000    / 1000));
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  /* ── FAQ ACCORDION ── */
+  document.querySelectorAll('.faq-question').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item   = btn.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+
+      document.querySelectorAll('.faq-item.open').forEach(function (o) {
+        o.classList.remove('open');
+        o.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  /* ── AGENDA ACCORDION (mobile only) ── */
+  if (window.innerWidth <= 768) {
+    document.querySelectorAll('.agenda-header').forEach(function (header) {
+      header.addEventListener('click', function () {
+        var item = header.closest('.agenda-item');
+        item.classList.toggle('open');
+      });
+    });
+  }
+
+})();
+</script>
+</body>
+</html>

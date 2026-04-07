@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — 2A Educação</title>
+  <meta name="description" content="Artigos sobre carreira, liderança, empreendedorismo, IA e mercado de trabalho para jovens profissionais." />
+  <link rel="icon" type="image/png" href="assets/logos/logo-2a-dark.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/logos/logo-2a-light.png" alt="2A Educação" height="36" /></a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html"    class="nav-link">Home</a></li>
+      <li><a href="sobre.html"    class="nav-link">Sobre Nós</a></li>
+      <li><a href="jovens.html"   class="nav-link">Para Jovens</a></li>
+      <li><a href="empresas.html" class="nav-link">Para Empresas</a></li>
+      <li><a href="blog.html"     class="nav-link active">Blog</a></li>
+      <li><a href="contato.html"  class="nav-link">Contato</a></li>
+    </ul>
+    <div class="nav-ctas">
+      <button class="btn btn-outline btn-sm" onclick="openYouthModal()">Sou Jovem</button>
+      <button class="btn btn-primary btn-sm" onclick="openCompanyModal()">Sou Empresa</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="sobre.html" class="nav-link">Sobre Nós</a>
+  <a href="jovens.html" class="nav-link">Para Jovens</a>
+  <a href="empresas.html" class="nav-link">Para Empresas</a>
+  <a href="blog.html" class="nav-link active">Blog</a>
+  <a href="contato.html" class="nav-link">Contato</a>
+  <div class="mobile-nav-ctas">
+    <button class="btn btn-outline btn-full" onclick="openYouthModal()">Sou Jovem</button>
+    <button class="btn btn-primary btn-full" onclick="openCompanyModal()">Sou Empresa</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero-white" aria-label="Blog 2A Educação">
+  <div class="container">
+    <div class="hero-center" style="padding: 1.5rem 0 0;">
+      <p class="tag fade-in">Conteúdo</p>
+      <h1 class="fade-in fd-1">Blog 2A Educação</h1>
+      <p class="fade-in fd-2">Carreira, liderança, empreendedorismo, IA e mercado de trabalho — conteúdo que realmente importa para jovens profissionais.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ARTIGOS -->
+<section class="section section-white" aria-labelledby="blog-heading">
+  <div class="container">
+    <h2 class="sr-only" id="blog-heading">Artigos recentes</h2>
+    <div class="blog-grid">
+
+      <article class="blog-card reveal">
+        <div class="blog-card-body">
+          <span class="blog-tag">Carreira</span>
+          <h3 class="blog-title">5 habilidades que todo jovem profissional precisa desenvolver em 2024</h3>
+          <p class="blog-excerpt">O mercado de trabalho mudou. Descubra quais competências estão em alta e como desenvolvê-las rapidamente para se destacar na sua área.</p>
+          <div class="blog-meta">
+            <span class="blog-date">12 nov. 2024</span>
+            <a href="#" class="blog-read">
+              Ler mais
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal rv-1">
+        <div class="blog-card-body">
+          <span class="blog-tag">Liderança</span>
+          <h3 class="blog-title">Como liderar uma geração que não aceita mais microgerenciamento</h3>
+          <p class="blog-excerpt">A geração Z tem uma relação completamente diferente com autoridade e autonomia. Entenda como adaptar seu estilo de gestão e reter os melhores talentos.</p>
+          <div class="blog-meta">
+            <span class="blog-date">5 nov. 2024</span>
+            <a href="#" class="blog-read">
+              Ler mais
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal rv-2">
+        <div class="blog-card-body">
+          <span class="blog-tag">Empreendedorismo</span>
+          <h3 class="blog-title">Do estágio ao CEO: a jornada de empreendedores que começaram jovens</h3>
+          <p class="blog-excerpt">Conversamos com 5 fundadores que lançaram seus negócios antes dos 25 anos. Eles compartilham os erros, as conquistas e o que fariam diferente.</p>
+          <div class="blog-meta">
+            <span class="blog-date">28 out. 2024</span>
+            <a href="#" class="blog-read">
+              Ler mais
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal">
+        <div class="blog-card-body">
+          <span class="blog-tag">Inteligência Artificial</span>
+          <h3 class="blog-title">IA não vai tirar seu emprego — mas vai tirar o emprego de quem não souber usá-la</h3>
+          <p class="blog-excerpt">Entenda quais funções estão sendo transformadas pela IA e como jovens profissionais podem se posicionar para crescer com essa mudança.</p>
+          <div class="blog-meta">
+            <span class="blog-date">21 out. 2024</span>
+            <a href="#" class="blog-read">
+              Ler mais
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal rv-1">
+        <div class="blog-card-body">
+          <span class="blog-tag">Mercado de Trabalho</span>
+          <h3 class="blog-title">O que as empresas realmente querem quando pedem "perfil jovem"</h3>
+          <p class="blog-excerpt">Muitas vagas pedem candidatos com "energia jovem" e "mentalidade inovadora". Mas o que isso significa na prática? Conversamos com 10 gestores de RH.</p>
+          <div class="blog-meta">
+            <span class="blog-date">14 out. 2024</span>
+            <a href="#" class="blog-read">
+              Ler mais
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal rv-2">
+        <div class="blog-card-body">
+          <span class="blog-tag">Carreira</span>
+          <h3 class="blog-title">Networking não é sobre coletar contatos — é sobre ser memorável</h3>
+          <p class="blog-excerpt">A maioria das pessoas faz networking do jeito errado. Aprenda as estratégias que realmente funcionam para construir relações profissionais de longo prazo.</p>
+          <div class="blog-meta">
+            <span class="blog-date">7 out. 2024</span>
+            <a href="#" class="blog-read">
+              Ler mais
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-dark">
+  <div class="container">
+    <h2 class="reveal">Mais do que conteúdo — transformação.</h2>
+    <p class="reveal rv-1">Acesse a 2A Academy e aprenda com especialistas que vivem o que ensinam.</p>
+    <div class="cta-btns reveal rv-2">
+      <button class="btn btn-primary btn-lg" onclick="openYouthModal()">Conhecer a Academy</button>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="assets/logos/logo-2a-dark.png" alt="2A Educação" height="40" /><p>Conectando jovens ao futuro que eles merecem.</p><div class="footer-socials"><a href="#" class="social-link" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><a href="#" class="social-link" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href="#" class="social-link" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a><a href="#" class="social-link" aria-label="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg></a></div></div>
+      <div class="footer-col"><h4>Para Jovens</h4><ul><li><a href="jovens.html">Visão Geral</a></li><li><a href="jovens-academy.html">2A Academy</a></li><li><a href="jovens-growy.html">GROWY</a></li></ul></div>
+      <div class="footer-col"><h4>Para Empresas</h4><ul><li><a href="empresas.html">Visão Geral</a></li><li><a href="empresas-growy.html">GROWY Empresas</a></li><li><a href="empresas-aceleracao.html">Aceleração Geracional</a></li><li><a href="empresas-2ahire.html">2A Hire</a></li></ul></div>
+      <div class="footer-col"><h4>Institucional</h4><ul><li><a href="sobre.html">Sobre a 2A</a></li><li><a href="blog.html">Blog</a></li><li><a href="contato.html">Contato</a></li><li><a href="#">Política de Privacidade</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p class="footer-copy">© 2024 2A Educação. Todos os direitos reservados.</p></div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modalYouth" role="dialog" aria-modal="true" aria-labelledby="modalYouthTitle"><div class="modal-box"><button class="modal-close" aria-label="Fechar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><h3 class="modal-title" id="modalYouthTitle">Quero saber mais</h3><p class="modal-sub">Preencha o formulário e entraremos em contato em breve.</p><form id="formYouth" novalidate><input type="hidden" name="_subject" value="Lead Jovem | 2A Educação" /><div class="form-group"><label class="form-label" for="youthName">Nome completo</label><input class="form-input" type="text" id="youthName" name="nome" placeholder="Seu nome" required /></div><div class="form-group"><label class="form-label" for="youthEmail">E-mail</label><input class="form-input" type="email" id="youthEmail" name="email" placeholder="seu@email.com" required /></div><div class="form-group"><label class="form-label" for="youthPhone">Telefone</label><input class="form-input" type="tel" id="youthPhone" name="telefone" placeholder="(11) 9 0000-0000" /></div><div class="form-group"><label class="form-label" for="youthProduct">Qual produto te interessa?</label><select class="form-input" id="youthProduct" name="produto"><option value="">Selecione</option><option value="2A Academy">2A Academy</option><option value="GROWY">GROWY</option></select></div><button class="btn btn-primary btn-full" type="submit">Quero saber mais</button></form><div class="form-success" id="formYouthSuccess"><p>Recebemos seu interesse!<br />Em breve entraremos em contato.</p></div></div></div>
+<div class="modal-overlay" id="modalCompany" role="dialog" aria-modal="true" aria-labelledby="modalCompanyTitle"><div class="modal-box"><button class="modal-close" aria-label="Fechar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><h3 class="modal-title" id="modalCompanyTitle">Falar com nosso time</h3><p class="modal-sub">Preencha o formulário e nossa equipe comercial entrará em contato.</p><form id="formCompany" novalidate><input type="hidden" name="_subject" value="Lead Empresa | 2A Educação" /><div class="form-group"><label class="form-label" for="compName">Nome</label><input class="form-input" type="text" id="compName" name="nome" placeholder="Seu nome" required /></div><div class="form-group"><label class="form-label" for="compEmail">E-mail corporativo</label><input class="form-input" type="email" id="compEmail" name="email" placeholder="voce@empresa.com.br" required /></div><div class="form-group"><label class="form-label" for="compPhone">Telefone</label><input class="form-input" type="tel" id="compPhone" name="telefone" placeholder="(11) 9 0000-0000" /></div><div class="form-group"><label class="form-label" for="compCompany">Nome da empresa</label><input class="form-input" type="text" id="compCompany" name="empresa" placeholder="Empresa S.A." required /></div><div class="form-group"><label class="form-label" for="compRole">Cargo</label><input class="form-input" type="text" id="compRole" name="cargo" placeholder="Head de RH" /></div><div class="form-group"><label class="form-label" for="compProduct">Qual solução te interessa?</label><select class="form-input" id="compProduct" name="solucao"><option value="">Selecione</option><option value="GROWY Empresas">GROWY Empresas</option><option value="Aceleração Geracional">Aceleração Geracional</option><option value="2A Hire">2A Hire</option></select></div><button class="btn btn-primary btn-full" type="submit">Falar com nosso time</button></form><div class="form-success" id="formCompanySuccess"><p>Recebemos seu contato!<br />Nossa equipe comercial entrará em contato em breve.</p></div></div></div>
+
+<script src="main.js"></script>
+</body>
+</html>

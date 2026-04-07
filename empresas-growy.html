@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GROWY para Empresas — 2A Educação</title>
+  <meta name="description" content="Patrocine o GROWY e posicione sua empresa como destino dos melhores jovens talentos do Brasil." />
+  <link rel="icon" type="image/png" href="assets/logos/logo-2a-dark.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/logos/logo-2a-light.png" alt="2A Educação" height="36" /></a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html"    class="nav-link">Home</a></li>
+      <li><a href="sobre.html"    class="nav-link">Sobre Nós</a></li>
+      <li><a href="jovens.html"   class="nav-link">Para Jovens</a></li>
+      <li><a href="empresas.html" class="nav-link active">Para Empresas</a></li>
+      <li><a href="blog.html"     class="nav-link">Blog</a></li>
+      <li><a href="contato.html"  class="nav-link">Contato</a></li>
+    </ul>
+    <div class="nav-ctas">
+      <button class="btn btn-outline btn-sm" onclick="openYouthModal()">Sou Jovem</button>
+      <button class="btn btn-primary btn-sm" onclick="openCompanyModal()">Sou Empresa</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="sobre.html" class="nav-link">Sobre Nós</a>
+  <a href="jovens.html" class="nav-link">Para Jovens</a>
+  <a href="empresas.html" class="nav-link active">Para Empresas</a>
+  <a href="blog.html" class="nav-link">Blog</a>
+  <a href="contato.html" class="nav-link">Contato</a>
+  <div class="mobile-nav-ctas">
+    <button class="btn btn-outline btn-full" onclick="openYouthModal()">Sou Jovem</button>
+    <button class="btn btn-primary btn-full" onclick="openCompanyModal()">Sou Empresa</button>
+  </div>
+</nav>
+
+<!-- HERO (dark) -->
+<section class="page-hero-dark" aria-label="GROWY para Empresas">
+  <div class="container">
+    <div class="hero-center">
+      <img src="assets/logos/logo-growy.png" alt="GROWY" class="growy-hero-logo fade-in" />
+      <h1 class="fade-in fd-1">GROWY para Empresas</h1>
+      <p class="fade-in fd-2">Patrocine o evento e posicione sua marca diante dos jovens talentos mais engajados do Brasil — com acesso direto a dados, candidatos e processos seletivos ao vivo.</p>
+      <div class="hero-ctas fade-in fd-3">
+        <button class="btn btn-primary btn-lg" onclick="openCompanyModal()">Quero uma cota</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO BANNER -->
+<img src="assets/images/evento-01.JPG" alt="Evento GROWY com jovens e empresas" class="photo-banner" loading="lazy" />
+
+<!-- BENEFÍCIOS -->
+<section class="section section-white" aria-labelledby="benefits-heading">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-label" style="justify-content:center;"><h2 id="benefits-heading">O que sua empresa recebe</h2></div>
+      <p>Mais do que visibilidade — acesso real a talentos qualificados e dados estratégicos.</p>
+    </div>
+    <div class="grid-4">
+      <div class="card reveal" style="text-align: center;">
+        <div class="card-icon" style="margin: 0 auto 1.25rem;" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <h3>Acesso a dados</h3>
+        <p style="font-size: 0.875rem;">Receba a lista completa de participantes com perfis detalhados para prospecção pós-evento.</p>
+      </div>
+      <div class="card reveal rv-1" style="text-align: center;">
+        <div class="card-icon" style="margin: 0 auto 1.25rem;" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3>Marca empregadora</h3>
+        <p style="font-size: 0.875rem;">Posicione-se como a empresa dos sonhos dos jovens antes mesmo de abrir vagas.</p>
+      </div>
+      <div class="card reveal rv-2" style="text-align: center;">
+        <div class="card-icon" style="margin: 0 auto 1.25rem;" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <h3>Fit cultural</h3>
+        <p style="font-size: 0.875rem;">Interaja diretamente com candidatos alinhados ao perfil da sua empresa antes da contratação.</p>
+      </div>
+      <div class="card reveal rv-3" style="text-align: center;">
+        <div class="card-icon" style="margin: 0 auto 1.25rem;" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Contratação acelerada</h3>
+        <p style="font-size: 0.875rem;">Conduza processos seletivos ao vivo durante o evento e reduza o ciclo de contratação.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="section section-gray" aria-labelledby="how-comp-heading">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-label" style="justify-content:center;"><h2 id="how-comp-heading">Como funciona para empresas</h2></div>
+    </div>
+    <div class="steps-grid">
+      <div class="step-item reveal">
+        <div class="step-num" aria-hidden="true">1</div>
+        <h3>Escolha sua cota</h3>
+        <p>Selecione o pacote de patrocínio ideal para os objetivos da sua empresa — de visibilidade à contratação direta.</p>
+      </div>
+      <div class="step-item reveal rv-1">
+        <div class="step-num" aria-hidden="true">2</div>
+        <h3>Apareça no evento</h3>
+        <p>Sua marca ganha espaço físico e digital durante o GROWY, com acesso às mesas de relacionamento e painéis.</p>
+      </div>
+      <div class="step-item reveal rv-2">
+        <div class="step-num" aria-hidden="true">3</div>
+        <h3>Contrate os melhores</h3>
+        <p>Receba os dados dos participantes, conduza entrevistas ao vivo e saia do evento com candidatos qualificados.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTO -->
+<section class="section section-white" aria-labelledby="testi-comp-heading">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-label" style="justify-content:center;"><h2 id="testi-comp-heading">O que dizem nossas empresas parceiras</h2></div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars" aria-label="5 estrelas">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testi-quote">"O GROWY foi a melhor decisão de employer branding que tomamos. Em um único evento nos conectamos com mais de 80 jovens qualificados e fizemos 12 contratações."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" aria-hidden="true">RM</div>
+          <div><div class="testi-name">Ricardo Mendes</div><div class="testi-role">Head de People · TechCorp Brasil</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal rv-1">
+        <div class="testi-stars" aria-label="5 estrelas">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testi-quote">"A qualidade dos jovens no evento é impressionante. Saímos com 3 contratações confirmadas logo na primeira edição que participamos."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" aria-hidden="true">CS</div>
+          <div><div class="testi-name">Camila Souza</div><div class="testi-role">Gerente de RH · Grupo Viva</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal rv-2">
+        <div class="testi-stars" aria-label="5 estrelas">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testi-quote">"O ROI foi absurdo. Investimos em uma cota e saímos com candidatos que reduziram nosso tempo de contratação em 60%. Estaremos na próxima edição com certeza."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" aria-hidden="true">PL</div>
+          <div><div class="testi-name">Paulo Lima</div><div class="testi-role">CHRO · Construtora Meridian</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-dark">
+  <div class="container">
+    <h2 class="reveal">Garanta sua cota no próximo GROWY.</h2>
+    <p class="reveal rv-1">As cotas são limitadas. Entre em contato com nosso time comercial e reserve seu espaço antes que esgote.</p>
+    <div class="cta-btns reveal rv-2">
+      <button class="btn btn-primary btn-lg" onclick="openCompanyModal()">Quero uma cota</button>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logos/logo-2a-dark.png" alt="2A Educação" height="40" />
+        <p>Conectando jovens ao futuro que eles merecem.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" class="social-link" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+          <a href="#" class="social-link" aria-label="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Para Jovens</h4><ul><li><a href="jovens.html">Visão Geral</a></li><li><a href="jovens-academy.html">2A Academy</a></li><li><a href="jovens-growy.html">GROWY</a></li></ul></div>
+      <div class="footer-col"><h4>Para Empresas</h4><ul><li><a href="empresas.html">Visão Geral</a></li><li><a href="empresas-growy.html">GROWY Empresas</a></li><li><a href="empresas-aceleracao.html">Aceleração Geracional</a></li><li><a href="empresas-2ahire.html">2A Hire</a></li></ul></div>
+      <div class="footer-col"><h4>Institucional</h4><ul><li><a href="sobre.html">Sobre a 2A</a></li><li><a href="blog.html">Blog</a></li><li><a href="contato.html">Contato</a></li><li><a href="#">Política de Privacidade</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p class="footer-copy">© 2024 2A Educação. Todos os direitos reservados.</p></div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modalYouth" role="dialog" aria-modal="true" aria-labelledby="modalYouthTitle">
+  <div class="modal-box">
+    <button class="modal-close" aria-label="Fechar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <h3 class="modal-title" id="modalYouthTitle">Quero saber mais</h3><p class="modal-sub">Preencha o formulário e entraremos em contato em breve.</p>
+    <form id="formYouth" novalidate><input type="hidden" name="_subject" value="Lead Jovem | 2A Educação" /><div class="form-group"><label class="form-label" for="youthName">Nome completo</label><input class="form-input" type="text" id="youthName" name="nome" placeholder="Seu nome" required /></div><div class="form-group"><label class="form-label" for="youthEmail">E-mail</label><input class="form-input" type="email" id="youthEmail" name="email" placeholder="seu@email.com" required /></div><div class="form-group"><label class="form-label" for="youthPhone">Telefone</label><input class="form-input" type="tel" id="youthPhone" name="telefone" placeholder="(11) 9 0000-0000" /></div><div class="form-group"><label class="form-label" for="youthProduct">Qual produto te interessa?</label><select class="form-input" id="youthProduct" name="produto"><option value="">Selecione</option><option value="2A Academy">2A Academy</option><option value="GROWY">GROWY</option></select></div><button class="btn btn-primary btn-full" type="submit">Quero saber mais</button></form>
+    <div class="form-success" id="formYouthSuccess"><p>Recebemos seu interesse!<br />Em breve entraremos em contato.</p></div>
+  </div>
+</div>
+<div class="modal-overlay" id="modalCompany" role="dialog" aria-modal="true" aria-labelledby="modalCompanyTitle">
+  <div class="modal-box">
+    <button class="modal-close" aria-label="Fechar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <h3 class="modal-title" id="modalCompanyTitle">Quero uma cota no GROWY</h3><p class="modal-sub">Preencha o formulário e nossa equipe comercial entrará em contato.</p>
+    <form id="formCompany" novalidate><input type="hidden" name="_subject" value="Lead Empresa — GROWY Cota | 2A Educação" /><div class="form-group"><label class="form-label" for="compName">Nome</label><input class="form-input" type="text" id="compName" name="nome" placeholder="Seu nome" required /></div><div class="form-group"><label class="form-label" for="compEmail">E-mail corporativo</label><input class="form-input" type="email" id="compEmail" name="email" placeholder="voce@empresa.com.br" required /></div><div class="form-group"><label class="form-label" for="compPhone">Telefone</label><input class="form-input" type="tel" id="compPhone" name="telefone" placeholder="(11) 9 0000-0000" /></div><div class="form-group"><label class="form-label" for="compCompany">Nome da empresa</label><input class="form-input" type="text" id="compCompany" name="empresa" placeholder="Empresa S.A." required /></div><div class="form-group"><label class="form-label" for="compRole">Cargo</label><input class="form-input" type="text" id="compRole" name="cargo" placeholder="Head de RH" /></div><div class="form-group"><label class="form-label" for="compProduct">Qual solução te interessa?</label><select class="form-input" id="compProduct" name="solucao"><option value="">Selecione</option><option value="GROWY Empresas" selected>GROWY Empresas</option><option value="Aceleração Geracional">Aceleração Geracional</option><option value="2A Hire">2A Hire</option></select></div><button class="btn btn-primary btn-full" type="submit">Falar com nosso time</button></form>
+    <div class="form-success" id="formCompanySuccess"><p>Recebemos seu contato!<br />Nossa equipe comercial entrará em contato em breve.</p></div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Jovens — 2A Educação</title>
+  <meta name="description" content="Conheça a 2A Academy e o GROWY — soluções criadas para jovens que querem ir além na carreira." />
+  <link rel="icon" type="image/png" href="assets/logos/logo-2a-dark.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="nav" id="nav" role="navigation" aria-label="Navegação principal">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/logos/logo-2a-light.png" alt="2A Educação" height="36" /></a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html"    class="nav-link">Home</a></li>
+      <li><a href="sobre.html"    class="nav-link">Sobre Nós</a></li>
+      <li><a href="jovens.html"   class="nav-link active">Para Jovens</a></li>
+      <li><a href="empresas.html" class="nav-link">Para Empresas</a></li>
+      <li><a href="blog.html"     class="nav-link">Blog</a></li>
+      <li><a href="contato.html"  class="nav-link">Contato</a></li>
+    </ul>
+    <div class="nav-ctas">
+      <button class="btn btn-outline btn-sm" onclick="openYouthModal()">Sou Jovem</button>
+      <button class="btn btn-primary btn-sm" onclick="openCompanyModal()">Sou Empresa</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Menu mobile">
+  <a href="index.html"    class="nav-link">Home</a>
+  <a href="sobre.html"    class="nav-link">Sobre Nós</a>
+  <a href="jovens.html"   class="nav-link active">Para Jovens</a>
+  <a href="empresas.html" class="nav-link">Para Empresas</a>
+  <a href="blog.html"     class="nav-link">Blog</a>
+  <a href="contato.html"  class="nav-link">Contato</a>
+  <div class="mobile-nav-ctas">
+    <button class="btn btn-outline btn-full" onclick="openYouthModal()">Sou Jovem</button>
+    <button class="btn btn-primary btn-full" onclick="openCompanyModal()">Sou Empresa</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero" aria-label="Para Jovens">
+  <div class="container">
+    <div class="hero-split">
+      <div class="hero-text fade-in">
+        <p class="tag">Para Jovens</p>
+        <h1>Feito para jovens que querem ir além.</h1>
+        <p>O ecossistema 2A reúne aprendizado prático, conexões reais com o mercado e eventos únicos — tudo pensado para acelerar a sua carreira.</p>
+        <div class="hero-ctas">
+          <button class="btn btn-primary btn-lg" onclick="openYouthModal()">Quero começar</button>
+          <a href="#solucoes" class="btn btn-outline btn-lg">Ver soluções</a>
+        </div>
+      </div>
+      <div class="hero-img-wrap fade-in fd-2">
+        <img src="assets/images/evento-04.JPG" alt="Jovens no evento GROWY" loading="eager" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUÇÕES -->
+<section class="section section-white" id="solucoes" aria-labelledby="sol-heading">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-label" style="justify-content:center;"><h2 id="sol-heading">Nossas soluções para você</h2></div>
+      <p>Escolha o caminho que faz mais sentido para o seu momento de carreira.</p>
+    </div>
+
+    <div class="grid-2" style="gap: 2.5rem;">
+      <!-- 2A Academy -->
+      <div class="card-product reveal" style="padding: 3rem;">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </div>
+        <h3 style="font-size: 1.5rem;">2A Academy</h3>
+        <p>A plataforma completa de aprendizado com cursos em Finanças, Soft Skills, Inteligência Artificial, Empreendedorismo e Marketing Digital — todos ensinados por especialistas reconhecidos no mercado.</p>
+        <ul class="feature-list" style="margin-bottom: 2rem;" aria-label="Recursos da 2A Academy">
+          <li class="feature-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Cursos gravados de alta qualidade
+          </li>
+          <li class="feature-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Especialistas do mercado
+          </li>
+          <li class="feature-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Conteúdo prático e aplicável
+          </li>
+          <li class="feature-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Acesso sob demanda
+          </li>
+        </ul>
+        <a href="jovens-academy.html" class="btn btn-primary">
+          Quero conhecer
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <!-- GROWY -->
+      <div class="card-product reveal rv-1" style="padding: 3rem;">
+        <div class="card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 style="font-size: 1.5rem;">GROWY</h3>
+        <p>O evento de carreira mais conectado do Brasil para jovens talentos. Painéis com líderes empresariais, mesas de networking, pitch elevator para gestores e processos seletivos ao vivo.</p>
+        <ul class="feature-list" style="margin-bottom: 2rem;" aria-label="O que acontece no GROWY">
+          <li class="feature-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Painéis com lideranças do mercado
+          </li>
+          <li class="feature-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Mesas de relacionamento
+          </li>
+          <li class="feature-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Pitch Elevator com gestores
+          </li>
+          <li class="feature-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Processos Seletivos ao Vivo
+          </li>
+        </ul>
+        <a href="jovens-growy.html" class="btn btn-primary">
+          Quero participar
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-dark">
+  <div class="container">
+    <h2 class="reveal">Você pode mais. A gente te prova.</h2>
+    <p class="reveal rv-1">Junte-se a mais de 5.000 jovens que já estão transformando suas carreiras com a 2A Educação.</p>
+    <div class="cta-btns reveal rv-2">
+      <button class="btn btn-primary btn-lg" onclick="openYouthModal()">Começar agora</button>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logos/logo-2a-dark.png" alt="2A Educação" height="40" />
+        <p>Conectando jovens ao futuro que eles merecem.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" class="social-link" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+          <a href="#" class="social-link" aria-label="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Para Jovens</h4>
+        <ul>
+          <li><a href="jovens.html">Visão Geral</a></li>
+          <li><a href="jovens-academy.html">2A Academy</a></li>
+          <li><a href="jovens-growy.html">GROWY</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Para Empresas</h4>
+        <ul>
+          <li><a href="empresas.html">Visão Geral</a></li>
+          <li><a href="empresas-growy.html">GROWY Empresas</a></li>
+          <li><a href="empresas-aceleracao.html">Aceleração Geracional</a></li>
+          <li><a href="empresas-2ahire.html">2A Hire</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="sobre.html">Sobre a 2A</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2024 2A Educação. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- MODALS -->
+<div class="modal-overlay" id="modalYouth" role="dialog" aria-modal="true" aria-labelledby="modalYouthTitle">
+  <div class="modal-box">
+    <button class="modal-close" aria-label="Fechar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <h3 class="modal-title" id="modalYouthTitle">Quero saber mais</h3>
+    <p class="modal-sub">Preencha o formulário e entraremos em contato em breve.</p>
+    <form id="formYouth" novalidate>
+      <input type="hidden" name="_subject" value="Lead Jovem | 2A Educação" />
+      <div class="form-group"><label class="form-label" for="youthName">Nome completo</label><input class="form-input" type="text" id="youthName" name="nome" placeholder="Seu nome" required /></div>
+      <div class="form-group"><label class="form-label" for="youthEmail">E-mail</label><input class="form-input" type="email" id="youthEmail" name="email" placeholder="seu@email.com" required /></div>
+      <div class="form-group"><label class="form-label" for="youthPhone">Telefone</label><input class="form-input" type="tel" id="youthPhone" name="telefone" placeholder="(11) 9 0000-0000" /></div>
+      <div class="form-group"><label class="form-label" for="youthProduct">Qual produto te interessa?</label><select class="form-input" id="youthProduct" name="produto"><option value="">Selecione</option><option value="2A Academy">2A Academy</option><option value="GROWY">GROWY</option></select></div>
+      <button class="btn btn-primary btn-full" type="submit">Quero saber mais</button>
+    </form>
+    <div class="form-success" id="formYouthSuccess"><p>Recebemos seu interesse!<br />Em breve entraremos em contato.</p></div>
+  </div>
+</div>
+<div class="modal-overlay" id="modalCompany" role="dialog" aria-modal="true" aria-labelledby="modalCompanyTitle">
+  <div class="modal-box">
+    <button class="modal-close" aria-label="Fechar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <h3 class="modal-title" id="modalCompanyTitle">Falar com nosso time</h3>
+    <p class="modal-sub">Preencha o formulário e nossa equipe comercial entrará em contato.</p>
+    <form id="formCompany" novalidate>
+      <input type="hidden" name="_subject" value="Lead Empresa | 2A Educação" />
+      <div class="form-group"><label class="form-label" for="compName">Nome</label><input class="form-input" type="text" id="compName" name="nome" placeholder="Seu nome" required /></div>
+      <div class="form-group"><label class="form-label" for="compEmail">E-mail corporativo</label><input class="form-input" type="email" id="compEmail" name="email" placeholder="voce@empresa.com.br" required /></div>
+      <div class="form-group"><label class="form-label" for="compPhone">Telefone</label><input class="form-input" type="tel" id="compPhone" name="telefone" placeholder="(11) 9 0000-0000" /></div>
+      <div class="form-group"><label class="form-label" for="compCompany">Nome da empresa</label><input class="form-input" type="text" id="compCompany" name="empresa" placeholder="Empresa S.A." required /></div>
+      <div class="form-group"><label class="form-label" for="compRole">Cargo</label><input class="form-input" type="text" id="compRole" name="cargo" placeholder="Head de RH" /></div>
+      <div class="form-group"><label class="form-label" for="compProduct">Qual solução te interessa?</label><select class="form-input" id="compProduct" name="solucao"><option value="">Selecione</option><option value="GROWY Empresas">GROWY Empresas</option><option value="Aceleração Geracional">Aceleração Geracional</option><option value="2A Hire">2A Hire</option></select></div>
+      <button class="btn btn-primary btn-full" type="submit">Falar com nosso time</button>
+    </form>
+    <div class="form-success" id="formCompanySuccess"><p>Recebemos seu contato!<br />Nossa equipe comercial entrará em contato em breve.</p></div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
