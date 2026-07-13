@@ -178,4 +178,30 @@
 
   document.querySelectorAll('[data-target]').forEach(el => counterObs.observe(el));
 
+  /* ─── SCROLL TO TOP ──────────────────────────────────────── */
+  const scrollTopBtn = document.getElementById('scroll-top');
+  if (scrollTopBtn) {
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ─── FLOATING GROWY BANNER (index.html only) ────────────── */
+  const growyBanner = document.getElementById('growy-banner');
+  if (growyBanner) {
+    if (!sessionStorage.getItem('growyBannerDismissed')) {
+      setTimeout(() => growyBanner.classList.add('visible'), 8000);
+    }
+    const bannerClose = growyBanner.querySelector('.growy-banner-close');
+    if (bannerClose) {
+      bannerClose.addEventListener('click', () => {
+        growyBanner.classList.remove('visible');
+        sessionStorage.setItem('growyBannerDismissed', 'true');
+      });
+    }
+  }
+
 })();

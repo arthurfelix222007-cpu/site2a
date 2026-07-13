@@ -2,38 +2,105 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GROWY Edição 3 — 09 de Maio · Itajaí SC | 2A Educação</title>
-  <meta name="description" content="Mais de 8 processos seletivos ao vivo em um único dia. Conecte-se com empresas que estão contratando agora. 09 de Maio · Praia Brava, Itajaí SC." />
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Sora:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap');
+  <title>GROWY Edição 4 | Evento de Carreira · Maringá PR</title>
+  <meta name="description" content="GROWY Edição 4 — evento presencial de carreira em Maringá/PR. Processos seletivos ao vivo, networking com empresas e oportunidades reais. 26 de Agosto." />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;0,900;1,600;1,700&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="canonical" href="https://2aeducacao.com.br/jovens-growy.html">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="2A Educação">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="GROWY Edição 4 | Evento de Carreira · Maringá PR">
+  <meta property="og:description" content="Mais de 6 processos seletivos em um único dia. Conecte-se com empresas que estão contratando. 26 de Agosto · Maringá, PR.">
+  <meta property="og:image" content="GROWY/fotos/evento-03.JPG">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "GROWY Edição 4",
+    "description": "Evento presencial de carreira que conecta jovens com empresas que estão contratando. Processos seletivos ao vivo, painéis com lideranças e networking.",
+    "startDate": "2026-08-26T08:00:00-03:00",
+    "endDate": "2026-08-26T20:00:00-03:00",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "Local a confirmar",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Maringá",
+        "addressRegion": "PR",
+        "addressCountry": "BR"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "2A Educação",
+      "url": "https://2aeducacao.com.br"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "150",
+      "priceCurrency": "BRL",
+      "availability": "https://schema.org/LimitedAvailability",
+      "url": "https://pickpass.com.br/eventos/growy-edicao-5-maringa-pr-ee10ca"
+    }
+  }
+  </script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1433942234694761');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1433942234694761&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <style>
     /* ══════════════════════════════════════
-       TOKENS & RESET
+       TOKENS & RESET — "Editorial Energy" system
     ══════════════════════════════════════ */
     :root {
-      --bg:          #080808;
-      --bg-alt:      #0A0A0A;
-      --gold:        #C9A84C;
-      --gold-bright: #F0C040;
-      --gold-glow:   rgba(201,168,76,0.12);
-      --white:       #FFFFFF;
-      --gray:        #999999;
-      --card-bg:     #0F0F0F;
-      --card-border: rgba(201,168,76,0.2);
+      --bg:          #F6F1E7;
+      --bg-soft:     #EEE5D2;
+      --ink:         #16140F;
+      --ink-soft:    #55503F;
+      --accent:      #F5C800;
+      --line:        rgba(22,20,15,0.18);
+      --card:        #FFFFFF;
       --green-wa:    #25D366;
+      --error:       #E05252;
+      --shadow-c:    rgba(22,20,15,0.9);
       --ease:        cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Inter', sans-serif;
       background: var(--bg);
-      color: var(--white);
-      line-height: 1.8;
+      color: var(--ink);
+      line-height: 1.7;
       overflow-x: hidden;
-      padding-top: 48px;
+      padding-top: 52px;
     }
     img { display: block; max-width: 100%; }
     a { text-decoration: none; color: inherit; }
@@ -43,35 +110,25 @@
     /* ══════════════════════════════════════
        KEYFRAMES
     ══════════════════════════════════════ */
-    @keyframes bar-shimmer {
-      0%   { background-position: 100% 0; }
-      100% { background-position: -100% 0; }
-    }
-    @keyframes gold-pulse {
-      0%, 100% {
-        box-shadow: 0 4px 20px rgba(201,168,76,0.3),
-                    0 0 0 0 rgba(201,168,76,0.4);
-      }
-      50% {
-        box-shadow: 0 4px 40px rgba(201,168,76,0.5),
-                    0 0 0 12px rgba(201,168,76,0);
-      }
-    }
-    @keyframes whatsapp-pulse {
-      0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
-      50%      { box-shadow: 0 4px 40px rgba(37,211,102,0.7), 0 0 0 8px rgba(37,211,102,0.1); }
-    }
-    @keyframes marquee-scroll {
+    @keyframes marqueeScroll {
       0%   { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
+    @keyframes waPulse {
+      0%, 100% { box-shadow: 4px 4px 0 var(--shadow-c); }
+      50%      { box-shadow: 4px 4px 0 var(--shadow-c), 0 0 0 8px rgba(37,211,102,0.18); }
+    }
     @keyframes slideInLeft {
-      from { opacity: 0; transform: translateX(-20px); }
+      from { opacity: 0; transform: translateX(-24px); }
       to   { opacity: 1; transform: translateX(0); }
     }
     @keyframes slideInRight {
-      from { opacity: 0; transform: translateX(20px); }
-      to   { opacity: 1; transform: translateX(0); }
+      from { opacity: 0; transform: translate(24px, 8px) rotate(3deg); }
+      to   { opacity: 1; transform: translate(0,0) rotate(-1.2deg); }
+    }
+    @keyframes tickerShift {
+      0%, 100% { background-position: 0 0; }
+      50% { background-position: 40px 0; }
     }
 
     /* ══════════════════════════════════════
@@ -91,43 +148,52 @@
     ══════════════════════════════════════ */
     .reveal {
       opacity: 0;
-      transform: translateY(32px);
-      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+      transform: translateY(28px);
+      transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
     }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
     /* ══════════════════════════════════════
        LAYOUT
     ══════════════════════════════════════ */
-    .container    { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+    .container    { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 2rem; }
     .container-sm { width: 100%; max-width: 900px;  margin: 0 auto; padding: 0 2rem; }
-    .section      { padding: 100px 0; }
-    .section-alt  { padding: 100px 0; background: var(--bg-alt); }
+    .section      { padding: 104px 0; }
+    .section-alt  { padding: 104px 0; background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 
     /* ══════════════════════════════════════
        TYPOGRAPHY
     ══════════════════════════════════════ */
-    .label {
-      display: block;
-      font-family: 'Sora', sans-serif;
-      font-size: 0.75rem;
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.78rem;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--gold);
-      margin-bottom: 1rem;
+      letter-spacing: 0.16em;
+      color: var(--ink);
+      margin-bottom: 1.25rem;
     }
-    .h2 {
-      font-family: 'Playfair Display', serif;
+    .eyebrow::before {
+      content: '';
+      width: 9px; height: 9px;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .title-xl {
+      font-family: 'Fraunces', serif;
       font-weight: 700;
-      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-      line-height: 1.2;
-      color: var(--white);
+      font-size: clamp(1.9rem, 3.6vw, 3rem);
+      line-height: 1.14;
+      color: var(--ink);
       margin-bottom: 2.5rem;
+      letter-spacing: -0.01em;
     }
-    .h2 .gold        { color: var(--gold); display: block; }
-    .h2 .underline   { border-bottom: 2px solid var(--gold); display: inline-block; padding-bottom: 4px; }
-    .gold-glow       { color: var(--gold); text-shadow: 0 0 30px rgba(201,168,76,0.4); }
+    .title-xl .mark    { font-style: italic; color: var(--ink); display: block; }
+    .title-xl .boxed   { background: var(--ink); color: var(--bg); padding: 0 10px; display: inline-block; }
+    .ink-glow          { color: var(--ink); }
 
     /* ══════════════════════════════════════
        BUTTONS
@@ -137,57 +203,62 @@
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
-      font-family: 'Sora', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
-      font-size: 0.95rem;
-      letter-spacing: 0.08em;
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
-      padding: 18px 40px;
-      border-radius: 8px;
-      border: none;
+      padding: 18px 34px;
+      border-radius: 4px;
+      border: 2px solid var(--ink);
       cursor: pointer;
-      transition: transform 0.2s ease, filter 0.2s ease;
+      box-shadow: 5px 5px 0 var(--shadow-c);
+      transition: transform 0.18s var(--ease), box-shadow 0.18s var(--ease);
     }
-    .btn:hover { transform: translateY(-2px); filter: brightness(1.05); }
-    .btn-gold {
-      background: linear-gradient(135deg, #C9A84C, #F0C040);
-      color: #080808;
-      animation: gold-pulse 2.5s ease-in-out infinite;
+    .btn:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: 8px 8px 0 var(--shadow-c);
+    }
+    .btn:active { transform: translate(0,0); box-shadow: 2px 2px 0 var(--shadow-c); }
+    .btn-primary {
+      background: var(--accent);
+      color: var(--ink);
     }
     .btn-wa {
       background: var(--green-wa);
-      color: var(--white);
+      color: #06210F;
     }
     .btn-full { width: 100%; max-width: 440px; }
     .btn-link {
       display: inline-flex;
       align-items: center;
-      gap: 0.35rem;
-      color: var(--gold);
-      font-family: 'Sora', sans-serif;
+      gap: 0.4rem;
+      color: var(--ink);
+      font-family: 'Space Grotesk', sans-serif;
       font-weight: 600;
       font-size: 0.9rem;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 2px;
       transition: gap 0.2s;
       background: none;
-      border: none;
-      padding: 0;
+      border-left: none; border-right: none; border-top: none;
     }
-    .btn-link:hover { gap: 0.55rem; }
+    .btn-link:hover { gap: 0.6rem; }
 
     /* ══════════════════════════════════════
-       CARDS
+       CARDS (hard-edge, offset shadow)
     ══════════════════════════════════════ */
     .card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 36px 28px;
-      transition: transform 0.3s var(--ease), box-shadow 0.3s ease, border-color 0.3s ease;
+      background: var(--card);
+      border: 2px solid var(--ink);
+      border-radius: 4px;
+      padding: 34px 28px;
+      box-shadow: 5px 5px 0 var(--shadow-c);
+      transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
     }
     .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 24px 60px rgba(201,168,76,0.12);
-      border-color: rgba(201,168,76,0.5);
+      transform: translate(-4px, -4px);
+      box-shadow: 9px 9px 0 var(--shadow-c);
     }
 
     /* ══════════════════════════════════════
@@ -198,15 +269,15 @@
       width: 100%;
       max-width: 320px;
       margin: 0 auto;
-      border-radius: 20px;
+      border-radius: 6px;
       overflow: hidden;
       aspect-ratio: 9 / 16;
       background: #111;
-      border: 2px solid rgba(201,168,76,0.4);
-      box-shadow: 0 0 60px rgba(201,168,76,0.15);
+      border: 3px solid var(--ink);
+      box-shadow: 8px 8px 0 var(--accent);
       transition: box-shadow 0.3s ease;
     }
-    .video-vertical:hover { box-shadow: 0 0 80px rgba(201,168,76,0.3); }
+    .video-vertical:hover { box-shadow: 11px 11px 0 var(--accent); }
     .video-vertical video {
       width: 100%;
       height: 100%;
@@ -221,47 +292,50 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 9999;
-      height: 48px;
+      height: 52px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0 24px;
       gap: 1rem;
-      background: linear-gradient(90deg, #B8922A, #C9A84C, #F0C040, #C9A84C, #B8922A);
-      background-size: 300% 100%;
-      animation: bar-shimmer 4s linear infinite;
+      background: var(--ink);
+      border-bottom: 2px solid var(--accent);
     }
     .top-bar-text {
-      font-family: 'Sora', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-weight: 600;
       font-size: 0.8rem;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: #080808;
+      letter-spacing: 0.08em;
+      color: var(--bg);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
+    .top-bar-text b { color: var(--accent); }
     .top-bar-cta {
-      background: #080808;
-      color: #F0C040;
-      font-family: 'Sora', sans-serif;
+      background: var(--accent);
+      color: var(--ink);
+      font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
-      font-size: 0.8rem;
-      padding: 8px 20px;
-      border-radius: 6px;
+      font-size: 0.78rem;
+      padding: 9px 18px;
+      border-radius: 3px;
       white-space: nowrap;
       flex-shrink: 0;
       transition: background 0.2s;
     }
-    .top-bar-cta:hover { background: #1A1A1A; }
+    .top-bar-cta:hover { background: #FFF; }
 
     /* ══════════════════════════════════════
        02 — HERO
     ══════════════════════════════════════ */
     .hero {
       background: var(--bg);
-      background-image: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(201,168,76,0.08) 0%, transparent 60%);
+      background-image:
+        linear-gradient(var(--line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--line) 1px, transparent 1px);
+      background-size: 44px 44px;
       min-height: 100vh;
       position: relative;
     }
@@ -269,185 +343,201 @@
       display: grid;
       grid-template-columns: 55fr 45fr;
       gap: 4rem;
-      min-height: calc(100vh - 48px);
+      min-height: calc(100vh - 52px);
       align-items: stretch;
     }
     .hero-left {
       align-self: center;
-      padding: 80px 0 80px 0;
-      animation: slideInLeft 0.8s var(--ease) 0.2s both;
+      padding: 80px 0;
+      animation: slideInLeft 0.7s var(--ease) 0.15s both;
     }
     .hero-badge {
       display: inline-flex;
       align-items: center;
-      border: 1px solid rgba(201,168,76,0.3);
-      border-radius: 50px;
-      padding: 6px 18px;
-      font-family: 'Sora', sans-serif;
-      font-weight: 500;
+      border: 2px solid var(--ink);
+      border-radius: 3px;
+      padding: 6px 16px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
       font-size: 0.75rem;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--gold);
-      background: rgba(201,168,76,0.07);
-      margin-bottom: 1.5rem;
+      color: var(--ink);
+      background: #FFF;
+      box-shadow: 3px 3px 0 var(--shadow-c);
+      margin-bottom: 1.75rem;
     }
     .hero-headline {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Fraunces', serif;
       font-weight: 700;
-      font-size: clamp(2rem, 4.5vw, 3.4rem);
-      line-height: 1.2;
-      color: var(--white);
-      margin-bottom: 1.25rem;
+      font-size: clamp(2.1rem, 4.6vw, 3.5rem);
+      line-height: 1.12;
+      color: var(--ink);
+      margin-bottom: 1.4rem;
+      letter-spacing: -0.01em;
     }
-    .hero-headline .gold-line {
+    .hero-headline .accent-line {
       display: block;
-      color: var(--gold);
+      font-style: italic;
+      color: var(--ink);
     }
     .hero-sub {
-      font-size: 1.05rem;
-      color: var(--gray);
+      font-size: 1.08rem;
+      color: var(--ink-soft);
       line-height: 1.7;
       max-width: 480px;
-      margin-bottom: 1.75rem;
+      margin-bottom: 1.9rem;
     }
     .hero-bullets {
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
-      margin-bottom: 1.75rem;
+      gap: 0.8rem;
+      margin-bottom: 1.9rem;
     }
     .hero-bullet {
       display: flex;
       align-items: flex-start;
       gap: 12px;
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-weight: 500;
-      font-size: 0.95rem;
-      color: var(--white);
+      font-size: 0.96rem;
+      color: var(--ink);
       line-height: 1.5;
     }
-    .hero-bullet svg { flex-shrink: 0; margin-top: 2px; }
+    .hero-bullet .tick {
+      flex-shrink: 0;
+      margin-top: 3px;
+      width: 16px; height: 16px;
+      background: var(--accent);
+      border: 2px solid var(--ink);
+      display: inline-block;
+    }
     .hero-urgency {
-      background: rgba(201,168,76,0.06);
-      border-left: 3px solid var(--gold);
-      border-radius: 0 8px 8px 0;
-      padding: 14px 20px;
-      margin-bottom: 1.75rem;
+      background: #FFF;
+      border: 2px solid var(--ink);
+      border-radius: 4px;
+      padding: 16px 20px;
+      margin-bottom: 1.9rem;
+      box-shadow: 4px 4px 0 var(--shadow-c);
     }
     .hero-urgency-date {
-      font-family: 'Sora', sans-serif;
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: var(--white);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: var(--ink);
       margin-bottom: 2px;
     }
-    .hero-urgency-note { font-size: 0.88rem; color: var(--gray); }
+    .hero-urgency-note { font-size: 0.88rem; color: var(--ink-soft); }
 
     /* Hero right / photo */
     .hero-right {
-      animation: slideInRight 0.8s var(--ease) 0.3s both;
+      animation: slideInRight 0.8s var(--ease) 0.25s both;
       position: relative;
       display: flex;
       flex-direction: column;
+      justify-content: center;
     }
     .hero-photo-wrap {
       position: relative;
-      height: 100%;
-      min-height: 500px;
+      height: calc(100% - 40px);
+      min-height: 480px;
+      margin: 20px 30px 20px 0;
     }
     .hero-photo-wrap img {
       width: 100%;
       height: 100%;
-      min-height: 500px;
+      min-height: 480px;
       object-fit: cover;
-      border-radius: 16px;
-      outline: 2px solid rgba(201,168,76,0.3);
-      outline-offset: 6px;
+      border-radius: 4px;
+      border: 3px solid var(--ink);
+      box-shadow: 12px 12px 0 var(--accent);
     }
     .hero-stat-card {
       position: absolute;
-      bottom: 28px;
-      left: -28px;
-      background: rgba(8,8,8,0.92);
-      border: 1px solid rgba(201,168,76,0.4);
-      border-radius: 12px;
+      bottom: -18px;
+      left: -26px;
+      background: var(--ink);
+      border: 2px solid var(--ink);
+      border-radius: 4px;
       padding: 14px 20px;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      transform: rotate(-2deg);
+      box-shadow: 5px 5px 0 var(--accent);
     }
     .hero-stat-num {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Fraunces', serif;
       font-weight: 700;
       font-size: 2rem;
-      color: var(--gold);
+      color: var(--accent);
       line-height: 1;
       margin-bottom: 4px;
     }
-    .hero-stat-label { font-size: 0.78rem; color: var(--gray); }
+    .hero-stat-label { font-size: 0.76rem; color: var(--bg); font-family: 'Space Grotesk', sans-serif; }
 
     /* ══════════════════════════════════════
        03 — COMPANIES MARQUEE
     ══════════════════════════════════════ */
     .marquee-section {
-      background: var(--bg-alt);
-      border-top: 1px solid #1A1A1A;
-      border-bottom: 1px solid #1A1A1A;
-      padding: 28px 0;
+      background: #ffffff;
+      padding: 40px 0;
     }
     .marquee-section-label {
       text-align: center;
-      font-family: 'Sora', sans-serif;
-      font-size: 0.75rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.76rem;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: #555;
-      margin-bottom: 24px;
+      letter-spacing: 0.18em;
+      color: var(--ink);
+      margin-bottom: 32px;
     }
-    .marquee-wrap {
+    .marquee-wrapper {
       overflow: hidden;
       position: relative;
+      width: 100%;
     }
-    .marquee-wrap::before,
-    .marquee-wrap::after {
+    .marquee-wrapper::before,
+    .marquee-wrapper::after {
       content: '';
       position: absolute;
-      top: 0; bottom: 0;
-      width: 120px;
+      top: 0;
+      bottom: 0;
+      width: 100px;
       z-index: 2;
       pointer-events: none;
     }
-    .marquee-wrap::before {
+    .marquee-wrapper::before {
       left: 0;
-      background: linear-gradient(to right, var(--bg-alt), transparent);
+      background: linear-gradient(to right, #ffffff, transparent);
     }
-    .marquee-wrap::after {
+    .marquee-wrapper::after {
       right: 0;
-      background: linear-gradient(to left, var(--bg-alt), transparent);
+      background: linear-gradient(to left, #ffffff, transparent);
     }
-    .marquee-track {
+    .marquee-inner {
       display: flex;
       align-items: center;
       gap: 64px;
       width: max-content;
-      padding: 0 32px;
-      animation: marquee-scroll 28s linear infinite;
+      animation: marquee-scroll 30s linear infinite;
+      padding: 8px 0;
     }
-    .marquee-track:hover { animation-play-state: paused; }
+    .marquee-inner:hover {
+      animation-play-state: paused;
+    }
+    @keyframes marquee-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
     .marquee-logo {
-      height: 44px;
+      height: 120px;
       width: auto;
       object-fit: contain;
-      flex-shrink: 0;
-      filter: grayscale(0.3) brightness(1.3);
-      mix-blend-mode: screen;
-      transition: filter 0.3s ease, transform 0.3s ease;
-      cursor: pointer;
+      display: block;
+      filter: grayscale(1) brightness(0.3);
+      transition: filter 0.3s ease;
     }
     .marquee-logo:hover {
-      filter: grayscale(0) brightness(1.5);
-      transform: scale(1.08);
+      filter: grayscale(0) brightness(1);
     }
 
     /* ══════════════════════════════════════
@@ -456,28 +546,28 @@
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      max-width: 1000px;
+      max-width: 1020px;
       margin: 0 auto;
       padding: 0 2rem;
     }
     .stat-col {
       padding: 1.5rem 2rem;
       text-align: center;
-      border-right: 1px solid #1A1A1A;
+      border-right: 1px dashed var(--line);
     }
     .stat-col:last-child { border-right: none; }
     .stat-num {
       display: block;
-      font-family: 'Playfair Display', serif;
+      font-family: 'Fraunces', serif;
       font-weight: 700;
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      color: var(--gold);
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      color: var(--ink);
       line-height: 1;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.55rem;
     }
     .stat-label {
       font-size: 0.9rem;
-      color: #666;
+      color: var(--ink-soft);
       max-width: 160px;
       margin: 0 auto;
       line-height: 1.5;
@@ -489,46 +579,49 @@
     .fw-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
+      gap: 1.4rem;
       margin-bottom: 2.5rem;
     }
     .fw-card {
-      background: var(--card-bg);
-      border: 1px solid rgba(201,168,76,0.15);
-      border-top: 3px solid var(--gold);
-      border-radius: 16px;
-      padding: 36px 28px;
-      transition: transform 0.3s var(--ease), box-shadow 0.3s ease, border-color 0.3s ease;
+      background: var(--card);
+      border: 2px solid var(--ink);
+      border-radius: 4px;
+      padding: 34px 26px;
+      box-shadow: 5px 5px 0 var(--shadow-c);
+      transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+      position: relative;
     }
     .fw-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 24px 60px rgba(201,168,76,0.12);
-      border-color: rgba(201,168,76,0.5);
-      border-top-color: var(--gold);
+      transform: translate(-4px, -4px);
+      box-shadow: 9px 9px 0 var(--shadow-c);
     }
-    .fw-deco {
-      font-family: 'Playfair Display', serif;
-      font-size: 4rem;
-      color: var(--gold);
-      opacity: 0.08;
-      line-height: 1;
-      display: block;
-      margin-bottom: -1rem;
+    .fw-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px; height: 40px;
+      background: var(--accent);
+      border: 2px solid var(--ink);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--ink);
+      margin-bottom: 1.1rem;
     }
     .fw-title {
-      font-family: 'Sora', sans-serif;
+      font-family: 'Fraunces', serif;
       font-weight: 700;
-      font-size: 1.1rem;
-      color: var(--white);
+      font-size: 1.15rem;
+      color: var(--ink);
       margin-bottom: 0.75rem;
     }
-    .fw-body { font-size: 0.95rem; color: var(--gray); line-height: 1.7; }
+    .fw-body { font-size: 0.95rem; color: var(--ink-soft); line-height: 1.7; }
     .fw-note {
       display: block;
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Fraunces', serif;
       font-style: italic;
-      font-size: 1rem;
-      color: var(--gold);
+      font-size: 1.05rem;
+      color: var(--ink);
       text-align: center;
       margin-bottom: 2rem;
     }
@@ -545,16 +638,18 @@
     }
     .timeline {
       position: relative;
-      padding-left: 48px;
+      padding-left: 52px;
     }
     .timeline::before {
       content: '';
       position: absolute;
-      left: 16px;
+      left: 15px;
       top: 24px;
       bottom: 24px;
       width: 2px;
-      background: linear-gradient(to bottom, var(--gold), rgba(201,168,76,0.08));
+      background-image: linear-gradient(var(--ink) 60%, transparent 40%);
+      background-size: 2px 12px;
+      background-repeat: repeat-y;
     }
     .tl-item {
       position: relative;
@@ -563,36 +658,35 @@
     .tl-item:last-child { margin-bottom: 0; }
     .tl-dot {
       position: absolute;
-      left: -40px;
-      top: 2px;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      border: 2px solid var(--gold);
-      background: var(--bg);
+      left: -52px;
+      top: 0;
+      width: 34px;
+      height: 34px;
+      border-radius: 4px;
+      border: 2px solid var(--ink);
+      background: var(--accent);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Sora', sans-serif;
-      font-size: 0.7rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.75rem;
       font-weight: 700;
-      color: var(--gold);
+      color: var(--ink);
     }
     .tl-title {
-      font-family: 'Sora', sans-serif;
+      font-family: 'Fraunces', serif;
       font-weight: 700;
-      font-size: 1.05rem;
-      color: var(--white);
+      font-size: 1.1rem;
+      color: var(--ink);
       margin-bottom: 0.5rem;
     }
-    .tl-body { font-size: 0.93rem; color: var(--gray); line-height: 1.7; margin-bottom: 0.65rem; }
+    .tl-body { font-size: 0.94rem; color: var(--ink-soft); line-height: 1.7; margin-bottom: 0.65rem; }
 
     .steps-photo img {
       width: 100%;
-      border-radius: 12px;
-      border: 1px solid rgba(201,168,76,0.2);
-      outline: 2px solid rgba(201,168,76,0.15);
-      outline-offset: 6px;
+      border-radius: 4px;
+      border: 3px solid var(--ink);
+      box-shadow: 10px 10px 0 var(--accent);
     }
 
     /* ══════════════════════════════════════
@@ -604,35 +698,39 @@
       gap: 5rem;
       align-items: start;
     }
-    .agenda-items { }
-    .agenda-item {
-      border-bottom: 1px solid #1A1A1A;
+    .agenda-items {
+      display: flex;
+      flex-direction: column;
     }
-    .agenda-item:first-child { border-top: 1px solid #1A1A1A; }
+    .agenda-item {
+      border-bottom: 2px solid var(--ink);
+      transition: background 0.2s ease;
+    }
+    .agenda-item:first-child { border-top: 2px solid var(--ink); }
     .agenda-header {
       display: flex;
       align-items: center;
       gap: 1rem;
-      padding: 24px 0;
+      padding: 24px 4px;
       cursor: pointer;
     }
     .agenda-num {
-      font-family: 'Sora', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
       font-size: 0.8rem;
-      color: var(--gold);
+      color: var(--ink);
       letter-spacing: 0.08em;
       flex-shrink: 0;
     }
     .agenda-title {
-      font-family: 'Sora', sans-serif;
+      font-family: 'Fraunces', serif;
       font-weight: 700;
-      font-size: 1.05rem;
-      color: var(--white);
+      font-size: 1.1rem;
+      color: var(--ink);
       flex: 1;
     }
     .agenda-chevron {
-      color: var(--gold);
+      color: var(--ink);
       flex-shrink: 0;
       transition: transform 0.35s ease;
     }
@@ -641,9 +739,9 @@
       overflow: hidden;
     }
     .agenda-body-inner {
-      padding-bottom: 20px;
-      font-size: 0.93rem;
-      color: var(--gray);
+      padding: 0 4px 22px;
+      font-size: 0.94rem;
+      color: var(--ink-soft);
       line-height: 1.7;
       max-width: 540px;
     }
@@ -659,10 +757,11 @@
 
     .agenda-photo img {
       width: 100%;
-      border-radius: 12px;
-      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 4px;
+      border: 3px solid var(--ink);
+      box-shadow: 10px 10px 0 var(--accent);
       position: sticky;
-      top: 80px;
+      top: 84px;
     }
 
     /* ══════════════════════════════════════
@@ -670,19 +769,20 @@
     ══════════════════════════════════════ */
     .video-section { text-align: center; }
     .video-section-label {
-      font-family: 'Sora', sans-serif;
-      font-size: 0.75rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.76rem;
       font-weight: 600;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 0.75rem;
+      color: var(--ink);
+      margin-bottom: 0.8rem;
     }
-    .video-section .h2 { margin-bottom: 2rem; }
+    .video-section .title-xl { margin-bottom: 2rem; }
     .video-caption {
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 0.8rem;
-      color: #555;
-      margin-top: 1rem;
+      color: var(--ink-soft);
+      margin-top: 1.1rem;
     }
 
     /* ══════════════════════════════════════
@@ -691,17 +791,21 @@
     .gallery-row-1 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-bottom: 12px;
+      gap: 18px;
+      margin-bottom: 18px;
     }
     .gallery-row-2 {
       display: grid;
       grid-template-columns: 60fr 40fr;
-      gap: 12px;
+      gap: 18px;
     }
     .gallery-item {
-      border-radius: 12px;
+      border: 3px solid var(--ink);
+      border-radius: 4px;
       overflow: hidden;
+      background: #FFF;
+      box-shadow: 6px 6px 0 var(--shadow-c);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .gallery-row-1 .gallery-item { aspect-ratio: 4/3; }
     .gallery-row-2 .gallery-item { aspect-ratio: 16/9; }
@@ -712,13 +816,13 @@
       display: block;
       transition: transform 0.4s ease;
     }
-    .gallery-item:hover img { transform: scale(1.04); }
-    .gallery-item {
-      transition: box-shadow 0.4s ease;
-    }
+    .gallery-item:hover img { transform: scale(1.05); }
     .gallery-item:hover {
-      box-shadow: 0 8px 40px rgba(201,168,76,0.2);
+      transform: translate(-3px,-3px);
+      box-shadow: 9px 9px 0 var(--shadow-c);
     }
+    .gallery-row-1 .gallery-item:nth-child(2) { transform: rotate(-0.6deg); }
+    .gallery-row-1 .gallery-item:nth-child(2):hover { transform: translate(-3px,-3px) rotate(-0.6deg); }
 
     /* ══════════════════════════════════════
        10 — SUCCESS CASES
@@ -726,22 +830,23 @@
     .cases-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
+      gap: 1.6rem;
       margin-bottom: 2rem;
     }
     .case-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 36px;
+      background: var(--card);
+      border: 2px solid var(--ink);
+      border-radius: 4px;
+      padding: 34px;
       display: flex;
       flex-direction: column;
       gap: 16px;
-      transition: transform 0.3s var(--ease), box-shadow 0.3s ease;
+      box-shadow: 5px 5px 0 var(--shadow-c);
+      transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
     }
     .case-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 24px 60px rgba(201,168,76,0.12);
+      transform: translate(-4px,-4px);
+      box-shadow: 9px 9px 0 var(--shadow-c);
     }
     .case-header { display: flex; align-items: center; gap: 16px; }
     .case-photo {
@@ -749,74 +854,81 @@
       height: 64px;
       border-radius: 50%;
       object-fit: cover;
-      border: 2px solid var(--gold);
+      border: 3px solid var(--ink);
       flex-shrink: 0;
     }
     .case-name {
-      font-family: 'Sora', sans-serif;
+      font-family: 'Fraunces', serif;
       font-weight: 700;
-      font-size: 1rem;
-      color: var(--white);
+      font-size: 1.02rem;
+      color: var(--ink);
       margin-bottom: 4px;
     }
     .case-badge {
       display: inline-block;
-      background: var(--gold);
-      color: #080808;
-      font-family: 'Sora', sans-serif;
+      background: var(--accent);
+      color: var(--ink);
+      border: 1.5px solid var(--ink);
+      font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
       font-size: 0.62rem;
       text-transform: uppercase;
       letter-spacing: 0.04em;
       padding: 3px 8px;
-      border-radius: 4px;
+      border-radius: 3px;
     }
     .case-quote {
+      font-family: 'Fraunces', serif;
       font-style: italic;
-      font-size: 0.95rem;
-      color: #AAA;
+      font-size: 0.98rem;
+      color: var(--ink-soft);
       line-height: 1.7;
     }
     .case-result {
       display: flex;
       align-items: center;
       gap: 8px;
-      font-family: 'Sora', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-weight: 600;
       font-size: 0.9rem;
-      color: var(--gold);
+      color: var(--ink);
+    }
+    .case-result .tick {
+      width: 14px; height: 14px;
+      background: var(--accent);
+      border: 1.5px solid var(--ink);
+      flex-shrink: 0;
     }
 
     /* LinkedIn card */
     .li-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
+      background: var(--card);
+      border: 2px solid var(--ink);
+      border-radius: 4px;
       overflow: hidden;
       max-width: 680px;
       margin: 0 auto;
-      transition: box-shadow 0.3s ease;
+      box-shadow: 6px 6px 0 var(--shadow-c);
     }
-    .li-card:hover { box-shadow: 0 0 40px rgba(201,168,76,0.1); }
     .li-header {
       display: flex;
       align-items: center;
       gap: 12px;
       padding: 20px 28px;
-      border-bottom: 1px solid #1A1A1A;
+      border-bottom: 2px solid var(--ink);
     }
-    .li-header img { height: 32px; width: auto; object-fit: contain; }
+    .li-header img { height: 30px; width: auto; object-fit: contain; }
     .li-name {
-      font-family: 'Sora', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-weight: 600;
       font-size: 0.95rem;
-      color: var(--white);
+      color: var(--ink);
     }
-    .li-role { font-size: 0.78rem; color: #666; }
+    .li-role { font-size: 0.78rem; color: var(--ink-soft); }
     .li-img-wrap {
       max-height: 500px;
       overflow: hidden;
-      background: #1A1A1A;
+      background: var(--bg-soft);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -829,8 +941,9 @@
     .li-caption {
       padding: 10px 28px;
       font-size: 0.75rem;
-      color: #444;
+      color: var(--ink-soft);
       text-align: center;
+      border-top: 1px dashed var(--line);
     }
 
     /* ══════════════════════════════════════
@@ -839,59 +952,61 @@
     .test-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
+      gap: 1.4rem;
       align-items: start;
     }
     .test-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      padding: 28px;
+      background: var(--card);
+      border: 2px solid var(--ink);
+      border-radius: 4px;
+      padding: 26px;
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      transition: transform 0.3s var(--ease), box-shadow 0.3s ease;
+      box-shadow: 5px 5px 0 var(--shadow-c);
+      transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
     }
     .test-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 24px 60px rgba(201,168,76,0.1);
+      transform: translate(-4px,-4px);
+      box-shadow: 9px 9px 0 var(--shadow-c);
     }
     .test-header { display: flex; align-items: center; gap: 0.85rem; }
     .test-photo {
-      width: 52px;
-      height: 52px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
       object-fit: cover;
-      border: 2px solid var(--gold);
+      border: 3px solid var(--ink);
       flex-shrink: 0;
     }
     .test-name {
-      font-family: 'Sora', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-weight: 600;
       font-size: 0.95rem;
-      color: var(--white);
+      color: var(--ink);
       margin-bottom: 4px;
     }
     .stars { display: flex; gap: 3px; }
-    .test-quote { font-size: 0.9rem; color: #AAA; line-height: 1.7; font-style: italic; }
+    .test-quote { font-family: 'Fraunces', serif; font-size: 0.92rem; color: var(--ink-soft); line-height: 1.7; font-style: italic; }
 
     .test-video-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
+      background: var(--card);
+      border: 2px solid var(--ink);
+      border-radius: 4px;
       padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 0.85rem;
+      box-shadow: 5px 5px 0 var(--shadow-c);
     }
     .test-video-label {
-      font-family: 'Sora', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 0.75rem;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--gold);
+      letter-spacing: 0.1em;
+      color: var(--ink);
     }
     .test-video-card .video-vertical { max-width: 240px; }
 
@@ -899,37 +1014,39 @@
        12 — PARTNER / EQI
     ══════════════════════════════════════ */
     .eqi-card {
-      background: var(--card-bg);
-      border: 1px solid rgba(201,168,76,0.3);
-      border-radius: 20px;
+      background: var(--card);
+      border: 2px solid var(--ink);
+      border-radius: 6px;
       padding: 56px 48px;
       max-width: 640px;
       margin: 2.5rem auto 0;
       text-align: center;
+      box-shadow: 9px 9px 0 var(--accent);
     }
     .eqi-logo {
-      height: 56px;
+      height: 130px;
       width: auto;
       object-fit: contain;
-      filter: brightness(1.3);
-      margin: 0 auto 2rem;
+      filter: none;
+      margin: 0 auto 24px;
       display: block;
     }
     .eqi-num {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Fraunces', serif;
       font-weight: 700;
-      font-size: 4rem;
-      color: var(--gold);
+      font-size: 3.8rem;
+      color: var(--ink);
       line-height: 1;
     }
     .eqi-num-label {
-      font-size: 1rem;
-      color: var(--white);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      color: var(--ink);
       margin-bottom: 1.5rem;
     }
-    .eqi-divider { border: none; border-top: 1px solid #1A1A1A; margin: 1.75rem 0; }
-    .eqi-body { font-size: 0.95rem; color: var(--gray); line-height: 1.8; max-width: 480px; margin: 0 auto 1rem; }
-    .eqi-fine { font-size: 0.75rem; color: #444; max-width: 460px; margin: 0 auto; }
+    .eqi-divider { border: none; border-top: 1px dashed var(--line); margin: 1.75rem 0; }
+    .eqi-body { font-size: 0.95rem; color: var(--ink-soft); line-height: 1.8; max-width: 480px; margin: 0 auto 1rem; }
+    .eqi-fine { font-size: 0.75rem; color: var(--ink-soft); opacity: 0.8; max-width: 460px; margin: 0 auto; }
 
     /* ══════════════════════════════════════
        13 — OFFER
@@ -938,18 +1055,60 @@
       margin-bottom: 2.5rem;
     }
     .offer-price {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Fraunces', serif;
       font-weight: 700;
       font-size: clamp(4rem, 10vw, 6rem);
       line-height: 1;
-      color: var(--gold);
-      text-shadow: 0 0 40px rgba(201,168,76,0.3);
+      color: var(--ink);
     }
     .offer-price-sub {
+      font-family: 'Fraunces', serif;
       font-style: italic;
-      color: var(--gray);
+      color: var(--ink-soft);
       font-size: 1rem;
       margin-top: 0.25rem;
+    }
+    .price-anchor {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .price-original {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      color: #666666;
+      text-decoration: line-through;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .price-current {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 8px;
+      margin: 8px 0;
+    }
+    .price-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      color: #888888;
+    }
+    .price-value {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 4.5rem;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .price-savings {
+      display: inline-block;
+      background: var(--accent);
+      color: #0A0A0A;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-top: 8px;
     }
     .offer-layout {
       display: grid;
@@ -957,55 +1116,64 @@
       gap: 3rem;
       align-items: start;
     }
-    .checklist { display: flex; flex-direction: column; gap: 0.85rem; }
+    .checklist { display: flex; flex-direction: column; gap: 0.9rem; }
     .check-item {
       display: flex;
       align-items: flex-start;
       gap: 14px;
       font-size: 1rem;
-      color: var(--white);
+      color: var(--ink);
       line-height: 1.5;
       font-weight: 500;
     }
-    .check-item svg { flex-shrink: 0; margin-top: 3px; }
+    .check-item .tick {
+      flex-shrink: 0;
+      margin-top: 4px;
+      width: 16px; height: 16px;
+      background: var(--accent);
+      border: 2px solid var(--ink);
+      display: inline-block;
+    }
     .guarantee-box {
-      background: rgba(201,168,76,0.05);
-      border: 1px solid rgba(201,168,76,0.3);
-      border-radius: 16px;
+      background: var(--card);
+      border: 2px solid var(--ink);
+      border-radius: 6px;
       padding: 36px 28px;
       text-align: center;
+      box-shadow: 7px 7px 0 var(--accent);
     }
     .guarantee-icon { margin-bottom: 1rem; }
     .guarantee-title {
-      font-family: 'Sora', sans-serif;
+      font-family: 'Fraunces', serif;
       font-weight: 700;
-      font-size: 1.05rem;
-      color: var(--white);
+      font-size: 1.1rem;
+      color: var(--ink);
       margin-bottom: 0.65rem;
     }
-    .guarantee-body { font-size: 0.93rem; color: var(--gray); line-height: 1.7; margin-bottom: 1.5rem; }
+    .guarantee-body { font-size: 0.93rem; color: var(--ink-soft); line-height: 1.7; margin-bottom: 1.5rem; }
     .guarantee-box .btn { width: 100%; }
 
     /* ══════════════════════════════════════
        14 — COUNTDOWN
     ══════════════════════════════════════ */
     .countdown-section {
-      border-top: 1px solid rgba(201,168,76,0.2);
-      border-bottom: 1px solid rgba(201,168,76,0.2);
-      padding: 80px 0;
+      border-top: 2px solid var(--ink);
+      border-bottom: 2px solid var(--ink);
+      padding: 84px 0;
       text-align: center;
+      background: var(--bg-soft);
     }
     .countdown-title {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Fraunces', serif;
       font-weight: 700;
+      font-style: italic;
       font-size: clamp(1.8rem, 4vw, 2.8rem);
-      color: var(--gold);
-      text-shadow: 0 0 30px rgba(201,168,76,0.3);
+      color: var(--ink);
       margin-bottom: 1rem;
     }
     .countdown-body {
       font-size: 1rem;
-      color: var(--gray);
+      color: var(--ink-soft);
       max-width: 480px;
       margin: 0 auto 2.5rem;
       line-height: 1.7;
@@ -1019,30 +1187,30 @@
       margin-bottom: 2.5rem;
     }
     .cd-box {
-      background: var(--card-bg);
-      border: 1px solid rgba(201,168,76,0.3);
-      border-radius: 12px;
-      padding: 20px 28px;
+      background: var(--card);
+      border: 2px solid var(--ink);
+      border-radius: 4px;
+      padding: 20px 26px;
       min-width: 88px;
       text-align: center;
+      box-shadow: 4px 4px 0 var(--shadow-c);
     }
     .cd-num {
       display: block;
-      font-family: 'Playfair Display', serif;
+      font-family: 'Fraunces', serif;
       font-weight: 700;
       font-size: clamp(2rem, 5vw, 3rem);
-      color: var(--gold);
+      color: var(--ink);
       line-height: 1;
-      text-shadow: 0 0 20px rgba(201,168,76,0.4);
     }
     .cd-label {
       display: block;
-      font-family: 'Sora', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 0.65rem;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: #555;
+      letter-spacing: 0.14em;
+      color: var(--ink-soft);
       margin-top: 6px;
     }
 
@@ -1053,8 +1221,8 @@
       max-width: 720px;
       margin: 2.5rem auto 0;
     }
-    .faq-item { border-bottom: 1px solid #1A1A1A; }
-    .faq-item:first-child { border-top: 1px solid #1A1A1A; }
+    .faq-item { border-bottom: 2px solid var(--ink); }
+    .faq-item:first-child { border-top: 2px solid var(--ink); }
     .faq-question {
       width: 100%;
       background: none;
@@ -1063,18 +1231,18 @@
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
-      padding: 24px 0;
-      font-family: 'Sora', sans-serif;
+      padding: 24px 2px;
+      font-family: 'Space Grotesk', sans-serif;
       font-weight: 600;
       font-size: 1rem;
-      color: var(--white);
+      color: var(--ink);
       text-align: left;
       transition: color 0.2s;
     }
-    .faq-question:hover { color: var(--gold); }
+    .faq-question:hover { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; }
     .faq-chevron-icon {
       flex-shrink: 0;
-      color: var(--gold);
+      color: var(--ink);
       transition: transform 0.35s ease;
     }
     .faq-item.open .faq-chevron-icon { transform: rotate(180deg); }
@@ -1084,9 +1252,9 @@
       transition: max-height 0.4s ease;
     }
     .faq-answer-inner {
-      padding-bottom: 20px;
+      padding: 0 2px 20px;
       font-size: 0.95rem;
-      color: var(--gray);
+      color: var(--ink-soft);
       line-height: 1.7;
     }
     .faq-item.open .faq-answer { max-height: 300px; }
@@ -1103,47 +1271,39 @@
       padding: 100px 2rem;
       position: relative;
       overflow: hidden;
-    }
-    .final-cta::before {
-      content: '';
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      width: 800px; height: 600px;
-      background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 70%);
-      pointer-events: none;
+      background: var(--ink);
     }
     .final-cta-inner { position: relative; z-index: 1; max-width: 680px; }
     .final-headline {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Fraunces', serif;
       font-weight: 700;
       font-size: clamp(2.2rem, 5vw, 3.8rem);
       line-height: 1.15;
-      color: var(--white);
+      color: var(--bg);
       margin-bottom: 0.75rem;
     }
-    .final-headline .gold { color: var(--gold); display: block; }
-    .final-info { font-size: 0.9rem; color: #666; margin: 1.25rem 0 2rem; }
+    .final-headline .accent { color: var(--accent); font-style: italic; display: block; }
+    .final-info { font-family: 'Space Grotesk', sans-serif; font-size: 0.9rem; color: #A39C88; margin: 1.25rem 0 2rem; }
     .final-btns { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
 
     /* ══════════════════════════════════════
        FOOTER
     ══════════════════════════════════════ */
     .lp-footer {
-      background: #050505;
-      border-top: 1px solid #111;
+      background: var(--ink);
+      border-top: 1px solid #2A2820;
       padding: 2.5rem 0;
       text-align: center;
     }
     .footer-brand {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Fraunces', serif;
       font-weight: 700;
+      font-style: italic;
       font-size: 1.2rem;
-      color: var(--gold);
-      opacity: 0.5;
+      color: var(--accent);
       margin-bottom: 0.5rem;
     }
-    .lp-footer p { font-size: 0.78rem; color: #333; }
+    .lp-footer p { font-family: 'Space Grotesk', sans-serif; font-size: 0.76rem; color: #6B6656; }
 
     /* ══════════════════════════════════════
        FLOATING WA BUTTON
@@ -1155,29 +1315,31 @@
       width: 60px; height: 60px;
       border-radius: 50%;
       background: var(--green-wa);
+      border: 2px solid var(--ink);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--white);
-      animation: whatsapp-pulse 3s ease-in-out infinite;
+      color: #06210F;
+      animation: waPulse 3s ease-in-out infinite;
       transition: transform 0.2s ease;
     }
-    .wa-float:hover { transform: scale(1.1); }
+    .wa-float:hover { transform: scale(1.08); }
     .wa-tooltip {
       position: absolute;
       right: 72px;
       top: 50%;
       transform: translateY(-50%);
-      background: #111;
-      color: var(--white);
+      background: var(--ink);
+      color: var(--bg);
+      font-family: 'Space Grotesk', sans-serif;
       font-size: 0.8rem;
       padding: 6px 12px;
-      border-radius: 6px;
+      border-radius: 4px;
       white-space: nowrap;
       opacity: 0;
       pointer-events: none;
       transition: opacity 0.2s;
-      border: 1px solid #222;
+      border: 1px solid var(--accent);
     }
     .wa-float:hover .wa-tooltip { opacity: 1; }
 
@@ -1190,27 +1352,28 @@
       bottom: 0; left: 0; right: 0;
       z-index: 9997;
       height: 68px;
-      background: linear-gradient(135deg, #C9A84C, #F0C040);
+      background: var(--ink);
+      border-top: 2px solid var(--accent);
       align-items: center;
       justify-content: space-between;
       padding: 0 20px;
       gap: 0.75rem;
     }
     .mob-text {
-      font-family: 'Sora', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
       font-size: 0.8rem;
-      color: #080808;
+      color: var(--bg);
       line-height: 1.3;
     }
     .mob-btn {
-      background: #080808;
-      color: #F0C040;
-      font-family: 'Sora', sans-serif;
+      background: var(--accent);
+      color: var(--ink);
+      font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
       font-size: 0.85rem;
       padding: 10px 20px;
-      border-radius: 6px;
+      border-radius: 3px;
       white-space: nowrap;
       flex-shrink: 0;
     }
@@ -1237,14 +1400,16 @@
         grid-template-columns: repeat(2, 1fr);
       }
       .stat-col:nth-child(2) { border-right: none; }
-      .stat-col:nth-child(3) { border-top: 1px solid #1A1A1A; }
-      .stat-col:nth-child(4) { border-top: 1px solid #1A1A1A; border-right: none; }
+      .stat-col:nth-child(3) { border-top: 1px dashed var(--line); }
+      .stat-col:nth-child(4) { border-top: 1px dashed var(--line); border-right: none; }
       .fw-grid { grid-template-columns: 1fr; }
       .cases-grid { grid-template-columns: 1fr; }
       .test-grid { grid-template-columns: 1fr; }
       .gallery-row-1 { grid-template-columns: repeat(2, 1fr); }
       .gallery-row-2 { grid-template-columns: 1fr; }
       .gallery-row-2 .gallery-item { aspect-ratio: 4/3; }
+      .gallery-row-1 .gallery-item:nth-child(2) { transform: none; }
+      .gallery-row-1 .gallery-item:nth-child(2):hover { transform: translate(-3px,-3px); }
       .countdown { gap: 12px; }
       .cd-box { min-width: 70px; padding: 14px 16px; }
       .hero-stat-card { display: none; }
@@ -1257,6 +1422,279 @@
       .gallery-row-1 { grid-template-columns: 1fr; }
       .top-bar-text { font-size: 0.6rem; }
     }
+
+    /* ══════════════════════════════════════
+       SCROLL TO TOP
+    ══════════════════════════════════════ */
+    #scroll-top {
+      position: fixed;
+      bottom: 90px;
+      left: 20px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--card);
+      border: 2px solid var(--ink);
+      color: var(--ink);
+      font-size: 1.2rem;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s, background 0.3s;
+      z-index: 9990;
+      box-shadow: 3px 3px 0 var(--shadow-c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #scroll-top.visible { opacity: 1; visibility: visible; }
+    #scroll-top:hover { background: var(--accent); }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    /* ══════════════════════════════════════
+       QUIZ MODAL
+    ══════════════════════════════════════ */
+    .quiz-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background: rgba(22,20,15,0.82);
+      align-items: center;
+      justify-content: center;
+    }
+    .quiz-overlay.active { display: flex; }
+
+    .quiz-modal {
+      background: var(--card);
+      border: 2px solid var(--ink);
+      border-radius: 6px;
+      padding: 48px 40px;
+      max-width: 520px;
+      width: 90%;
+      position: relative;
+      opacity: 0;
+      transform: scale(0.95);
+      box-shadow: 12px 12px 0 var(--accent);
+      transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .quiz-modal.open {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .quiz-modal.closing {
+      opacity: 0;
+      transform: scale(0.97);
+      transition: opacity 0.2s ease-in, transform 0.2s ease-in;
+    }
+
+    .quiz-close {
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      background: none;
+      border: 2px solid var(--ink);
+      color: var(--ink);
+      font-size: 1.2rem;
+      cursor: pointer;
+      line-height: 1;
+      width: 32px; height: 32px;
+      border-radius: 4px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .quiz-close:hover { background: var(--accent); }
+
+    .quiz-progress-bar {
+      height: 6px;
+      background: var(--bg-soft);
+      border: 1.5px solid var(--ink);
+      border-radius: 4px;
+      margin-bottom: 36px;
+      overflow: hidden;
+    }
+    .quiz-progress-fill {
+      height: 100%;
+      background: var(--accent);
+      transition: width 0.4s ease;
+      width: 20%;
+    }
+
+    .quiz-step-counter {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.75rem;
+      color: var(--ink-soft);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .quiz-question {
+      font-family: 'Fraunces', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.3;
+      margin-bottom: 28px;
+    }
+
+    .quiz-input {
+      width: 100%;
+      background: var(--bg-soft);
+      border: 2px solid var(--ink);
+      border-radius: 4px;
+      padding: 16px 20px;
+      color: var(--ink);
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      box-sizing: border-box;
+    }
+    .quiz-input::placeholder { color: #948E7B; }
+    .quiz-input:focus {
+      background: #FFF;
+      box-shadow: 3px 3px 0 var(--shadow-c);
+    }
+    .quiz-input.error {
+      border-color: var(--error);
+      box-shadow: 3px 3px 0 var(--error);
+    }
+
+    .quiz-hint {
+      font-size: 0.8rem;
+      color: var(--ink-soft);
+      margin-top: 8px;
+    }
+
+    .quiz-error-msg {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      color: var(--error);
+      font-weight: 600;
+      margin-top: 8px;
+      display: none;
+    }
+    .quiz-error-msg.visible { display: block; }
+
+    .quiz-btn {
+      width: 100%;
+      background: var(--accent);
+      color: var(--ink);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 16px 32px;
+      border-radius: 4px;
+      border: 2px solid var(--ink);
+      cursor: pointer;
+      margin-top: 24px;
+      box-shadow: 5px 5px 0 var(--shadow-c);
+      transition: transform 0.18s, box-shadow 0.18s;
+      display: block;
+    }
+    .quiz-btn:hover { transform: translate(-2px,-2px); box-shadow: 7px 7px 0 var(--shadow-c); }
+    .quiz-btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; box-shadow: 5px 5px 0 var(--shadow-c); }
+
+    /* Step transition */
+    .quiz-step {
+      display: none;
+    }
+    .quiz-step.active {
+      display: block;
+      animation: quizSlideIn 0.3s ease-out;
+    }
+    .quiz-step.leaving {
+      animation: quizSlideOut 0.25s ease-in forwards;
+    }
+    @keyframes quizSlideIn {
+      from { opacity: 0; transform: translateX(30px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes quizSlideOut {
+      from { opacity: 1; transform: translateX(0); }
+      to   { opacity: 0; transform: translateX(-30px); }
+    }
+
+    /* Step 5 — card toggles */
+    .quiz-card-options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 4px;
+    }
+    .quiz-card-option {
+      background: var(--bg-soft);
+      border: 2px solid var(--ink);
+      border-radius: 4px;
+      padding: 18px 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    .quiz-card-option:hover {
+      box-shadow: 3px 3px 0 var(--shadow-c);
+    }
+    .quiz-card-option.selected {
+      background: var(--accent);
+      box-shadow: 4px 4px 0 var(--shadow-c);
+    }
+    .quiz-card-option svg { flex-shrink: 0; }
+    .quiz-card-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      color: var(--ink);
+      font-size: 0.95rem;
+    }
+    .quiz-card-error {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      color: var(--error);
+      font-weight: 600;
+      margin-top: 8px;
+      display: none;
+    }
+    .quiz-card-error.visible { display: block; }
+
+    /* Sub-fields for "Sim" option */
+    .quiz-subfields {
+      display: none;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 20px;
+      animation: quizFadeIn 0.3s ease-out;
+    }
+    .quiz-subfields.visible { display: flex; }
+    @keyframes quizFadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .quiz-field-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      color: var(--ink-soft);
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .quiz-modal {
+        padding: 32px 24px 80px;
+        max-width: 95vw;
+        max-height: 90vh;
+      }
+      .quiz-question { font-size: 1.3rem; }
+    }
   </style>
 </head>
 <body>
@@ -1265,8 +1703,8 @@
      01 — STICKY TOP BAR
 ══════════════════════════════ -->
 <div class="top-bar" role="banner">
-  <span class="top-bar-text">⚡ EDIÇÃO 3 · 09 DE MAIO · ITAJAÍ SC · VAGAS LIMITADAS</span>
-  <a href="https://pickpass.com.br/eventos/growy-edicao-3-mmtnxvgr" class="top-bar-cta" target="_blank" rel="noopener">GARANTIR VAGA →</a>
+  <span class="top-bar-text">⚡ EDIÇÃO 4 · 26 DE AGOSTO · <b>MARINGÁ PR</b> · VAGAS LIMITADAS</span>
+  <a href="https://pickpass.com.br/eventos/growy-edicao-5-maringa-pr-ee10ca" class="top-bar-cta" target="_blank" rel="noopener">GARANTIR VAGA →</a>
 </div>
 
 <!-- ══════════════════════════════
@@ -1278,47 +1716,47 @@
 
       <!-- LEFT: TEXT -->
       <div class="hero-left">
-        <span class="hero-badge">GROWY · Edição 3 · Evento de Carreira</span>
+        <span class="hero-badge">GROWY · Edição 4 · Evento de Carreira</span>
 
         <h1 class="hero-headline">
-          Mais de 8 processos seletivos<br>
+          Mais de 6 processos seletivos<br>
           em um único dia.<br>
-          <span class="gold-line">Saia com emprego na mão.</span>
+          <span class="accent-line">Saia com emprego na mão.</span>
         </h1>
 
         <p class="hero-sub">Conecte-se diretamente com empresas que estão contratando e participe de processos seletivos ao vivo no mesmo dia.</p>
 
         <ul class="hero-bullets">
           <li class="hero-bullet">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Mais de 8 empresas recrutando ao vivo no evento
+            <span class="tick" aria-hidden="true"></span>
+            Mais de 6 empresas recrutando ao vivo no evento
           </li>
           <li class="hero-bullet">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="tick" aria-hidden="true"></span>
             Mais de 200 vagas de emprego e estágio disponíveis
           </li>
           <li class="hero-bullet">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="tick" aria-hidden="true"></span>
             Entrevistas e processos seletivos acontecendo no local
           </li>
           <li class="hero-bullet">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="tick" aria-hidden="true"></span>
             Networking direto com recrutadores e quem decide
           </li>
         </ul>
 
         <div class="hero-urgency">
-          <div class="hero-urgency-date">09 de Maio · Itajaí, SC</div>
+          <div class="hero-urgency-date">26 de Agosto · Maringá, PR</div>
           <div class="hero-urgency-note">Vagas limitadas — quem chega preparado sai na frente.</div>
         </div>
 
-        <a href="https://pickpass.com.br/eventos/growy-edicao-3-mmtnxvgr" class="btn btn-gold btn-full" target="_blank" rel="noopener">GARANTIR MINHA VAGA AGORA →</a>
+        <a href="https://pickpass.com.br/eventos/growy-edicao-5-maringa-pr-ee10ca" class="btn btn-primary btn-full" target="_blank" rel="noopener">GARANTIR MINHA VAGA AGORA →</a>
       </div>
 
       <!-- RIGHT: PHOTO -->
       <div class="hero-right">
         <div class="hero-photo-wrap">
-          <img src="GROWY/fotos/evento-05.JPG" alt="Jovens participando da GROWY em Itajaí" />
+          <img src="GROWY/fotos/evento-05.JPG" alt="Jovens participando da GROWY em Maringá" loading="eager" fetchpriority="high" />
           <div class="hero-stat-card" aria-hidden="true">
             <div class="hero-stat-num">1 em 8</div>
             <div class="hero-stat-label">participantes são contratados</div>
@@ -1335,25 +1773,27 @@
 ══════════════════════════════ -->
 <div class="marquee-section" aria-label="Empresas parceiras">
   <p class="marquee-section-label">Empresas que confiam na 2A e podem te contratar no evento</p>
-  <div class="marquee-wrap">
-    <div class="marquee-track" aria-hidden="true">
-      <img src="GROWYlogos/eqi.png"       alt="EQI Investimentos" class="marquee-logo" />
-      <img src="GROWYlogos/outside.png"   alt="Outside"           class="marquee-logo" />
-      <img src="GROWYlogos/pib.png"       alt="PIB Education"     class="marquee-logo" />
-      <img src="GROWYlogos/sicredi.png"   alt="Sicredi"           class="marquee-logo" />
-      <img src="GROWYlogos/kefraya.png"   alt="Kefraya"           class="marquee-logo" />
-      <img src="GROWYlogos/harmonique.png" alt="Harmonique"       class="marquee-logo" />
-      <img src="GROWYlogos/uma.png"       alt="UMA"               class="marquee-logo" />
-      <img src="GROWYlogos/uniavan.png"   alt="Uniavan"           class="marquee-logo" />
-      <!-- Duplicate for seamless loop -->
-      <img src="GROWYlogos/eqi.png"       alt="" class="marquee-logo" />
-      <img src="GROWYlogos/outside.png"   alt="" class="marquee-logo" />
-      <img src="GROWYlogos/pib.png"       alt="" class="marquee-logo" />
-      <img src="GROWYlogos/sicredi.png"   alt="" class="marquee-logo" />
-      <img src="GROWYlogos/kefraya.png"   alt="" class="marquee-logo" />
-      <img src="GROWYlogos/harmonique.png" alt="" class="marquee-logo" />
-      <img src="GROWYlogos/uma.png"       alt="" class="marquee-logo" />
-      <img src="GROWYlogos/uniavan.png"   alt="" class="marquee-logo" />
+  <div class="marquee-wrapper">
+    <div class="marquee-track">
+      <div class="marquee-inner" aria-hidden="true">
+        <img src="GROWYlogos/eqi.png" alt="EQI" class="marquee-logo">
+        <img src="GROWYlogos/outside.png" alt="Outside" class="marquee-logo">
+        <img src="GROWYlogos/pib-fixed.png" alt="PIB" class="marquee-logo">
+        <img src="GROWYlogos/sicredi.png" alt="Sicredi" class="marquee-logo">
+        <img src="GROWYlogos/kefraya.png" alt="Kefraya" class="marquee-logo">
+        <img src="GROWYlogos/harmonique.png" alt="Harmonique" class="marquee-logo">
+        <img src="GROWYlogos/uma.png" alt="UMA" class="marquee-logo">
+        <img src="GROWYlogos/uniavan.png" alt="Uniavan" class="marquee-logo">
+        <!-- Duplicate for seamless loop -->
+        <img src="GROWYlogos/eqi.png" alt="EQI" class="marquee-logo">
+        <img src="GROWYlogos/outside.png" alt="Outside" class="marquee-logo">
+        <img src="GROWYlogos/pib-fixed.png" alt="PIB" class="marquee-logo">
+        <img src="GROWYlogos/sicredi.png" alt="Sicredi" class="marquee-logo">
+        <img src="GROWYlogos/kefraya.png" alt="Kefraya" class="marquee-logo">
+        <img src="GROWYlogos/harmonique.png" alt="Harmonique" class="marquee-logo">
+        <img src="GROWYlogos/uma.png" alt="UMA" class="marquee-logo">
+        <img src="GROWYlogos/uniavan.png" alt="Uniavan" class="marquee-logo">
+      </div>
     </div>
   </div>
 </div>
@@ -1387,31 +1827,31 @@
 ══════════════════════════════ -->
 <section class="section-alt" aria-labelledby="forwhom-title">
   <div class="container">
-    <span class="label reveal" data-delay="0">Para quem é</span>
-    <h2 class="h2 reveal" data-delay="100" id="forwhom-title">
+    <span class="eyebrow reveal" data-delay="0">Para quem é</span>
+    <h2 class="title-xl reveal" data-delay="100" id="forwhom-title">
       A GROWY é para<br>
-      <span class="gold underline">você que...</span>
+      <span class="mark">você que...</span>
     </h2>
     <div class="fw-grid">
       <div class="fw-card reveal" data-delay="0">
-        <span class="fw-deco" aria-hidden="true">01</span>
+        <span class="fw-num" aria-hidden="true">01</span>
         <div class="fw-title">Quer o primeiro emprego</div>
         <p class="fw-body">Você tem potencial, mas o mercado ainda não te enxergou. Na GROWY, você vai estar na frente de quem pode te contratar agora.</p>
       </div>
       <div class="fw-card reveal" data-delay="100">
-        <span class="fw-deco" aria-hidden="true">02</span>
+        <span class="fw-num" aria-hidden="true">02</span>
         <div class="fw-title">Quer uma oportunidade melhor</div>
         <p class="fw-body">Está empregado, mas sabe que pode ir mais longe. Conecte-se com empresas que valorizam quem tem fome de crescer.</p>
       </div>
       <div class="fw-card reveal" data-delay="200">
-        <span class="fw-deco" aria-hidden="true">03</span>
+        <span class="fw-num" aria-hidden="true">03</span>
         <div class="fw-title">Quer se preparar de verdade</div>
         <p class="fw-body">Aqui você não manda currículo para o vazio. Você treina, recebe feedback e entra em processos seletivos ao vivo.</p>
       </div>
     </div>
     <span class="fw-note reveal" data-delay="0">"Se você se identificou, seu lugar é na GROWY."</span>
     <div class="fw-cta reveal" data-delay="100">
-      <a href="https://pickpass.com.br/eventos/growy-edicao-3-mmtnxvgr" class="btn btn-gold" target="_blank" rel="noopener">QUERO PARTICIPAR →</a>
+      <a href="https://pickpass.com.br/eventos/growy-edicao-5-maringa-pr-ee10ca" class="btn btn-primary" target="_blank" rel="noopener">QUERO PARTICIPAR →</a>
     </div>
   </div>
 </section>
@@ -1421,18 +1861,18 @@
 ══════════════════════════════ -->
 <section class="section" aria-labelledby="steps-title">
   <div class="container">
-    <span class="label reveal" data-delay="0">Como participar</span>
-    <h2 class="h2 reveal" data-delay="100" id="steps-title">
+    <span class="eyebrow reveal" data-delay="0">Como participar</span>
+    <h2 class="title-xl reveal" data-delay="100" id="steps-title">
       3 passos para<br>
-      <span class="gold underline">mudar sua trajetória</span>
+      <span class="mark">mudar sua trajetória</span>
     </h2>
     <div class="steps-grid">
       <div class="timeline reveal" data-delay="0">
         <div class="tl-item">
           <div class="tl-dot" aria-hidden="true">01</div>
           <div class="tl-title">Garanta sua vaga</div>
-          <p class="tl-body">Inscrição por R$ 45 — um valor simbólico para confirmar que você vai aparecer. Direto, sem complicação.</p>
-          <a href="https://pickpass.com.br/eventos/growy-edicao-3-mmtnxvgr" class="btn-link" target="_blank" rel="noopener">Garantir minha vaga →</a>
+          <p class="tl-body">Inscrição por R$ 150 — um valor simbólico para confirmar que você vai aparecer. Direto, sem complicação.</p>
+          <a href="https://pickpass.com.br/eventos/growy-edicao-5-maringa-pr-ee10ca" class="btn-link" target="_blank" rel="noopener">Garantir minha vaga →</a>
         </div>
         <div class="tl-item">
           <div class="tl-dot" aria-hidden="true">02</div>
@@ -1441,12 +1881,12 @@
         </div>
         <div class="tl-item">
           <div class="tl-dot" aria-hidden="true">03</div>
-          <div class="tl-title">Dia do evento · 09 de Maio</div>
+          <div class="tl-title">Dia do evento · 26 de Agosto</div>
           <p class="tl-body">Processos seletivos ao vivo, painéis com líderes e conexões que abrem portas. Você sai do evento com oportunidades na mão.</p>
         </div>
       </div>
       <div class="steps-photo reveal" data-delay="200">
-        <img src="GROWY/fotos/evento-02.jpg" alt="Jovens em networking na GROWY" loading="lazy" />
+        <img src="GROWY/fotos/evento-02.jpg" alt="Jovens em networking na GROWY" loading="lazy" decoding="async" />
       </div>
     </div>
   </div>
@@ -1457,10 +1897,10 @@
 ══════════════════════════════ -->
 <section class="section-alt" aria-labelledby="agenda-title">
   <div class="container">
-    <span class="label reveal" data-delay="0">Programação</span>
-    <h2 class="h2 reveal" data-delay="100" id="agenda-title">
+    <span class="eyebrow reveal" data-delay="0">Programação</span>
+    <h2 class="title-xl reveal" data-delay="100" id="agenda-title">
       O que acontece<br>
-      <span class="gold underline">no dia?</span>
+      <span class="mark">no dia?</span>
     </h2>
     <div class="agenda-layout">
       <div class="agenda-items reveal" data-delay="0">
@@ -1522,7 +1962,7 @@
 
       </div>
       <div class="agenda-photo reveal" data-delay="200">
-        <img src="GROWY/fotos/evento-03.JPG" alt="Painel de lideranças na GROWY" loading="lazy" />
+        <img src="GROWY/fotos/evento-03.JPG" alt="Painel de lideranças na GROWY" loading="lazy" decoding="async" />
       </div>
     </div>
   </div>
@@ -1535,11 +1975,11 @@
   <div class="container-sm">
     <div class="reveal" data-delay="0">
       <p class="video-section-label">Veja como foi a última edição</p>
-      <h2 class="h2" id="video-title">A GROWY em imagens</h2>
+      <h2 class="title-xl" id="video-title">A GROWY em imagens</h2>
     </div>
     <div class="reveal" data-delay="150">
       <div class="video-vertical">
-        <video controls playsinline preload="metadata" aria-label="Vídeo da edição anterior da GROWY">
+        <video controls playsinline preload="none" aria-label="Vídeo da edição anterior da GROWY">
           <source src="GROWY/videos/growy-edicao-2.mp4" type="video/mp4">
         </video>
       </div>
@@ -1553,29 +1993,29 @@
 ══════════════════════════════ -->
 <section class="section-alt" aria-labelledby="gallery-title">
   <div class="container">
-    <span class="label reveal" data-delay="0">Galeria</span>
-    <h2 class="h2 reveal" data-delay="100" id="gallery-title">
+    <span class="eyebrow reveal" data-delay="0">Galeria</span>
+    <h2 class="title-xl reveal" data-delay="100" id="gallery-title">
       Veja a GROWY<br>
-      <span class="gold underline">na prática</span>
+      <span class="mark">na prática</span>
     </h2>
     <div class="reveal" data-delay="200">
       <div class="gallery-row-1">
         <div class="gallery-item">
-          <img src="GROWY/fotos/evento-01.JPG" alt="Jovens participando da GROWY" loading="lazy" />
+          <img src="GROWY/fotos/evento-01.JPG" alt="Jovens participando da GROWY" loading="lazy" decoding="async" />
         </div>
         <div class="gallery-item">
-          <img src="GROWY/fotos/evento-02.jpg" alt="Networking na GROWY" loading="lazy" />
+          <img src="GROWY/fotos/evento-02.jpg" alt="Networking na GROWY" loading="lazy" decoding="async" />
         </div>
         <div class="gallery-item">
-          <img src="GROWY/fotos/evento-03.JPG" alt="Painel na GROWY" loading="lazy" />
+          <img src="GROWY/fotos/evento-03.JPG" alt="Painel na GROWY" loading="lazy" decoding="async" />
         </div>
       </div>
       <div class="gallery-row-2">
         <div class="gallery-item">
-          <img src="GROWY/fotos/evento-04.JPG" alt="Dinâmica em grupo na GROWY" loading="lazy" />
+          <img src="GROWY/fotos/evento-04.JPG" alt="Dinâmica em grupo na GROWY" loading="lazy" decoding="async" />
         </div>
         <div class="gallery-item">
-          <img src="GROWY/fotos/evento-05.JPG" alt="Momentos da GROWY" loading="lazy" />
+          <img src="GROWY/fotos/evento-05.JPG" alt="Momentos da GROWY" loading="lazy" decoding="async" />
         </div>
       </div>
     </div>
@@ -1587,15 +2027,15 @@
 ══════════════════════════════ -->
 <section class="section" aria-labelledby="cases-title">
   <div class="container">
-    <span class="label reveal" data-delay="0">Cases</span>
-    <h2 class="h2 reveal" data-delay="100" id="cases-title">
+    <span class="eyebrow reveal" data-delay="0">Cases</span>
+    <h2 class="title-xl reveal" data-delay="100" id="cases-title">
       Quem participou<br>
-      <span class="gold underline">já colheu resultados</span>
+      <span class="mark">já colheu resultados</span>
     </h2>
     <div class="cases-grid">
       <div class="case-card reveal" data-delay="0">
         <div class="case-header">
-          <img src="GROWY/fotos/case-bernardo.jpg" alt="Foto de Bernardo Ormeneze" class="case-photo" />
+          <img src="GROWY/fotos/case-bernardo.jpg" alt="Foto de Bernardo Ormeneze" class="case-photo" loading="lazy" decoding="async" />
           <div>
             <div class="case-name">Bernardo Ormeneze</div>
             <span class="case-badge">SDR TOP 1 BRASIL · EQI</span>
@@ -1603,14 +2043,14 @@
         </div>
         <p class="case-quote">"Participei da GROWY e em menos de 30 dias estava contratado. Em um mês me tornei o SDR número 1 do Brasil na EQI Investimentos."</p>
         <div class="case-result">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          <span class="tick" aria-hidden="true"></span>
           Contratado em menos de 30 dias
         </div>
       </div>
       <div class="case-card reveal" data-delay="150">
         <!-- Replace with case-matheus.jpg final version when available -->
         <div class="case-header">
-          <img src="GROWY/fotos/case-matheus.jpg" alt="Foto de Matheus Marques" class="case-photo" style="filter:contrast(1.15) brightness(1.1) saturate(1.1);" />
+          <img src="GROWY/fotos/case-matheus.jpg" alt="Foto de Matheus Marques" class="case-photo" style="filter:contrast(1.15) brightness(1.1) saturate(1.1);" loading="lazy" decoding="async" />
           <div>
             <div class="case-name">Matheus Marques</div>
             <span class="case-badge">TOP 6 BRASIL · EQI</span>
@@ -1618,7 +2058,7 @@
         </div>
         <p class="case-quote">"Após a GROWY, me tornei o assessor com maior captação do escritório EQI Praia Brava e cheguei ao 6º lugar no ranking nacional de assessores."</p>
         <div class="case-result">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          <span class="tick" aria-hidden="true"></span>
           Top 6 Brasil · Maior captação do escritório
         </div>
       </div>
@@ -1627,14 +2067,14 @@
     <!-- LinkedIn Proof -->
     <div class="li-card reveal" data-delay="0">
       <div class="li-header">
-        <img src="GROWYlogos/eqi.png" alt="EQI Investimentos" />
+        <img src="GROWYlogos/eqi.png" alt="EQI Investimentos" loading="lazy" decoding="async" />
         <div>
           <div class="li-name">Matheus Alves Marques</div>
           <div class="li-role">Especialista em Investimentos · EQI</div>
         </div>
       </div>
       <div class="li-img-wrap">
-        <img src="GROWY/fotos/depoimentomatheus.jpg" alt="Post de Matheus Marques no LinkedIn sobre a GROWY" />
+        <img src="GROWY/fotos/depoimentomatheus.jpg" alt="Post de Matheus Marques no LinkedIn sobre a GROWY" loading="lazy" decoding="async" />
       </div>
       <div class="li-caption">Post original publicado no LinkedIn</div>
     </div>
@@ -1646,25 +2086,25 @@
 ══════════════════════════════ -->
 <section class="section-alt" aria-labelledby="test-title">
   <div class="container">
-    <span class="label reveal" data-delay="0">Depoimentos</span>
-    <h2 class="h2 reveal" data-delay="100" id="test-title">
+    <span class="eyebrow reveal" data-delay="0">Depoimentos</span>
+    <h2 class="title-xl reveal" data-delay="100" id="test-title">
       O que dizem<br>
-      <span class="gold underline">os participantes</span>
+      <span class="mark">os participantes</span>
     </h2>
     <div class="test-grid">
 
       <!-- Gabriela -->
       <div class="test-card reveal" data-delay="0">
         <div class="test-header">
-          <img src="GROWY/fotos/depoimento-gabriela.jpg" alt="Foto de Gabriela Nunes" class="test-photo" />
+          <img src="GROWY/fotos/depoimento-gabriela.jpg" alt="Foto de Gabriela Nunes" class="test-photo" loading="lazy" decoding="async" />
           <div>
             <div class="test-name">Gabriela Nunes</div>
             <div class="stars" aria-label="5 de 5 estrelas">
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="#C9A84C" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="#C9A84C" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="#C9A84C" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="#C9A84C" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="#C9A84C" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="#F5C800" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="#F5C800" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="#F5C800" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="#F5C800" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="#F5C800" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
             </div>
           </div>
         </div>
@@ -1674,15 +2114,15 @@
       <!-- Arthur Fischer -->
       <div class="test-card reveal" data-delay="120">
         <div class="test-header">
-          <img src="GROWY/fotos/depoimento-arthur.jpg" alt="Foto de Arthur Fischer" class="test-photo" />
+          <img src="GROWY/fotos/depoimento-arthur.jpg" alt="Foto de Arthur Fischer" class="test-photo" loading="lazy" decoding="async" />
           <div>
             <div class="test-name">Arthur Fischer</div>
             <div class="stars" aria-label="5 de 5 estrelas">
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="#C9A84C" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="#C9A84C" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="#C9A84C" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="#C9A84C" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="#C9A84C" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="#F5C800" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="#F5C800" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="#F5C800" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="#F5C800" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="#F5C800" aria-hidden="true"><path d="M8 12.3l-4.9 2.9 1.3-5.5L.3 6l5.6-.5L8 .3l2.1 5.2 5.6.5-4.1 3.7 1.3 5.5z"/></svg>
             </div>
           </div>
         </div>
@@ -1693,7 +2133,7 @@
       <div class="test-video-card reveal" data-delay="240">
         <span class="test-video-label">Depoimento em vídeo</span>
         <div class="video-vertical">
-          <video controls playsinline preload="metadata" aria-label="Depoimento em vídeo de participante da GROWY">
+          <video controls playsinline preload="none" aria-label="Depoimento em vídeo de participante da GROWY">
             <source src="GROWY/videos/depoimento-01.mp4" type="video/mp4">
           </video>
         </div>
@@ -1708,13 +2148,13 @@
 ══════════════════════════════ -->
 <section class="section" aria-labelledby="partner-title">
   <div class="container" style="text-align:center;">
-    <span class="label reveal" data-delay="0">Empresa parceira</span>
-    <h2 class="h2 reveal" data-delay="100" id="partner-title">
+    <span class="eyebrow reveal" data-delay="0" style="justify-content:center;">Empresa parceira</span>
+    <h2 class="title-xl reveal" data-delay="100" id="partner-title">
       Quem confia<br>
-      <span class="gold underline">na GROWY</span>
+      <span class="mark">na GROWY</span>
     </h2>
     <div class="eqi-card reveal" data-delay="200">
-      <img src="GROWYlogos/eqi.png" alt="EQI Investimentos" class="eqi-logo" />
+      <img src="GROWYlogos/eqi-color.png" alt="EQI Investimentos" class="eqi-logo" loading="lazy" decoding="async" />
       <div class="eqi-num">+400</div>
       <div class="eqi-num-label">contratações em um único ano</div>
       <hr class="eqi-divider" />
@@ -1729,31 +2169,37 @@
 ══════════════════════════════ -->
 <section class="section-alt" aria-labelledby="offer-title">
   <div class="container">
-    <span class="label reveal" data-delay="0">O que você recebe</span>
+    <span class="eyebrow reveal" data-delay="0">O que você recebe</span>
     <div class="offer-price-wrap reveal" data-delay="100">
-      <h2 class="h2" id="offer-title" style="margin-bottom:0.25rem;">Por apenas</h2>
-      <div class="offer-price gold-glow">R$ 45</div>
-      <div class="offer-price-sub">e uma decisão.</div>
+      <h2 class="title-xl" id="offer-title" style="margin-bottom:0.25rem;">Por apenas</h2>
+      <div class="price-anchor">
+        <span class="price-original">De R$ 497</span>
+        <div class="price-current">
+          <span class="price-label">por apenas</span>
+          <span class="price-value">R$ 150</span>
+        </div>
+        <span class="price-savings">Você economiza R$ 347</span>
+      </div>
     </div>
     <div class="offer-layout">
       <div class="checklist reveal" data-delay="0">
-        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Acesso completo ao evento presencial</div>
-        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Avaliação de perfil pela equipe 2A antes do evento</div>
-        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Painéis com lideranças do mercado</div>
-        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Rounds de networking com recrutadores</div>
-        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Participação em processos seletivos ao vivo</div>
-        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Workshop de pitch com feedback de gestores</div>
-        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Certificado de participação GROWY</div>
-        <div class="check-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Acesso à comunidade pós-evento</div>
+        <div class="check-item"><span class="tick" aria-hidden="true"></span>Acesso completo ao evento presencial</div>
+        <div class="check-item"><span class="tick" aria-hidden="true"></span>Avaliação de perfil pela equipe 2A antes do evento</div>
+        <div class="check-item"><span class="tick" aria-hidden="true"></span>Painéis com lideranças do mercado</div>
+        <div class="check-item"><span class="tick" aria-hidden="true"></span>Rounds de networking com recrutadores</div>
+        <div class="check-item"><span class="tick" aria-hidden="true"></span>Participação em processos seletivos ao vivo</div>
+        <div class="check-item"><span class="tick" aria-hidden="true"></span>Workshop de pitch com feedback de gestores</div>
+        <div class="check-item"><span class="tick" aria-hidden="true"></span>Certificado de participação GROWY</div>
+        <div class="check-item"><span class="tick" aria-hidden="true"></span>Acesso à comunidade pós-evento</div>
       </div>
       <div class="reveal" data-delay="200">
         <div class="guarantee-box">
           <div class="guarantee-icon">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#16140F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
           <div class="guarantee-title">Garantia de Experiência</div>
-          <p class="guarantee-body">Se você participar e sentir que não valeu os R$ 45, devolvemos. Sem burocracia, sem questionamentos.</p>
-          <a href="https://pickpass.com.br/eventos/growy-edicao-3-mmtnxvgr" class="btn btn-gold" target="_blank" rel="noopener" style="display:flex;width:100%;justify-content:center;">GARANTIR MINHA VAGA POR R$ 45 →</a>
+          <p class="guarantee-body">Se você participar e sentir que não valeu os R$ 150, devolvemos. Sem burocracia, sem questionamentos.</p>
+          <a href="https://pickpass.com.br/eventos/growy-edicao-5-maringa-pr-ee10ca" class="btn btn-primary" target="_blank" rel="noopener" style="display:flex;width:100%;justify-content:center;">GARANTIR MINHA VAGA POR R$ 150 →</a>
         </div>
       </div>
     </div>
@@ -1786,7 +2232,7 @@
           <span class="cd-label">Seg</span>
         </div>
       </div>
-      <a href="https://pickpass.com.br/eventos/growy-edicao-3-mmtnxvgr" class="btn btn-gold" target="_blank" rel="noopener">QUERO GARANTIR MINHA VAGA AGORA →</a>
+      <a href="https://pickpass.com.br/eventos/growy-edicao-5-maringa-pr-ee10ca" class="btn btn-primary" target="_blank" rel="noopener">QUERO GARANTIR MINHA VAGA AGORA →</a>
     </div>
   </div>
 </section>
@@ -1796,10 +2242,10 @@
 ══════════════════════════════ -->
 <section class="section" aria-labelledby="faq-title">
   <div class="container">
-    <span class="label reveal" data-delay="0">Dúvidas</span>
-    <h2 class="h2 reveal" data-delay="100" id="faq-title">
+    <span class="eyebrow reveal" data-delay="0">Dúvidas</span>
+    <h2 class="title-xl reveal" data-delay="100" id="faq-title">
       Dúvidas<br>
-      <span class="gold underline">frequentes</span>
+      <span class="mark">frequentes</span>
     </h2>
     <div class="faq-list">
 
@@ -1808,7 +2254,7 @@
           Quanto custa a inscrição?
           <svg class="faq-chevron-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
-        <div class="faq-answer"><div class="faq-answer-inner">R$ 45 — um valor simbólico para confirmar sua presença. Não é ingresso de show, é comprometimento com a sua carreira.</div></div>
+        <div class="faq-answer"><div class="faq-answer-inner">R$ 150 — um valor simbólico para confirmar sua presença. Não é ingresso de show, é comprometimento com a sua carreira.</div></div>
       </div>
 
       <div class="faq-item">
@@ -1816,7 +2262,7 @@
           O evento é presencial?
           <svg class="faq-chevron-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
-        <div class="faq-answer"><div class="faq-answer-inner">Sim, presencial. PIB Education, Av. Osvaldo Reis, 3334, Sala 01, Edifício Artefacto Towers, Praia Brava, Itajaí-SC.</div></div>
+        <div class="faq-answer"><div class="faq-answer-inner">Sim, presencial. Local a confirmar, Maringá, PR.</div></div>
       </div>
 
       <div class="faq-item">
@@ -1848,7 +2294,7 @@
           Posso pedir reembolso?
           <svg class="faq-chevron-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
-        <div class="faq-answer"><div class="faq-answer-inner">Participou e não achou que valeu os R$ 45? Devolvemos. Simples assim.</div></div>
+        <div class="faq-answer"><div class="faq-answer-inner">Participou e não achou que valeu os R$ 150? Devolvemos. Simples assim.</div></div>
       </div>
 
     </div>
@@ -1862,11 +2308,11 @@
   <div class="final-cta-inner reveal" data-delay="0">
     <h2 class="final-headline" id="finalcta-title">
       Sua carreira começa
-      <span class="gold">com uma decisão.</span>
+      <span class="accent">com uma decisão.</span>
     </h2>
-    <p class="final-info">09 de Maio · PIB Education · Praia Brava, Itajaí SC</p>
+    <p class="final-info">26 de Agosto · Local a confirmar · Maringá, PR</p>
     <div class="final-btns">
-      <a href="https://pickpass.com.br/eventos/growy-edicao-3-mmtnxvgr" class="btn btn-gold btn-full" target="_blank" rel="noopener">GARANTIR MINHA VAGA AGORA →</a>
+      <a href="https://pickpass.com.br/eventos/growy-edicao-5-maringa-pr-ee10ca" class="btn btn-primary btn-full" target="_blank" rel="noopener">GARANTIR MINHA VAGA AGORA →</a>
       <a href="https://wa.me/message/X4UMSV5HFTPIM1" class="btn btn-wa" target="_blank" rel="noopener">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         Falar com a equipe no WhatsApp
@@ -1879,7 +2325,7 @@
 <footer class="lp-footer">
   <div class="container">
     <div class="footer-brand">GROWY · 2A EDUCAÇÃO</div>
-    <p>© 2026 2A Educação · Todos os direitos reservados · Itajaí, SC</p>
+    <p>© 2026 2A Educação · Todos os direitos reservados · Maringá, PR</p>
   </div>
 </footer>
 
@@ -1891,8 +2337,115 @@
 
 <!-- MOBILE BOTTOM BAR -->
 <div class="mobile-bar" role="complementary" aria-label="Inscrição rápida">
-  <span class="mob-text">09/05 · ITAJAÍ/SC</span>
-  <a href="https://pickpass.com.br/eventos/growy-edicao-3-mmtnxvgr" class="mob-btn" target="_blank" rel="noopener">INSCREVER AGORA</a>
+  <span class="mob-text">26/08 · MARINGÁ/PR</span>
+  <a href="https://pickpass.com.br/eventos/growy-edicao-5-maringa-pr-ee10ca" class="mob-btn" target="_blank" rel="noopener">INSCREVER AGORA</a>
+</div>
+
+<!-- SCROLL TO TOP -->
+<button id="scroll-top" aria-label="Voltar ao topo">↑</button>
+
+<!-- ══════════════════════════════
+     QUIZ MODAL
+══════════════════════════════ -->
+<div class="quiz-overlay" id="quizOverlay" role="dialog" aria-modal="true" aria-labelledby="quizQuestion">
+
+  <div class="quiz-modal" id="quizModal">
+
+    <button class="quiz-close" id="quizClose" aria-label="Fechar">&times;</button>
+
+    <div class="quiz-progress-bar">
+      <div class="quiz-progress-fill" id="quizProgressFill"></div>
+    </div>
+
+    <!-- STEP 1 — Nome -->
+    <div class="quiz-step active" id="quizStep1">
+      <div class="quiz-step-counter">ETAPA 1 DE 5</div>
+      <div class="quiz-question" id="quizQuestion">Qual é o seu nome?</div>
+      <input class="quiz-input" type="text" id="qNome" name="nome"
+        placeholder="Seu nome completo" autocomplete="given-name" />
+      <div class="quiz-error-msg" id="qNomeError">Por favor, preencha seu nome.</div>
+      <button class="quiz-btn" id="quizBtn1">Continuar →</button>
+    </div>
+
+    <!-- STEP 2 — Telefone -->
+    <div class="quiz-step" id="quizStep2">
+      <div class="quiz-step-counter">ETAPA 2 DE 5</div>
+      <div class="quiz-question">Qual é o seu WhatsApp?</div>
+      <input class="quiz-input" type="tel" id="qTelefone" name="telefone"
+        placeholder="(47) 99999-9999" autocomplete="tel" />
+      <div class="quiz-hint">Vamos usar para te enviar as instruções do evento.</div>
+      <div class="quiz-error-msg" id="qTelefoneError">Por favor, insira um número válido.</div>
+      <button class="quiz-btn" id="quizBtn2">Continuar →</button>
+    </div>
+
+    <!-- STEP 3 — Email -->
+    <div class="quiz-step" id="quizStep3">
+      <div class="quiz-step-counter">ETAPA 3 DE 5</div>
+      <div class="quiz-question">Qual é o seu e-mail?</div>
+      <input class="quiz-input" type="email" id="qEmail" name="email"
+        placeholder="seuemail@exemplo.com" autocomplete="email" />
+      <div class="quiz-hint">Você vai receber a confirmação de inscrição aqui.</div>
+      <div class="quiz-error-msg" id="qEmailError">Por favor, insira um e-mail válido.</div>
+      <button class="quiz-btn" id="quizBtn3">Continuar →</button>
+    </div>
+
+    <!-- STEP 4 — Idade -->
+    <div class="quiz-step" id="quizStep4">
+      <div class="quiz-step-counter">ETAPA 4 DE 5</div>
+      <div class="quiz-question">Quantos anos você tem?</div>
+      <input class="quiz-input" type="number" id="qIdade" name="idade"
+        placeholder="Ex: 22" min="16" max="35" />
+      <div class="quiz-hint">A GROWY é voltada para jovens de 16 a 35 anos.</div>
+      <div class="quiz-error-msg" id="qIdadeError">A GROWY é voltada para jovens de 16 a 35 anos.</div>
+      <button class="quiz-btn" id="quizBtn4">Continuar →</button>
+    </div>
+
+    <!-- STEP 5 — Faculdade -->
+    <div class="quiz-step" id="quizStep5">
+      <div class="quiz-step-counter">ETAPA 5 DE 5</div>
+      <div class="quiz-question">Você está fazendo faculdade?</div>
+
+      <div class="quiz-card-options">
+        <div class="quiz-card-option" id="cardSim" data-value="sim">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16140F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+          <span class="quiz-card-label">Sim, estou cursando</span>
+        </div>
+        <div class="quiz-card-option" id="cardNao" data-value="nao">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16140F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+          </svg>
+          <span class="quiz-card-label">Não estou fazendo faculdade</span>
+        </div>
+      </div>
+      <div class="quiz-card-error" id="qCardError">Por favor, selecione uma opção.</div>
+
+      <div class="quiz-subfields" id="quizSubfields">
+        <div>
+          <label class="quiz-field-label" for="qInstituicao">Instituição</label>
+          <input class="quiz-input" type="text" id="qInstituicao" name="instituicao"
+            placeholder="Ex: UNIVALI, FURB, UNIAVAN..." />
+          <div class="quiz-error-msg" id="qInstituicaoError">Por favor, preencha a instituição.</div>
+        </div>
+        <div>
+          <label class="quiz-field-label" for="qCurso">Curso</label>
+          <input class="quiz-input" type="text" id="qCurso" name="curso"
+            placeholder="Ex: Administração, Direito..." />
+          <div class="quiz-error-msg" id="qCursoError">Por favor, preencha o curso.</div>
+        </div>
+        <div>
+          <label class="quiz-field-label" for="qPeriodo">Período</label>
+          <input class="quiz-input" type="number" id="qPeriodo" name="periodo"
+            placeholder="Ex: 3" min="1" max="12" />
+          <div class="quiz-hint">Qual semestre ou período você está cursando?</div>
+        </div>
+      </div>
+
+      <button class="quiz-btn" id="quizBtn5">Garantir meu ingresso →</button>
+    </div>
+
+  </div>
 </div>
 
 <!-- ══════════════════════════════
@@ -1966,7 +2519,7 @@
   counters.forEach(function (el) { cObs.observe(el); });
 
   /* ── COUNTDOWN TIMER ── */
-  var eventDate = new Date('2026-05-09T08:00:00');
+  var eventDate = new Date('2026-08-26T08:00:00');
   var $d = document.getElementById('cd-days');
   var $h = document.getElementById('cd-hours');
   var $m = document.getElementById('cd-mins');
@@ -2015,6 +2568,296 @@
       });
     });
   }
+
+  /* ── SCROLL TO TOP ── */
+  (function () {
+    var btn = document.getElementById('scroll-top');
+    if (!btn) return;
+    window.addEventListener('scroll', function () {
+      btn.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+    btn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }());
+
+  /* ══════════════════════════════════════
+     QUIZ MODAL
+  ══════════════════════════════════════ */
+  (function () {
+    var PICKPASS_URL = 'https://pickpass.com.br/eventos/growy-edicao-5-maringa-pr-ee10ca';
+    var GAS_URL = 'https://script.google.com/macros/s/AKfycbwi9FuwtlxTJsuJdfyqzZGmplLHYPtgvEDu47abGNH6hI8ap2pAdj-k1QUZUcLHsrpR6A/exec';
+
+    var overlay    = document.getElementById('quizOverlay');
+    var modal      = document.getElementById('quizModal');
+    var closeBtn   = document.getElementById('quizClose');
+    var progFill   = document.getElementById('quizProgressFill');
+
+    var steps      = [1,2,3,4,5];
+    var currentStep = 1;
+    var lastFocused = null;
+
+    /* ── Inputs ── */
+    var qNome      = document.getElementById('qNome');
+    var qTelefone  = document.getElementById('qTelefone');
+    var qEmail     = document.getElementById('qEmail');
+    var qIdade     = document.getElementById('qIdade');
+    var cardSim    = document.getElementById('cardSim');
+    var cardNao    = document.getElementById('cardNao');
+    var subfields  = document.getElementById('quizSubfields');
+    var qInstituicao = document.getElementById('qInstituicao');
+    var qCurso     = document.getElementById('qCurso');
+    var qPeriodo   = document.getElementById('qPeriodo');
+
+    var selectedCard = null; // 'sim' | 'nao' | null
+
+    /* ── Phone mask ── */
+    qTelefone.addEventListener('input', function () {
+      var digits = qTelefone.value.replace(/\D/g, '').slice(0, 11);
+      var formatted = '';
+      if (digits.length === 0) { formatted = ''; }
+      else if (digits.length <= 2) { formatted = '(' + digits; }
+      else if (digits.length <= 7) { formatted = '(' + digits.slice(0,2) + ') ' + digits.slice(2); }
+      else { formatted = '(' + digits.slice(0,2) + ') ' + digits.slice(2,7) + '-' + digits.slice(7); }
+      qTelefone.value = formatted;
+    });
+
+    /* ── Progress bar ── */
+    function setProgress(step) {
+      progFill.style.width = ((step / 5) * 100) + '%';
+    }
+
+    /* ── Error helpers ── */
+    function showError(inputEl, errEl, msg) {
+      inputEl.classList.add('error');
+      if (msg) errEl.textContent = msg;
+      errEl.classList.add('visible');
+    }
+    function clearError(inputEl, errEl) {
+      inputEl.classList.remove('error');
+      errEl.classList.remove('visible');
+    }
+
+    /* ── Validation per step ── */
+    function validateStep(step) {
+      if (step === 1) {
+        var err = document.getElementById('qNomeError');
+        clearError(qNome, err);
+        if (!qNome.value.trim()) { showError(qNome, err); return false; }
+        return true;
+      }
+      if (step === 2) {
+        var err = document.getElementById('qTelefoneError');
+        clearError(qTelefone, err);
+        var digits = qTelefone.value.replace(/\D/g,'');
+        if (digits.length < 10) { showError(qTelefone, err); return false; }
+        return true;
+      }
+      if (step === 3) {
+        var err = document.getElementById('qEmailError');
+        clearError(qEmail, err);
+        var val = qEmail.value.trim();
+        var atIdx = val.indexOf('@');
+        if (atIdx < 1 || val.indexOf('.', atIdx) < atIdx + 2) { showError(qEmail, err); return false; }
+        return true;
+      }
+      if (step === 4) {
+        var err = document.getElementById('qIdadeError');
+        clearError(qIdade, err);
+        var age = parseInt(qIdade.value, 10);
+        if (isNaN(age) || age < 16 || age > 35) { showError(qIdade, err); return false; }
+        return true;
+      }
+      if (step === 5) {
+        var cardErr = document.getElementById('qCardError');
+        cardErr.classList.remove('visible');
+        if (!selectedCard) { cardErr.classList.add('visible'); return false; }
+        if (selectedCard === 'sim') {
+          var errI = document.getElementById('qInstituicaoError');
+          var errC = document.getElementById('qCursoError');
+          clearError(qInstituicao, errI);
+          clearError(qCurso, errC);
+          var ok = true;
+          if (!qInstituicao.value.trim()) { showError(qInstituicao, errI); ok = false; }
+          if (!qCurso.value.trim()) { showError(qCurso, errC); ok = false; }
+          return ok;
+        }
+        return true;
+      }
+      return true;
+    }
+
+    /* ── Step navigation ── */
+    function goToStep(nextStep) {
+      var currentEl = document.getElementById('quizStep' + currentStep);
+      var nextEl    = document.getElementById('quizStep' + nextStep);
+
+      currentEl.classList.add('leaving');
+      setTimeout(function () {
+        currentEl.classList.remove('active', 'leaving');
+        nextEl.classList.add('active');
+        currentStep = nextStep;
+        setProgress(currentStep);
+        // focus first input in next step
+        var firstInput = nextEl.querySelector('input, .quiz-card-option');
+        if (firstInput) firstInput.focus();
+      }, 250);
+    }
+
+    /* ── Step 5 card selection ── */
+    cardSim.addEventListener('click', function () {
+      selectedCard = 'sim';
+      cardSim.classList.add('selected');
+      cardNao.classList.remove('selected');
+      subfields.classList.add('visible');
+      document.getElementById('qCardError').classList.remove('visible');
+    });
+    cardNao.addEventListener('click', function () {
+      selectedCard = 'nao';
+      cardNao.classList.add('selected');
+      cardSim.classList.remove('selected');
+      subfields.classList.remove('visible');
+      document.getElementById('qCardError').classList.remove('visible');
+    });
+
+    /* ── Button handlers ── */
+    document.getElementById('quizBtn1').addEventListener('click', function () {
+      if (validateStep(1)) goToStep(2);
+    });
+    document.getElementById('quizBtn2').addEventListener('click', function () {
+      if (validateStep(2)) goToStep(3);
+    });
+    document.getElementById('quizBtn3').addEventListener('click', function () {
+      if (validateStep(3)) goToStep(4);
+    });
+    document.getElementById('quizBtn4').addEventListener('click', function () {
+      if (validateStep(4)) goToStep(5);
+    });
+    document.getElementById('quizBtn5').addEventListener('click', submitQuiz);
+
+    /* ── Enter key advances steps ── */
+    [qNome, qTelefone, qEmail, qIdade].forEach(function (inp, idx) {
+      inp.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          var btns = ['quizBtn1','quizBtn2','quizBtn3','quizBtn4'];
+          document.getElementById(btns[idx]).click();
+        }
+      });
+    });
+    [qInstituicao, qCurso, qPeriodo].forEach(function (inp) {
+      inp.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') { e.preventDefault(); submitQuiz(); }
+      });
+    });
+
+    /* ── Submit ── */
+    function submitQuiz() {
+      if (!validateStep(5)) return;
+
+      var btn = document.getElementById('quizBtn5');
+      btn.disabled = true;
+      btn.textContent = 'Enviando...';
+
+      var situacao     = selectedCard === 'sim' ? 'Cursando' : 'Não está cursando';
+      var instituicao  = selectedCard === 'sim' ? qInstituicao.value.trim() : 'Não está cursando';
+      var curso        = selectedCard === 'sim' ? qCurso.value.trim()       : 'Não está cursando';
+      var periodo      = selectedCard === 'sim' ? (qPeriodo.value.trim() || 'Não informado') : 'Não está cursando';
+
+      var data = {
+        nome:        qNome.value.trim(),
+        telefone:    qTelefone.value.trim(),
+        email:       qEmail.value.trim(),
+        idade:       qIdade.value.trim(),
+        situacao:    situacao,
+        instituicao: instituicao,
+        curso:       curso,
+        periodo:     periodo
+      };
+
+      fetch(GAS_URL, {
+        method:  'POST',
+        mode:    'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify(data)
+      })
+      .catch(function (err) { console.error('Quiz submit error:', err); })
+      .finally(function () {
+        closeQuizModal();
+        setTimeout(function () {
+          window.location.href = PICKPASS_URL;
+        }, 300);
+      });
+    }
+
+    /* ── Open / Close ── */
+    function openQuizModal(triggerEl) {
+      lastFocused = triggerEl || document.activeElement;
+      // Reset state
+      currentStep = 1;
+      steps.forEach(function (s) {
+        var el = document.getElementById('quizStep' + s);
+        el.classList.remove('active', 'leaving');
+      });
+      document.getElementById('quizStep1').classList.add('active');
+      setProgress(1);
+      selectedCard = null;
+      cardSim.classList.remove('selected');
+      cardNao.classList.remove('selected');
+      subfields.classList.remove('visible');
+      qNome.value = '';
+      qTelefone.value = '';
+      qEmail.value = '';
+      qIdade.value = '';
+      qInstituicao.value = '';
+      qCurso.value = '';
+      qPeriodo.value = '';
+      // Clear errors
+      document.querySelectorAll('.quiz-error-msg').forEach(function (e) { e.classList.remove('visible'); });
+      document.querySelectorAll('.quiz-input').forEach(function (i) { i.classList.remove('error'); });
+      document.getElementById('qCardError').classList.remove('visible');
+      document.getElementById('quizBtn5').disabled = false;
+      document.getElementById('quizBtn5').textContent = 'Garantir meu ingresso →';
+      // Show
+      overlay.classList.add('active');
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          modal.classList.add('open');
+          qNome.focus();
+        });
+      });
+    }
+
+    function closeQuizModal() {
+      modal.classList.remove('open');
+      modal.classList.add('closing');
+      setTimeout(function () {
+        overlay.classList.remove('active');
+        modal.classList.remove('closing');
+        if (lastFocused) lastFocused.focus();
+      }, 200);
+    }
+
+    /* ── Close triggers ── */
+    closeBtn.addEventListener('click', closeQuizModal);
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closeQuizModal();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) closeQuizModal();
+    });
+
+    /* ── Intercept Pickpass CTAs ── */
+    document.querySelectorAll('a[href*="pickpass.com.br"]').forEach(function (el) {
+      // Skip WhatsApp links (safety check)
+      if (el.href && el.href.indexOf('wa.me') !== -1) return;
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        openQuizModal(el);
+      });
+    });
+
+  }());
 
 })();
 </script>

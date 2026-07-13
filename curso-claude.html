@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curso Claude IA – 2A Educação</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0a0a0a;
+      color: #f0f0f0;
+    }
+
+    /* ───── HEADER ───── */
+    header {
+      background: #0a0a0a;
+      border-bottom: 2px solid #f5c800;
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #f5c800;
+      text-transform: uppercase;
+    }
+
+    .logo span {
+      color: #ffffff;
+    }
+
+    .header-badge {
+      background: #f5c800;
+      color: #0a0a0a;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    /* ───── CLAUDE DECORATION ───── */
+    .claude-orb {
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #d9775b55, #d9775b11 70%, transparent);
+      border: 1.5px solid #d9775b44;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    .claude-ring {
+      width: 480px;
+      height: 480px;
+      border-radius: 50%;
+      border: 1px solid #d9775b22;
+      position: absolute;
+      pointer-events: none;
+      animation: pulse-ring 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse-ring {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.04); opacity: 1; }
+    }
+
+    .claude-dots {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0; left: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .claude-dots span {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9775b;
+      opacity: 0.4;
+      animation: float-dot 6s ease-in-out infinite;
+    }
+
+    .claude-dots span:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; }
+    .claude-dots span:nth-child(2) { top: 70%; left: 85%; animation-delay: 1s; }
+    .claude-dots span:nth-child(3) { top: 40%; left: 90%; animation-delay: 2s; }
+    .claude-dots span:nth-child(4) { top: 80%; left: 15%; animation-delay: 3s; }
+    .claude-dots span:nth-child(5) { top: 25%; left: 75%; animation-delay: 1.5s; }
+
+    @keyframes float-dot {
+      0%, 100% { transform: translateY(0); opacity: 0.4; }
+      50% { transform: translateY(-12px); opacity: 0.9; }
+    }
+
+    /* ───── HERO ───── */
+    .hero {
+      background: #0a0a0a;
+      padding: 100px 20px 80px;
+      text-align: center;
+      border-bottom: 1px solid #1a1a1a;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero .orb-wrap {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero .badge {
+      display: inline-block;
+      background: #f5c800;
+      color: #0a0a0a;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 28px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 span {
+      color: #f5c800;
+    }
+
+    .hero h1 .claude-color {
+      color: #d9775b;
+    }
+
+    .hero p {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: #aaa;
+      max-width: 580px;
+      margin: 0 auto 48px;
+      line-height: 1.8;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Claude visual icon */
+    .claude-icon-hero {
+      position: relative;
+      z-index: 2;
+      margin: 0 auto 0;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #d9775b, #b85a3a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 60px #d9775b55, 0 0 120px #d9775b22;
+      animation: glow-pulse 3s ease-in-out infinite;
+    }
+
+    .claude-icon-hero svg {
+      width: 70px;
+      height: 70px;
+      fill: #fff;
+    }
+
+    @keyframes glow-pulse {
+      0%, 100% { box-shadow: 0 0 60px #d9775b55, 0 0 120px #d9775b22; }
+      50% { box-shadow: 0 0 90px #d9775b88, 0 0 160px #d9775b44; }
+    }
+
+    /* ───── DIVIDER ───── */
+    .divider {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #f5c800, transparent);
+      margin: 0;
+    }
+
+    /* ───── BENEFÍCIOS ───── */
+    .benefits {
+      padding: 90px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .section-label {
+      display: inline-block;
+      border: 1px solid #f5c800;
+      color: #f5c800;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .benefits h2 {
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      font-weight: 900;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .benefits .subtitle {
+      color: #888;
+      font-size: 1rem;
+      margin-bottom: 56px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .benefit-card {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 16px;
+      padding: 36px 26px;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .benefit-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #f5c800, #d9775b);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .benefit-card:hover {
+      border-color: #f5c800;
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(245, 200, 0, 0.08);
+    }
+
+    .benefit-card:hover::before {
+      opacity: 1;
+    }
+
+    .benefit-card .icon {
+      font-size: 36px;
+      margin-bottom: 18px;
+      display: block;
+    }
+
+    .benefit-card h3 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .benefit-card p {
+      font-size: 0.88rem;
+      color: #777;
+      line-height: 1.7;
+    }
+
+    .benefit-card .card-number {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #f5c800;
+      opacity: 0.08;
+      line-height: 1;
+    }
+
+    /* ───── FORMULÁRIO ───── */
+    .form-section {
+      background: #0d0d0d;
+      padding: 90px 20px;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .form-section::before {
+      content: '';
+      position: absolute;
+      top: -100px; left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #d9775b0a, transparent 70%);
+      pointer-events: none;
+    }
+
+    .form-wrapper {
+      max-width: 480px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .form-wrapper .section-label {
+      border-color: #d9775b;
+      color: #d9775b;
+    }
+
+    .form-wrapper h2 {
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 900;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .form-wrapper > p {
+      color: #888;
+      margin-bottom: 40px;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #ccc;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .form-group input {
+      width: 100%;
+      background: #111;
+      border: 1px solid #2a2a2a;
+      border-radius: 10px;
+      padding: 15px 18px;
+      color: #fff;
+      font-size: 1rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      outline: none;
+    }
+
+    .form-group input:focus {
+      border-color: #f5c800;
+      box-shadow: 0 0 0 3px rgba(245, 200, 0, 0.08);
+    }
+
+    .form-group input::placeholder {
+      color: #444;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: #f5c800;
+      color: #0a0a0a;
+      border: none;
+      border-radius: 10px;
+      padding: 17px;
+      font-size: 1.05rem;
+      font-weight: 900;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: opacity 0.3s, transform 0.2s, box-shadow 0.3s;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .btn-submit:hover:not(:disabled) {
+      opacity: 0.9;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(245, 200, 0, 0.3);
+    }
+
+    .btn-submit:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .spinner {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border: 3px solid rgba(0,0,0,0.2);
+      border-top-color: #0a0a0a;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .form-disclaimer {
+      margin-top: 16px;
+      font-size: 0.78rem;
+      color: #555;
+    }
+
+    /* ───── SUCESSO ───── */
+    .success-box {
+      display: none;
+      background: #0d1a0d;
+      border: 1px solid #2a5a2a;
+      border-radius: 16px;
+      padding: 40px 32px;
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    .success-box .check {
+      font-size: 52px;
+      margin-bottom: 16px;
+    }
+
+    .success-box h3 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #5cb87a;
+      margin-bottom: 10px;
+    }
+
+    .success-box p {
+      color: #888;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* ───── FOOTER ───── */
+    footer {
+      text-align: center;
+      padding: 36px 20px;
+      color: #444;
+      font-size: 0.82rem;
+      border-top: 1px solid #111;
+    }
+
+    footer span {
+      color: #f5c800;
+      font-weight: 700;
+    }
+
+    /* ───── RESPONSIVE ───── */
+    @media (max-width: 600px) {
+      header { padding: 14px 20px; }
+      .logo { font-size: 1.2rem; }
+      .claude-icon-hero { width: 100px; height: 100px; }
+      .claude-icon-hero svg { width: 50px; height: 50px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">2A <span>Educação</span></div>
+    <div class="header-badge">🔥 Vagas Limitadas</div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="claude-dots">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="orb-wrap">
+      <div class="claude-ring"></div>
+      <div class="claude-orb"></div>
+    </div>
+
+    <div class="badge">Curso 100% Gratuito</div>
+
+    <h1>Domine o <span class="claude-color">Claude IA</span><br/>do Zero ao <span>Avançado</span></h1>
+    <p>Aprenda a usar a IA mais poderosa do mercado na prática — automatize tarefas, turbine sua produtividade e saia na frente.</p>
+
+    <!-- Claude Logo SVG -->
+    <div class="claude-icon-hero">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- Simplified Claude-inspired icon: abstract "A" shape -->
+        <circle cx="50" cy="50" r="48" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+        <path d="M50 18 L78 75 H22 Z" fill="none" stroke="#fff" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+        <line x1="32" y1="58" x2="68" y2="58" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- BENEFÍCIOS -->
+  <section class="benefits">
+    <div class="section-label">Conteúdo do Curso</div>
+    <h2>O que você vai aprender</h2>
+    <p class="subtitle">Do básico ao avançado — tudo o que você precisa para dominar o Claude IA de verdade.</p>
+
+    <div class="benefits-grid">
+
+      <div class="benefit-card">
+        <span class="card-number">01</span>
+        <div class="icon">🧠</div>
+        <h3>Primeiros Passos e Skills do Claude</h3>
+        <p>Entenda como o Claude pensa, como se comunicar com ele de forma eficiente e desenvolva as habilidades essenciais para extrair resultados reais desde o início.</p>
+      </div>
+
+      <div class="benefit-card">
+        <span class="card-number">02</span>
+        <div class="icon">🔌</div>
+        <h3>MCPs e Conexões com Ferramentas</h3>
+        <p>Descubra como conectar o Claude a sistemas externos via MCPs e transforme a IA em um hub central que conversa com todas as suas ferramentas favoritas.</p>
+      </div>
+
+      <div class="benefit-card">
+        <span class="card-number">03</span>
+        <div class="icon">⚡</div>
+        <h3>Como Otimizar Seu Trabalho com Claude</h3>
+        <p>Aprenda técnicas avançadas de prompts, fluxos de trabalho e estratégias para multiplicar sua produtividade e eliminar tarefas repetitivas de uma vez por todas.</p>
+      </div>
+
+      <div class="benefit-card">
+        <span class="card-number">04</span>
+        <div class="icon">💻</div>
+        <h3>Claude Code na Prática</h3>
+        <p>Use o Claude para escrever, revisar e depurar código real. Mesmo sem ser dev, você vai criar soluções funcionais e entender como a IA está mudando o desenvolvimento.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- FORMULÁRIO -->
+  <section class="form-section">
+    <div class="form-wrapper">
+      <div class="section-label">Acesso Gratuito</div>
+      <h2>Garanta sua vaga agora</h2>
+      <p>Preencha os campos abaixo e receba o link do curso diretamente no seu email. É grátis e sem pegadinhas.</p>
+
+      <form id="leadForm">
+        <div class="form-group">
+          <label for="nome">Seu nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Ex: João Silva" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Seu melhor email</label>
+          <input type="email" id="email" name="email" placeholder="Ex: joao@email.com" required />
+        </div>
+        <button type="submit" class="btn-submit" id="btnSubmit">
+          Quero Acesso Gratuito →
+        </button>
+      </form>
+
+      <p class="form-disclaimer">🔒 Seus dados estão seguros. Sem spam, prometemos.</p>
+
+      <div class="success-box" id="successBox">
+        <div class="check">✅</div>
+        <h3>Acesso enviado!</h3>
+        <p>Verifique seu email. O link do curso foi enviado para a sua caixa de entrada.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 <span>2A Educação</span> · Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('leadForm');
+    const btn = document.getElementById('btnSubmit');
+    const successBox = document.getElementById('successBox');
+
+    const WEBHOOK_URL = 'https://webhooks.akillescecilio.com/webhook/curso-claude';
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const nome  = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim();
+
+      btn.disabled = true;
+      btn.innerHTML = '<span class="spinner"></span> Enviando...';
+
+      try {
+        await fetch(WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ nome, email })
+        });
+
+        form.style.display = 'none';
+        successBox.style.display = 'block';
+
+      } catch (err) {
+        btn.disabled = false;
+        btn.innerHTML = 'Quero Acesso Gratuito →';
+        alert('Erro ao enviar. Tente novamente.');
+      }
+    });
+  </script>
+
+</body>
+</html>
